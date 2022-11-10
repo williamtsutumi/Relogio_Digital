@@ -1,0 +1,110 @@
+|relogio_digital
+CLEAR => JK_FF:FFS0.CLEAR
+CLEAR => JK_FF:FFS1.CLEAR
+CLEAR => JK_FF:FFS2.CLEAR
+CLEAR => JK_FF:FFS3.CLEAR
+CLEAR => JK_FF:FFM0.CLEAR
+CLEAR => JK_FF:FFM1.CLEAR
+CLEAR => JK_FF:FFM2.CLEAR
+CLOCK => process_0~0.IN0
+CLOCK => JK_FF:FFS0.CLOCK
+CLOCK => JK_FF:FFS1.CLOCK
+CLOCK => JK_FF:FFS2.CLOCK
+CLOCK => JK_FF:FFS3.CLOCK
+CLOCK => JK_FF:FFM0.CLOCK
+CLOCK => JK_FF:FFM1.CLOCK
+CLOCK => JK_FF:FFM2.CLOCK
+MIN[0] <= <GND>
+MIN[1] <= <GND>
+MIN[2] <= <GND>
+MIN[3] <= <GND>
+SEG[0] <= SEG[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SEG[1] <= SEG[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SEG[2] <= SEG[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SEG[3] <= SEG[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|relogio_digital|JK_FF:FFS0
+J => process_0~4.IN0
+J => process_0~5.IN0
+K => process_0~2.IN0
+K => process_0~4.IN1
+K => process_0~6.IN1
+CLEAR => process_0~0.IN0
+CLOCK => process_0~1.IN0
+Q <= Q~0.DB_MAX_OUTPUT_PORT_TYPE
+QB <= <GND>
+
+
+|relogio_digital|JK_FF:FFS1
+J => process_0~4.IN0
+J => process_0~5.IN0
+K => process_0~2.IN0
+K => process_0~4.IN1
+K => process_0~6.IN1
+CLEAR => process_0~0.IN0
+CLOCK => process_0~1.IN0
+Q <= Q~0.DB_MAX_OUTPUT_PORT_TYPE
+QB <= <GND>
+
+
+|relogio_digital|JK_FF:FFS2
+J => process_0~4.IN0
+J => process_0~5.IN0
+K => process_0~2.IN0
+K => process_0~4.IN1
+K => process_0~6.IN1
+CLEAR => process_0~0.IN0
+CLOCK => process_0~1.IN0
+Q <= Q~0.DB_MAX_OUTPUT_PORT_TYPE
+QB <= <GND>
+
+
+|relogio_digital|JK_FF:FFS3
+J => process_0~4.IN0
+J => process_0~5.IN0
+K => process_0~2.IN0
+K => process_0~4.IN1
+K => process_0~6.IN1
+CLEAR => process_0~0.IN0
+CLOCK => process_0~1.IN0
+Q <= Q~0.DB_MAX_OUTPUT_PORT_TYPE
+QB <= <GND>
+
+
+|relogio_digital|JK_FF:FFM0
+J => process_0~4.IN0
+J => process_0~5.IN0
+K => process_0~2.IN0
+K => process_0~4.IN1
+K => process_0~6.IN1
+CLEAR => process_0~0.IN0
+CLOCK => process_0~1.IN0
+Q <= Q~0.DB_MAX_OUTPUT_PORT_TYPE
+QB <= <GND>
+
+
+|relogio_digital|JK_FF:FFM1
+J => process_0~4.IN0
+J => process_0~5.IN0
+K => process_0~2.IN0
+K => process_0~4.IN1
+K => process_0~6.IN1
+CLEAR => process_0~0.IN0
+CLOCK => process_0~1.IN0
+Q <= Q~0.DB_MAX_OUTPUT_PORT_TYPE
+QB <= <GND>
+
+
+|relogio_digital|JK_FF:FFM2
+J => process_0~4.IN0
+J => process_0~5.IN0
+K => process_0~2.IN0
+K => process_0~4.IN1
+K => process_0~6.IN1
+CLEAR => process_0~0.IN0
+CLOCK => process_0~1.IN0
+Q <= Q~0.DB_MAX_OUTPUT_PORT_TYPE
+QB <= <GND>
+
+
