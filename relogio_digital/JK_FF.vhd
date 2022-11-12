@@ -26,6 +26,6 @@ BEGIN
 			END IF;
 		END IF;
 		Q <= TMP;
-		Q <= NOT TMP;
+		QB <= NOT TMP;
 	END PROCESS;
 END arch;

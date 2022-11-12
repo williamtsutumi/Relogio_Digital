@@ -1,5 +1,5 @@
 Fitter report for relogio_digital
-Thu Nov 10 08:27:25 2022
+Fri Nov 11 22:24:25 2022
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -53,14 +53,14 @@ applicable agreement for further details.
 +----------------------------------------------------------------------+
 ; Fitter Summary                                                       ;
 +-----------------------+----------------------------------------------+
-; Fitter Status         ; Successful - Thu Nov 10 08:27:25 2022        ;
+; Fitter Status         ; Successful - Fri Nov 11 22:24:25 2022        ;
 ; Quartus II Version    ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name         ; relogio_digital                              ;
 ; Top-level Entity Name ; relogio_digital                              ;
 ; Family                ; MAX7000S                                     ;
 ; Device                ; EPM7128SLC84-7                               ;
 ; Timing Models         ; Final                                        ;
-; Total macrocells      ; 9 / 128 ( 7 % )                              ;
+; Total macrocells      ; 12 / 128 ( 9 % )                             ;
 ; Total pins            ; 14 / 68 ( 21 % )                             ;
 +-----------------------+----------------------------------------------+
 
@@ -93,7 +93,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 12     ;
+; Number detected on machine ; 6      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -101,7 +101,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/willi/OneDrive/햞ea de Trabalho/work/relogio_digital/relogio_digital.pin.
+The pin-out file can be found in D:/dev/uem/cd2/Relogio_Digital/relogio_digital/relogio_digital.pin.
 
 
 +------------------------------------------------------+
@@ -109,9 +109,9 @@ The pin-out file can be found in C:/Users/willi/OneDrive/햞ea de Trabalho/work/r
 +-----------------------------------+------------------+
 ; Resource                          ; Usage            ;
 +-----------------------------------+------------------+
-; Logic cells                       ; 9 / 128 ( 7 % )  ;
-; Registers                         ; 5 / 128 ( 4 % )  ;
-; Number of pterms used             ; 1                ;
+; Logic cells                       ; 12 / 128 ( 9 % ) ;
+; Registers                         ; 8 / 128 ( 6 % )  ;
+; Number of pterms used             ; 12               ;
 ; User inserted logic elements      ; 0                ;
 ; I/O pins                          ; 14 / 68 ( 21 % ) ;
 ;     -- Clock pins                 ; 1 / 2 ( 50 % )   ;
@@ -119,13 +119,13 @@ The pin-out file can be found in C:/Users/willi/OneDrive/햞ea de Trabalho/work/r
 ; Global signals                    ; 2                ;
 ; Shareable expanders               ; 0 / 128 ( 0 % )  ;
 ; Parallel expanders                ; 0 / 120 ( 0 % )  ;
-; Cells using turbo bit             ; 9 / 128 ( 7 % )  ;
+; Cells using turbo bit             ; 12 / 128 ( 9 % ) ;
 ; Maximum fan-out node              ; CLOCK            ;
-; Maximum fan-out                   ; 5                ;
-; Highest non-global fan-out signal ; SEG[2]~reg0      ;
-; Highest non-global fan-out        ; 1                ;
-; Total fan-out                     ; 15               ;
-; Average fan-out                   ; 0.65             ;
+; Maximum fan-out                   ; 8                ;
+; Highest non-global fan-out signal ; JK_FF:FFS1|TMP   ;
+; Highest non-global fan-out        ; 5                ;
+; Total fan-out                     ; 39               ;
+; Average fan-out                   ; 1.50             ;
 +-----------------------------------+------------------+
 
 
@@ -134,8 +134,8 @@ The pin-out file can be found in C:/Users/willi/OneDrive/햞ea de Trabalho/work/r
 +-------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
 ; Name  ; Pin # ; I/O Bank ; LAB ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; I/O Standard ; Location assigned by ;
 +-------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
-; CLEAR ; 1     ; --       ; --  ; 1                     ; 0                  ; yes    ; no             ; TTL          ; Fitter               ;
-; CLOCK ; 83    ; --       ; --  ; 5                     ; 0                  ; yes    ; no             ; TTL          ; Fitter               ;
+; CLEAR ; 1     ; --       ; --  ; 4                     ; 0                  ; yes    ; no             ; TTL          ; Fitter               ;
+; CLOCK ; 83    ; --       ; --  ; 8                     ; 0                  ; yes    ; no             ; TTL          ; Fitter               ;
 +-------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
 
 
@@ -148,10 +148,10 @@ The pin-out file can be found in C:/Users/willi/OneDrive/햞ea de Trabalho/work/r
 ; MIN[1] ; 6     ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
 ; MIN[2] ; 5     ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
 ; MIN[3] ; 4     ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
-; SEG[0] ; 10    ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
-; SEG[1] ; 11    ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
-; SEG[2] ; 12    ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
-; SEG[3] ; 9     ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; SEG[0] ; 9     ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; SEG[1] ; 12    ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; SEG[2] ; 11    ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; SEG[3] ; 10    ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
 +--------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
 
 
@@ -168,10 +168,10 @@ The pin-out file can be found in C:/Users/willi/OneDrive/햞ea de Trabalho/work/r
 ; 6        ; 5          ; --       ; MIN[1]         ; output ; TTL          ;         ; N               ;
 ; 7        ; 6          ; --       ; GND            ; gnd    ;              ;         ;                 ;
 ; 8        ; 7          ; --       ; MIN[0]         ; output ; TTL          ;         ; N               ;
-; 9        ; 8          ; --       ; SEG[3]         ; output ; TTL          ;         ; N               ;
-; 10       ; 9          ; --       ; SEG[0]         ; output ; TTL          ;         ; N               ;
-; 11       ; 10         ; --       ; SEG[1]         ; output ; TTL          ;         ; N               ;
-; 12       ; 11         ; --       ; SEG[2]         ; output ; TTL          ;         ; N               ;
+; 9        ; 8          ; --       ; SEG[0]         ; output ; TTL          ;         ; N               ;
+; 10       ; 9          ; --       ; SEG[3]         ; output ; TTL          ;         ; N               ;
+; 11       ; 10         ; --       ; SEG[2]         ; output ; TTL          ;         ; N               ;
+; 12       ; 11         ; --       ; SEG[1]         ; output ; TTL          ;         ; N               ;
 ; 13       ; 12         ; --       ; VCCIO          ; power  ;              ; 5.0V    ;                 ;
 ; 14       ; 13         ; --       ; TDI            ; input  ; TTL          ;         ; N               ;
 ; 15       ; 14         ; --       ; RESERVED       ;        ;              ;         ;                 ;
@@ -284,7 +284,10 @@ Note: User assignments will override these defaults. The user specified values a
 +----------------------------+------------+------+-----------------------------+--------------+
 ; Compilation Hierarchy Node ; Macrocells ; Pins ; Full Hierarchy Name         ; Library Name ;
 +----------------------------+------------+------+-----------------------------+--------------+
-; |relogio_digital           ; 9          ; 14   ; |relogio_digital            ; work         ;
+; |relogio_digital           ; 12         ; 14   ; |relogio_digital            ; work         ;
+;    |JK_FF:FFS0|            ; 1          ; 0    ; |relogio_digital|JK_FF:FFS0 ; work         ;
+;    |JK_FF:FFS1|            ; 1          ; 0    ; |relogio_digital|JK_FF:FFS1 ; work         ;
+;    |JK_FF:FFS2|            ; 1          ; 0    ; |relogio_digital|JK_FF:FFS2 ; work         ;
 ;    |JK_FF:FFS3|            ; 1          ; 0    ; |relogio_digital|JK_FF:FFS3 ; work         ;
 +----------------------------+------------+------+-----------------------------+--------------+
 
@@ -294,8 +297,8 @@ Note: User assignments will override these defaults. The user specified values a
 +-------+----------+---------+--------------+--------+----------------------+------------------+
 ; Name  ; Location ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ;
 +-------+----------+---------+--------------+--------+----------------------+------------------+
-; CLEAR ; PIN_1    ; 1       ; Async. clear ; yes    ; On                   ; --               ;
-; CLOCK ; PIN_83   ; 5       ; Clock        ; yes    ; On                   ; --               ;
+; CLEAR ; PIN_1    ; 4       ; Async. clear ; yes    ; On                   ; --               ;
+; CLOCK ; PIN_83   ; 8       ; Clock        ; yes    ; On                   ; --               ;
 +-------+----------+---------+--------------+--------+----------------------+------------------+
 
 
@@ -304,8 +307,8 @@ Note: User assignments will override these defaults. The user specified values a
 +-------+----------+---------+----------------------+------------------+
 ; Name  ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ;
 +-------+----------+---------+----------------------+------------------+
-; CLEAR ; PIN_1    ; 1       ; On                   ; --               ;
-; CLOCK ; PIN_83   ; 5       ; On                   ; --               ;
+; CLEAR ; PIN_1    ; 4       ; On                   ; --               ;
+; CLOCK ; PIN_83   ; 8       ; On                   ; --               ;
 +-------+----------+---------+----------------------+------------------+
 
 
@@ -314,43 +317,49 @@ Note: User assignments will override these defaults. The user specified values a
 +----------------+----------------+
 ; Name           ; Fan-Out        ;
 +----------------+----------------+
+; JK_FF:FFS0|TMP ; 5              ;
+; JK_FF:FFS3|TMP ; 5              ;
+; JK_FF:FFS1|TMP ; 5              ;
+; JK_FF:FFS2|TMP ; 4              ;
 ; ~GND~3         ; 1              ;
 ; ~GND~2         ; 1              ;
 ; ~GND~1         ; 1              ;
 ; ~GND~0         ; 1              ;
-; SEG[3]~reg0    ; 1              ;
-; JK_FF:FFS3|TMP ; 1              ;
 ; SEG[0]~reg0    ; 1              ;
-; SEG[1]~reg0    ; 1              ;
+; SEG[3]~reg0    ; 1              ;
 ; SEG[2]~reg0    ; 1              ;
+; SEG[1]~reg0    ; 1              ;
 +----------------+----------------+
 
 
-+------------------------------------------------+
-; Interconnect Usage Summary                     ;
-+----------------------------+-------------------+
-; Interconnect Resource Type ; Usage             ;
-+----------------------------+-------------------+
-; Output enables             ; 0 / 6 ( 0 % )     ;
-; PIA buffers                ; 1 / 288 ( < 1 % ) ;
-; PIAs                       ; 1 / 288 ( < 1 % ) ;
-+----------------------------+-------------------+
++----------------------------------------------+
+; Interconnect Usage Summary                   ;
++----------------------------+-----------------+
+; Interconnect Resource Type ; Usage           ;
++----------------------------+-----------------+
+; Output enables             ; 0 / 6 ( 0 % )   ;
+; PIA buffers                ; 4 / 288 ( 1 % ) ;
+; PIAs                       ; 4 / 288 ( 1 % ) ;
++----------------------------+-----------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB External Interconnect                                                  ;
 +----------------------------------------------+-----------------------------+
-; LAB External Interconnects  (Average = 0.13) ; Number of LABs  (Total = 1) ;
+; LAB External Interconnects  (Average = 0.50) ; Number of LABs  (Total = 1) ;
 +----------------------------------------------+-----------------------------+
 ; 0                                            ; 7                           ;
-; 1                                            ; 1                           ;
+; 1                                            ; 0                           ;
+; 2                                            ; 0                           ;
+; 3                                            ; 0                           ;
+; 4                                            ; 1                           ;
 +----------------------------------------------+-----------------------------+
 
 
 +----------------------------------------------------------------------+
 ; LAB Macrocells                                                       ;
 +----------------------------------------+-----------------------------+
-; Number of Macrocells  (Average = 1.13) ; Number of LABs  (Total = 1) ;
+; Number of Macrocells  (Average = 1.50) ; Number of LABs  (Total = 1) ;
 +----------------------------------------+-----------------------------+
 ; 0                                      ; 7                           ;
 ; 1                                      ; 0                           ;
@@ -361,25 +370,31 @@ Note: User assignments will override these defaults. The user specified values a
 ; 6                                      ; 0                           ;
 ; 7                                      ; 0                           ;
 ; 8                                      ; 0                           ;
-; 9                                      ; 1                           ;
+; 9                                      ; 0                           ;
+; 10                                     ; 0                           ;
+; 11                                     ; 0                           ;
+; 12                                     ; 1                           ;
 +----------------------------------------+-----------------------------+
 
 
-+--------------------------------------------------------+
-; Logic Cell Interconnection                             ;
-+-----+------------+-----------------------+-------------+
-; LAB ; Logic Cell ; Input                 ; Output      ;
-+-----+------------+-----------------------+-------------+
-;  A  ; LC3        ; CLOCK                 ; SEG[2]      ;
-;  A  ; LC5        ; CLOCK                 ; SEG[1]      ;
-;  A  ; LC6        ; CLOCK                 ; SEG[0]      ;
-;  A  ; LC1        ; CLOCK, CLEAR          ; SEG[3]~reg0 ;
-;  A  ; LC8        ; CLOCK, JK_FF:FFS3|TMP ; SEG[3]      ;
-;  A  ; LC11       ;                       ; MIN[0]      ;
-;  A  ; LC13       ;                       ; MIN[1]      ;
-;  A  ; LC14       ;                       ; MIN[2]      ;
-;  A  ; LC16       ;                       ; MIN[3]      ;
-+-----+------------+-----------------------+-------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Logic Cell Interconnection                                                                                                                                                    ;
++-----+------------+------------------------------------------------------------------------------+-----------------------------------------------------------------------------+
+; LAB ; Logic Cell ; Input                                                                        ; Output                                                                      ;
++-----+------------+------------------------------------------------------------------------------+-----------------------------------------------------------------------------+
+;  A  ; LC1        ; CLOCK, CLEAR, JK_FF:FFS0|TMP, JK_FF:FFS3|TMP, JK_FF:FFS1|TMP                 ; JK_FF:FFS1|TMP, SEG[1]~reg0, JK_FF:FFS2|TMP, JK_FF:FFS3|TMP, JK_FF:FFS0|TMP ;
+;  A  ; LC3        ; CLOCK, JK_FF:FFS1|TMP                                                        ; SEG[1]                                                                      ;
+;  A  ; LC2        ; CLOCK, CLEAR, JK_FF:FFS3|TMP, JK_FF:FFS1|TMP, JK_FF:FFS0|TMP, JK_FF:FFS2|TMP ; JK_FF:FFS2|TMP, SEG[2]~reg0, JK_FF:FFS3|TMP, JK_FF:FFS0|TMP                 ;
+;  A  ; LC5        ; CLOCK, JK_FF:FFS2|TMP                                                        ; SEG[2]                                                                      ;
+;  A  ; LC4        ; CLOCK, CLEAR, JK_FF:FFS2|TMP, JK_FF:FFS0|TMP, JK_FF:FFS1|TMP, JK_FF:FFS3|TMP ; JK_FF:FFS1|TMP, JK_FF:FFS2|TMP, JK_FF:FFS3|TMP, SEG[3]~reg0, JK_FF:FFS0|TMP ;
+;  A  ; LC6        ; CLOCK, JK_FF:FFS3|TMP                                                        ; SEG[3]                                                                      ;
+;  A  ; LC7        ; CLOCK, CLEAR, JK_FF:FFS1|TMP, JK_FF:FFS3|TMP, JK_FF:FFS0|TMP, JK_FF:FFS2|TMP ; JK_FF:FFS1|TMP, JK_FF:FFS2|TMP, JK_FF:FFS3|TMP, JK_FF:FFS0|TMP, SEG[0]~reg0 ;
+;  A  ; LC8        ; CLOCK, JK_FF:FFS0|TMP                                                        ; SEG[0]                                                                      ;
+;  A  ; LC11       ;                                                                              ; MIN[0]                                                                      ;
+;  A  ; LC13       ;                                                                              ; MIN[1]                                                                      ;
+;  A  ; LC14       ;                                                                              ; MIN[2]                                                                      ;
+;  A  ; LC16       ;                                                                              ; MIN[3]                                                                      ;
++-----+------------+------------------------------------------------------------------------------+-----------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------+
@@ -403,13 +418,13 @@ Note: User assignments will override these defaults. The user specified values a
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Nov 10 08:27:25 2022
+    Info: Processing started: Fri Nov 11 22:24:24 2022
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off relogio_digital -c relogio_digital
 Info: Selected device EPM7128SLC84-7 for design "relogio_digital"
 Info: Quartus II Fitter was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 216 megabytes
-    Info: Processing ended: Thu Nov 10 08:27:25 2022
-    Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 225 megabytes
+    Info: Processing ended: Fri Nov 11 22:24:25 2022
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
 
 

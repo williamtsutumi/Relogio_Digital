@@ -6,8 +6,8 @@ Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
 Actual Time    : 4.500 ns
-From           : SEG[0]~reg0
-To             : SEG[0]
+From           : SEG[1]~reg0
+To             : SEG[1]
 From Clock     : CLOCK
 To Clock       : --
 Failed Paths   : 0
@@ -16,8 +16,8 @@ Type           : Clock Setup: 'CLOCK'
 Slack          : N/A
 Required Time  : None
 Actual Time    : 125.00 MHz ( period = 8.000 ns )
-From           : JK_FF:FFS3|TMP
-To             : SEG[3]~reg0
+From           : JK_FF:FFS0|TMP
+To             : SEG[0]~reg0
 From Clock     : CLOCK
 To Clock       : CLOCK
 Failed Paths   : 0

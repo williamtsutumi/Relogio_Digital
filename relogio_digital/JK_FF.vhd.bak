@@ -14,8 +14,8 @@ BEGIN
 	BEGIN
 		IF (CLEAR = '0') THEN
 			TMP := '0';
-		ELSIF (CLOCK = '0' AND CLOCK'EVENT) THEN
-			if (J = '0' AND K = '0') THEN
+		ELSIF (CLOCK'EVENT and CLOCK='0') THEN
+			IF (J = '0' AND K = '0') THEN
 				TMP := TMP;
 			ELSIF (J = '1' AND K = '1') THEN
 				TMP := NOT TMP;
@@ -26,6 +26,6 @@ BEGIN
 			END IF;
 		END IF;
 		Q <= TMP;
-		Q <= NOT TMP;
+		QB <= NOT TMP;
 	END PROCESS;
 END arch;
