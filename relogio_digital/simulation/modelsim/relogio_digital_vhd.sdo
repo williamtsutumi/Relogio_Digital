@@ -24,7 +24,7 @@
 (DELAYFILE
   (SDFVERSION "2.1")
   (DESIGN "relogio_digital")
-  (DATE "11/12/2022 09:21:46")
+  (DATE "11/12/2022 09:31:14")
   (VENDOR "Altera")
   (PROGRAM "Quartus II")
   (VERSION "Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition")
@@ -200,17 +200,113 @@
     )
   )
   (CELL
-    (CELLTYPE "max_asynch_io")
-    (INSTANCE \\MIN\[0\]\~I\\.asynch_inst)
+    (CELLTYPE "max_asynch_mcell")
+    (INSTANCE \\contador_minutos\|FFM1\|TMP\\.pcom)
     (DELAY
       (ABSOLUTE
-        (IOPATH datain padio (2000:2000:2000) (2000:2000:2000))
+        (PORT pterm1[0] (1000:1000:1000) (1000:1000:1000))
+        (PORT pterm1[1] (1000:1000:1000) (1000:1000:1000))
+        (PORT pterm1[2] (1000:1000:1000) (1000:1000:1000))
+        (PORT pterm2[0] (1000:1000:1000) (1000:1000:1000))
+        (PORT pterm2[1] (1000:1000:1000) (1000:1000:1000))
+        (PORT pterm2[2] (1000:1000:1000) (1000:1000:1000))
+        (IOPATH pterm1[0] regin (3000:3000:3000) (3000:3000:3000))
+        (IOPATH pterm1[1] regin (3000:3000:3000) (3000:3000:3000))
+        (IOPATH pterm1[2] regin (3000:3000:3000) (3000:3000:3000))
+        (IOPATH pterm2[0] regin (3000:3000:3000) (3000:3000:3000))
+        (IOPATH pterm2[1] regin (3000:3000:3000) (3000:3000:3000))
+        (IOPATH pterm2[2] regin (3000:3000:3000) (3000:3000:3000))
+        (IOPATH fbkin regin (4000:4000:4000) (4000:4000:4000))
       )
     )
   )
   (CELL
+    (CELLTYPE "max_mcell_register")
+    (INSTANCE \\contador_minutos\|FFM1\|TMP\\.preg)
+    (DELAY
+      (ABSOLUTE
+        (PORT aclr (0:0:0) (0:0:0))
+        (PORT clk (0:0:0) (0:0:0))
+        (IOPATH (posedge clk) regout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH (posedge aclr) regout (2000:2000:2000) (2000:2000:2000))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP datain (posedge clk) (3000:3000:3000))
+      (HOLD datain (posedge clk) (2000:2000:2000))
+    )
+  )
+  (CELL
+    (CELLTYPE "max_asynch_mcell")
+    (INSTANCE \\contador_minutos\|FFM0\|TMP\\.pcom)
+    (DELAY
+      (ABSOLUTE
+        (PORT pterm1[0] (1000:1000:1000) (1000:1000:1000))
+        (PORT pterm1[1] (1000:1000:1000) (1000:1000:1000))
+        (PORT pterm1[2] (1000:1000:1000) (1000:1000:1000))
+        (IOPATH pterm1[0] regin (3000:3000:3000) (3000:3000:3000))
+        (IOPATH pterm1[1] regin (3000:3000:3000) (3000:3000:3000))
+        (IOPATH pterm1[2] regin (3000:3000:3000) (3000:3000:3000))
+        (IOPATH fbkin regin (4000:4000:4000) (4000:4000:4000))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "max_mcell_register")
+    (INSTANCE \\contador_minutos\|FFM0\|TMP\\.preg)
+    (DELAY
+      (ABSOLUTE
+        (PORT aclr (0:0:0) (0:0:0))
+        (PORT clk (0:0:0) (0:0:0))
+        (IOPATH (posedge clk) regout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH (posedge aclr) regout (2000:2000:2000) (2000:2000:2000))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP datain (posedge clk) (3000:3000:3000))
+      (HOLD datain (posedge clk) (2000:2000:2000))
+    )
+  )
+  (CELL
+    (CELLTYPE "max_asynch_mcell")
+    (INSTANCE \\contador_minutos\|FFM2\|TMP\\.pcom)
+    (DELAY
+      (ABSOLUTE
+        (PORT pterm1[0] (1000:1000:1000) (1000:1000:1000))
+        (PORT pterm1[1] (1000:1000:1000) (1000:1000:1000))
+        (PORT pterm1[2] (1000:1000:1000) (1000:1000:1000))
+        (PORT pterm2[0] (1000:1000:1000) (1000:1000:1000))
+        (PORT pterm2[1] (1000:1000:1000) (1000:1000:1000))
+        (PORT pterm2[2] (1000:1000:1000) (1000:1000:1000))
+        (IOPATH pterm1[0] regin (3000:3000:3000) (3000:3000:3000))
+        (IOPATH pterm1[1] regin (3000:3000:3000) (3000:3000:3000))
+        (IOPATH pterm1[2] regin (3000:3000:3000) (3000:3000:3000))
+        (IOPATH pterm2[0] regin (3000:3000:3000) (3000:3000:3000))
+        (IOPATH pterm2[1] regin (3000:3000:3000) (3000:3000:3000))
+        (IOPATH pterm2[2] regin (3000:3000:3000) (3000:3000:3000))
+        (IOPATH fbkin regin (4000:4000:4000) (4000:4000:4000))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "max_mcell_register")
+    (INSTANCE \\contador_minutos\|FFM2\|TMP\\.preg)
+    (DELAY
+      (ABSOLUTE
+        (PORT aclr (0:0:0) (0:0:0))
+        (PORT clk (0:0:0) (0:0:0))
+        (IOPATH (posedge clk) regout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH (posedge aclr) regout (2000:2000:2000) (2000:2000:2000))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP datain (posedge clk) (3000:3000:3000))
+      (HOLD datain (posedge clk) (2000:2000:2000))
+    )
+  )
+  (CELL
     (CELLTYPE "max_asynch_io")
-    (INSTANCE \\MIN\[1\]\~I\\.asynch_inst)
+    (INSTANCE \\SEG\[1\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
         (IOPATH datain padio (2000:2000:2000) (2000:2000:2000))
@@ -228,16 +324,7 @@
   )
   (CELL
     (CELLTYPE "max_asynch_io")
-    (INSTANCE \\MIN\[3\]\~I\\.asynch_inst)
-    (DELAY
-      (ABSOLUTE
-        (IOPATH datain padio (2000:2000:2000) (2000:2000:2000))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "max_asynch_io")
-    (INSTANCE \\SEG\[1\]\~I\\.asynch_inst)
+    (INSTANCE \\MIN\[1\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
         (IOPATH datain padio (2000:2000:2000) (2000:2000:2000))
@@ -247,6 +334,15 @@
   (CELL
     (CELLTYPE "max_asynch_io")
     (INSTANCE \\SEG\[2\]\~I\\.asynch_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain padio (2000:2000:2000) (2000:2000:2000))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "max_asynch_io")
+    (INSTANCE \\MIN\[0\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
         (IOPATH datain padio (2000:2000:2000) (2000:2000:2000))

@@ -67,14 +67,14 @@ Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage 
 CLEAR                        : 1         : input  : TTL               :         :           : N              
 GND+                         : 2         :        :                   :         :           :                
 VCCINT                       : 3         : power  :                   : 5.0V    :           :                
-MIN[3]                       : 4         : output : TTL               :         :           : N              
-MIN[2]                       : 5         : output : TTL               :         :           : N              
-MIN[1]                       : 6         : output : TTL               :         :           : N              
+RESERVED                     : 4         :        :                   :         :           :                
+SEG[0]                       : 5         : output : TTL               :         :           : N              
+SEG[3]                       : 6         : output : TTL               :         :           : N              
 GND                          : 7         : gnd    :                   :         :           :                
 MIN[0]                       : 8         : output : TTL               :         :           : N              
-SEG[0]                       : 9         : output : TTL               :         :           : N              
-SEG[3]                       : 10        : output : TTL               :         :           : N              
-SEG[2]                       : 11        : output : TTL               :         :           : N              
+SEG[2]                       : 9         : output : TTL               :         :           : N              
+MIN[1]                       : 10        : output : TTL               :         :           : N              
+MIN[2]                       : 11        : output : TTL               :         :           : N              
 SEG[1]                       : 12        : output : TTL               :         :           : N              
 VCCIO                        : 13        : power  :                   : 5.0V    :           :                
 TDI                          : 14        : input  : TTL               :         :           : N              

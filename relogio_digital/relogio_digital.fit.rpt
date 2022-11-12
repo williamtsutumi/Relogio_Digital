@@ -1,5 +1,5 @@
 Fitter report for relogio_digital
-Sat Nov 12 09:21:43 2022
+Sat Nov 12 09:31:11 2022
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -53,15 +53,15 @@ applicable agreement for further details.
 +----------------------------------------------------------------------+
 ; Fitter Summary                                                       ;
 +-----------------------+----------------------------------------------+
-; Fitter Status         ; Successful - Sat Nov 12 09:21:43 2022        ;
+; Fitter Status         ; Successful - Sat Nov 12 09:31:11 2022        ;
 ; Quartus II Version    ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name         ; relogio_digital                              ;
 ; Top-level Entity Name ; relogio_digital                              ;
 ; Family                ; MAX7000S                                     ;
 ; Device                ; EPM7128SLC84-7                               ;
 ; Timing Models         ; Final                                        ;
-; Total macrocells      ; 8 / 128 ( 6 % )                              ;
-; Total pins            ; 14 / 68 ( 21 % )                             ;
+; Total macrocells      ; 7 / 128 ( 5 % )                              ;
+; Total pins            ; 13 / 68 ( 19 % )                             ;
 +-----------------------+----------------------------------------------+
 
 
@@ -109,23 +109,23 @@ The pin-out file can be found in C:/Users/willi/OneDrive/햞ea de Trabalho/work/r
 +-----------------------------------+---------------------------------------------+
 ; Resource                          ; Usage                                       ;
 +-----------------------------------+---------------------------------------------+
-; Logic cells                       ; 8 / 128 ( 6 % )                             ;
-; Registers                         ; 4 / 128 ( 3 % )                             ;
-; Number of pterms used             ; 8                                           ;
+; Logic cells                       ; 7 / 128 ( 5 % )                             ;
+; Registers                         ; 7 / 128 ( 5 % )                             ;
+; Number of pterms used             ; 13                                          ;
 ; User inserted logic elements      ; 0                                           ;
-; I/O pins                          ; 14 / 68 ( 21 % )                            ;
+; I/O pins                          ; 13 / 68 ( 19 % )                            ;
 ;     -- Clock pins                 ; 1 / 2 ( 50 % )                              ;
 ;     -- Dedicated input pins       ; 1 / 2 ( 50 % )                              ;
 ; Global signals                    ; 2                                           ;
 ; Shareable expanders               ; 0 / 128 ( 0 % )                             ;
 ; Parallel expanders                ; 0 / 120 ( 0 % )                             ;
-; Cells using turbo bit             ; 8 / 128 ( 6 % )                             ;
-; Maximum fan-out node              ; cont_mod10:contador_segundos|JK_FF:FFS1|TMP ;
-; Maximum fan-out                   ; 5                                           ;
+; Cells using turbo bit             ; 7 / 128 ( 5 % )                             ;
+; Maximum fan-out node              ; CLEAR                                       ;
+; Maximum fan-out                   ; 7                                           ;
 ; Highest non-global fan-out signal ; cont_mod10:contador_segundos|JK_FF:FFS1|TMP ;
 ; Highest non-global fan-out        ; 5                                           ;
-; Total fan-out                     ; 31                                          ;
-; Average fan-out                   ; 1.41                                        ;
+; Total fan-out                     ; 45                                          ;
+; Average fan-out                   ; 2.25                                        ;
 +-----------------------------------+---------------------------------------------+
 
 
@@ -134,8 +134,8 @@ The pin-out file can be found in C:/Users/willi/OneDrive/햞ea de Trabalho/work/r
 +-------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
 ; Name  ; Pin # ; I/O Bank ; LAB ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; I/O Standard ; Location assigned by ;
 +-------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
-; CLEAR ; 1     ; --       ; --  ; 4                     ; 0                  ; yes    ; no             ; TTL          ; Fitter               ;
-; CLOCK ; 83    ; --       ; --  ; 4                     ; 0                  ; yes    ; no             ; TTL          ; Fitter               ;
+; CLEAR ; 1     ; --       ; --  ; 7                     ; 0                  ; yes    ; no             ; TTL          ; Fitter               ;
+; CLOCK ; 83    ; --       ; --  ; 7                     ; 0                  ; yes    ; no             ; TTL          ; Fitter               ;
 +-------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
 
 
@@ -145,13 +145,12 @@ The pin-out file can be found in C:/Users/willi/OneDrive/햞ea de Trabalho/work/r
 ; Name   ; Pin # ; I/O Bank ; LAB ; Output Register ; Slow Slew Rate ; Open Drain ; TRI Primitive ; I/O Standard ; Location assigned by ; Load  ; Output Enable Source ; Output Enable Group ;
 +--------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
 ; MIN[0] ; 8     ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
-; MIN[1] ; 6     ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
-; MIN[2] ; 5     ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
-; MIN[3] ; 4     ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
-; SEG[0] ; 9     ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; MIN[1] ; 10    ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; MIN[2] ; 11    ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; SEG[0] ; 5     ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
 ; SEG[1] ; 12    ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
-; SEG[2] ; 11    ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
-; SEG[3] ; 10    ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; SEG[2] ; 9     ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; SEG[3] ; 6     ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
 +--------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
 
 
@@ -163,14 +162,14 @@ The pin-out file can be found in C:/Users/willi/OneDrive/햞ea de Trabalho/work/r
 ; 1        ; 0          ; --       ; CLEAR          ; input  ; TTL          ;         ; N               ;
 ; 2        ; 1          ; --       ; GND+           ;        ;              ;         ;                 ;
 ; 3        ; 2          ; --       ; VCCINT         ; power  ;              ; 5.0V    ;                 ;
-; 4        ; 3          ; --       ; MIN[3]         ; output ; TTL          ;         ; N               ;
-; 5        ; 4          ; --       ; MIN[2]         ; output ; TTL          ;         ; N               ;
-; 6        ; 5          ; --       ; MIN[1]         ; output ; TTL          ;         ; N               ;
+; 4        ; 3          ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 5        ; 4          ; --       ; SEG[0]         ; output ; TTL          ;         ; N               ;
+; 6        ; 5          ; --       ; SEG[3]         ; output ; TTL          ;         ; N               ;
 ; 7        ; 6          ; --       ; GND            ; gnd    ;              ;         ;                 ;
 ; 8        ; 7          ; --       ; MIN[0]         ; output ; TTL          ;         ; N               ;
-; 9        ; 8          ; --       ; SEG[0]         ; output ; TTL          ;         ; N               ;
-; 10       ; 9          ; --       ; SEG[3]         ; output ; TTL          ;         ; N               ;
-; 11       ; 10         ; --       ; SEG[2]         ; output ; TTL          ;         ; N               ;
+; 9        ; 8          ; --       ; SEG[2]         ; output ; TTL          ;         ; N               ;
+; 10       ; 9          ; --       ; MIN[1]         ; output ; TTL          ;         ; N               ;
+; 11       ; 10         ; --       ; MIN[2]         ; output ; TTL          ;         ; N               ;
 ; 12       ; 11         ; --       ; SEG[1]         ; output ; TTL          ;         ; N               ;
 ; 13       ; 12         ; --       ; VCCIO          ; power  ;              ; 5.0V    ;                 ;
 ; 14       ; 13         ; --       ; TDI            ; input  ; TTL          ;         ; N               ;
@@ -284,12 +283,16 @@ Note: User assignments will override these defaults. The user specified values a
 +-----------------------------------+------------+------+----------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node        ; Macrocells ; Pins ; Full Hierarchy Name                                      ; Library Name ;
 +-----------------------------------+------------+------+----------------------------------------------------------+--------------+
-; |relogio_digital                  ; 8          ; 14   ; |relogio_digital                                         ; work         ;
+; |relogio_digital                  ; 7          ; 13   ; |relogio_digital                                         ; work         ;
 ;    |cont_mod10:contador_segundos| ; 4          ; 0    ; |relogio_digital|cont_mod10:contador_segundos            ; work         ;
 ;       |JK_FF:FFS0|                ; 1          ; 0    ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS0 ; work         ;
 ;       |JK_FF:FFS1|                ; 1          ; 0    ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS1 ; work         ;
 ;       |JK_FF:FFS2|                ; 1          ; 0    ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS2 ; work         ;
 ;       |JK_FF:FFS3|                ; 1          ; 0    ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS3 ; work         ;
+;    |cont_mod6:contador_minutos|   ; 3          ; 0    ; |relogio_digital|cont_mod6:contador_minutos              ; work         ;
+;       |JK_FF:FFM0|                ; 1          ; 0    ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM0   ; work         ;
+;       |JK_FF:FFM1|                ; 1          ; 0    ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM1   ; work         ;
+;       |JK_FF:FFM2|                ; 1          ; 0    ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM2   ; work         ;
 +-----------------------------------+------------+------+----------------------------------------------------------+--------------+
 
 
@@ -298,8 +301,8 @@ Note: User assignments will override these defaults. The user specified values a
 +-------+----------+---------+--------------+--------+----------------------+------------------+
 ; Name  ; Location ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ;
 +-------+----------+---------+--------------+--------+----------------------+------------------+
-; CLEAR ; PIN_1    ; 4       ; Async. clear ; yes    ; On                   ; --               ;
-; CLOCK ; PIN_83   ; 4       ; Clock        ; yes    ; On                   ; --               ;
+; CLEAR ; PIN_1    ; 7       ; Async. clear ; yes    ; On                   ; --               ;
+; CLOCK ; PIN_83   ; 7       ; Clock        ; yes    ; On                   ; --               ;
 +-------+----------+---------+--------------+--------+----------------------+------------------+
 
 
@@ -308,8 +311,8 @@ Note: User assignments will override these defaults. The user specified values a
 +-------+----------+---------+----------------------+------------------+
 ; Name  ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ;
 +-------+----------+---------+----------------------+------------------+
-; CLEAR ; PIN_1    ; 4       ; On                   ; --               ;
-; CLOCK ; PIN_83   ; 4       ; On                   ; --               ;
+; CLEAR ; PIN_1    ; 7       ; On                   ; --               ;
+; CLOCK ; PIN_83   ; 7       ; On                   ; --               ;
 +-------+----------+---------+----------------------+------------------+
 
 
@@ -321,11 +324,10 @@ Note: User assignments will override these defaults. The user specified values a
 ; cont_mod10:contador_segundos|JK_FF:FFS0|TMP ; 5       ;
 ; cont_mod10:contador_segundos|JK_FF:FFS3|TMP ; 5       ;
 ; cont_mod10:contador_segundos|JK_FF:FFS1|TMP ; 5       ;
+; cont_mod6:contador_minutos|JK_FF:FFM0|TMP   ; 4       ;
 ; cont_mod10:contador_segundos|JK_FF:FFS2|TMP ; 4       ;
-; ~GND~3                                      ; 1       ;
-; ~GND~2                                      ; 1       ;
-; ~GND~1                                      ; 1       ;
-; ~GND~0                                      ; 1       ;
+; cont_mod6:contador_minutos|JK_FF:FFM1|TMP   ; 4       ;
+; cont_mod6:contador_minutos|JK_FF:FFM2|TMP   ; 4       ;
 +---------------------------------------------+---------+
 
 
@@ -335,28 +337,31 @@ Note: User assignments will override these defaults. The user specified values a
 ; Interconnect Resource Type ; Usage           ;
 +----------------------------+-----------------+
 ; Output enables             ; 0 / 6 ( 0 % )   ;
-; PIA buffers                ; 4 / 288 ( 1 % ) ;
-; PIAs                       ; 4 / 288 ( 1 % ) ;
+; PIA buffers                ; 7 / 288 ( 2 % ) ;
+; PIAs                       ; 7 / 288 ( 2 % ) ;
 +----------------------------+-----------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB External Interconnect                                                  ;
 +----------------------------------------------+-----------------------------+
-; LAB External Interconnects  (Average = 0.50) ; Number of LABs  (Total = 1) ;
+; LAB External Interconnects  (Average = 0.88) ; Number of LABs  (Total = 1) ;
 +----------------------------------------------+-----------------------------+
 ; 0                                            ; 7                           ;
 ; 1                                            ; 0                           ;
 ; 2                                            ; 0                           ;
 ; 3                                            ; 0                           ;
-; 4                                            ; 1                           ;
+; 4                                            ; 0                           ;
+; 5                                            ; 0                           ;
+; 6                                            ; 0                           ;
+; 7                                            ; 1                           ;
 +----------------------------------------------+-----------------------------+
 
 
 +----------------------------------------------------------------------+
 ; LAB Macrocells                                                       ;
 +----------------------------------------+-----------------------------+
-; Number of Macrocells  (Average = 1.00) ; Number of LABs  (Total = 1) ;
+; Number of Macrocells  (Average = 0.88) ; Number of LABs  (Total = 1) ;
 +----------------------------------------+-----------------------------+
 ; 0                                      ; 7                           ;
 ; 1                                      ; 0                           ;
@@ -365,8 +370,7 @@ Note: User assignments will override these defaults. The user specified values a
 ; 4                                      ; 0                           ;
 ; 5                                      ; 0                           ;
 ; 6                                      ; 0                           ;
-; 7                                      ; 0                           ;
-; 8                                      ; 1                           ;
+; 7                                      ; 1                           ;
 +----------------------------------------+-----------------------------+
 
 
@@ -376,13 +380,12 @@ Note: User assignments will override these defaults. The user specified values a
 ; LAB ; Logic Cell ; Input                                                                                                                                                                                            ; Output                                                                                                                                                                                     ;
 +-----+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ;  A  ; LC3        ; CLOCK, CLEAR, cont_mod10:contador_segundos|JK_FF:FFS0|TMP, cont_mod10:contador_segundos|JK_FF:FFS3|TMP, cont_mod10:contador_segundos|JK_FF:FFS1|TMP                                              ; cont_mod10:contador_segundos|JK_FF:FFS1|TMP, SEG[1], cont_mod10:contador_segundos|JK_FF:FFS2|TMP, cont_mod10:contador_segundos|JK_FF:FFS3|TMP, cont_mod10:contador_segundos|JK_FF:FFS0|TMP ;
-;  A  ; LC5        ; CLOCK, CLEAR, cont_mod10:contador_segundos|JK_FF:FFS3|TMP, cont_mod10:contador_segundos|JK_FF:FFS1|TMP, cont_mod10:contador_segundos|JK_FF:FFS0|TMP, cont_mod10:contador_segundos|JK_FF:FFS2|TMP ; cont_mod10:contador_segundos|JK_FF:FFS2|TMP, SEG[2], cont_mod10:contador_segundos|JK_FF:FFS3|TMP, cont_mod10:contador_segundos|JK_FF:FFS0|TMP                                              ;
-;  A  ; LC6        ; CLOCK, CLEAR, cont_mod10:contador_segundos|JK_FF:FFS2|TMP, cont_mod10:contador_segundos|JK_FF:FFS0|TMP, cont_mod10:contador_segundos|JK_FF:FFS1|TMP, cont_mod10:contador_segundos|JK_FF:FFS3|TMP ; cont_mod10:contador_segundos|JK_FF:FFS1|TMP, cont_mod10:contador_segundos|JK_FF:FFS2|TMP, cont_mod10:contador_segundos|JK_FF:FFS3|TMP, SEG[3], cont_mod10:contador_segundos|JK_FF:FFS0|TMP ;
-;  A  ; LC8        ; CLOCK, CLEAR, cont_mod10:contador_segundos|JK_FF:FFS1|TMP, cont_mod10:contador_segundos|JK_FF:FFS3|TMP, cont_mod10:contador_segundos|JK_FF:FFS0|TMP, cont_mod10:contador_segundos|JK_FF:FFS2|TMP ; cont_mod10:contador_segundos|JK_FF:FFS1|TMP, cont_mod10:contador_segundos|JK_FF:FFS2|TMP, cont_mod10:contador_segundos|JK_FF:FFS3|TMP, cont_mod10:contador_segundos|JK_FF:FFS0|TMP, SEG[0] ;
-;  A  ; LC11       ;                                                                                                                                                                                                  ; MIN[0]                                                                                                                                                                                     ;
-;  A  ; LC13       ;                                                                                                                                                                                                  ; MIN[1]                                                                                                                                                                                     ;
-;  A  ; LC14       ;                                                                                                                                                                                                  ; MIN[2]                                                                                                                                                                                     ;
-;  A  ; LC16       ;                                                                                                                                                                                                  ; MIN[3]                                                                                                                                                                                     ;
+;  A  ; LC5        ; CLOCK, CLEAR, cont_mod6:contador_minutos|JK_FF:FFM0|TMP, cont_mod6:contador_minutos|JK_FF:FFM1|TMP, cont_mod6:contador_minutos|JK_FF:FFM2|TMP                                                    ; cont_mod6:contador_minutos|JK_FF:FFM2|TMP, MIN[2], cont_mod6:contador_minutos|JK_FF:FFM1|TMP, cont_mod6:contador_minutos|JK_FF:FFM0|TMP                                                    ;
+;  A  ; LC6        ; CLOCK, CLEAR, cont_mod6:contador_minutos|JK_FF:FFM2|TMP, cont_mod6:contador_minutos|JK_FF:FFM0|TMP, cont_mod6:contador_minutos|JK_FF:FFM1|TMP                                                    ; cont_mod6:contador_minutos|JK_FF:FFM2|TMP, cont_mod6:contador_minutos|JK_FF:FFM1|TMP, MIN[1], cont_mod6:contador_minutos|JK_FF:FFM0|TMP                                                    ;
+;  A  ; LC8        ; CLOCK, CLEAR, cont_mod10:contador_segundos|JK_FF:FFS3|TMP, cont_mod10:contador_segundos|JK_FF:FFS1|TMP, cont_mod10:contador_segundos|JK_FF:FFS0|TMP, cont_mod10:contador_segundos|JK_FF:FFS2|TMP ; cont_mod10:contador_segundos|JK_FF:FFS2|TMP, SEG[2], cont_mod10:contador_segundos|JK_FF:FFS3|TMP, cont_mod10:contador_segundos|JK_FF:FFS0|TMP                                              ;
+;  A  ; LC11       ; CLOCK, CLEAR, cont_mod6:contador_minutos|JK_FF:FFM1|TMP, cont_mod6:contador_minutos|JK_FF:FFM2|TMP, cont_mod6:contador_minutos|JK_FF:FFM0|TMP                                                    ; cont_mod6:contador_minutos|JK_FF:FFM2|TMP, cont_mod6:contador_minutos|JK_FF:FFM1|TMP, cont_mod6:contador_minutos|JK_FF:FFM0|TMP, MIN[0]                                                    ;
+;  A  ; LC13       ; CLOCK, CLEAR, cont_mod10:contador_segundos|JK_FF:FFS2|TMP, cont_mod10:contador_segundos|JK_FF:FFS0|TMP, cont_mod10:contador_segundos|JK_FF:FFS1|TMP, cont_mod10:contador_segundos|JK_FF:FFS3|TMP ; cont_mod10:contador_segundos|JK_FF:FFS1|TMP, cont_mod10:contador_segundos|JK_FF:FFS2|TMP, cont_mod10:contador_segundos|JK_FF:FFS3|TMP, SEG[3], cont_mod10:contador_segundos|JK_FF:FFS0|TMP ;
+;  A  ; LC14       ; CLOCK, CLEAR, cont_mod10:contador_segundos|JK_FF:FFS1|TMP, cont_mod10:contador_segundos|JK_FF:FFS3|TMP, cont_mod10:contador_segundos|JK_FF:FFS0|TMP, cont_mod10:contador_segundos|JK_FF:FFS2|TMP ; cont_mod10:contador_segundos|JK_FF:FFS1|TMP, cont_mod10:contador_segundos|JK_FF:FFS2|TMP, cont_mod10:contador_segundos|JK_FF:FFS3|TMP, cont_mod10:contador_segundos|JK_FF:FFS0|TMP, SEG[0] ;
 +-----+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -407,12 +410,12 @@ Note: User assignments will override these defaults. The user specified values a
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Sat Nov 12 09:21:43 2022
+    Info: Processing started: Sat Nov 12 09:31:11 2022
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off relogio_digital -c relogio_digital
 Info: Selected device EPM7128SLC84-7 for design "relogio_digital"
 Info: Quartus II Fitter was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 216 megabytes
-    Info: Processing ended: Sat Nov 12 09:21:43 2022
+    Info: Processing ended: Sat Nov 12 09:31:11 2022
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 

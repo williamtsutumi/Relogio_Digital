@@ -1,5 +1,5 @@
 Classic Timing Analyzer report for relogio_digital
-Sat Nov 12 09:21:45 2022
+Sat Nov 12 09:31:13 2022
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -36,15 +36,15 @@ applicable agreement for further details.
 
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Timing Analyzer Summary                                                                                                                                                                                                    ;
-+------------------------------+-------+---------------+----------------------------------+---------------------------------------------+---------------------------------------------+------------+----------+--------------+
-; Type                         ; Slack ; Required Time ; Actual Time                      ; From                                        ; To                                          ; From Clock ; To Clock ; Failed Paths ;
-+------------------------------+-------+---------------+----------------------------------+---------------------------------------------+---------------------------------------------+------------+----------+--------------+
-; Worst-case tco               ; N/A   ; None          ; 4.500 ns                         ; cont_mod10:contador_segundos|JK_FF:FFS1|TMP ; SEG[1]                                      ; CLOCK      ; --       ; 0            ;
-; Clock Setup: 'CLOCK'         ; N/A   ; None          ; 125.00 MHz ( period = 8.000 ns ) ; cont_mod10:contador_segundos|JK_FF:FFS2|TMP ; cont_mod10:contador_segundos|JK_FF:FFS2|TMP ; CLOCK      ; CLOCK    ; 0            ;
-; Total number of failed paths ;       ;               ;                                  ;                                             ;                                             ;            ;          ; 0            ;
-+------------------------------+-------+---------------+----------------------------------+---------------------------------------------+---------------------------------------------+------------+----------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                  ;
++------------------------------+-------+---------------+----------------------------------+---------------------------------------------+-------------------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                                        ; To                                        ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+---------------------------------------------+-------------------------------------------+------------+----------+--------------+
+; Worst-case tco               ; N/A   ; None          ; 4.500 ns                         ; cont_mod10:contador_segundos|JK_FF:FFS1|TMP ; SEG[1]                                    ; CLOCK      ; --       ; 0            ;
+; Clock Setup: 'CLOCK'         ; N/A   ; None          ; 125.00 MHz ( period = 8.000 ns ) ; cont_mod6:contador_minutos|JK_FF:FFM1|TMP   ; cont_mod6:contador_minutos|JK_FF:FFM1|TMP ; CLOCK      ; CLOCK    ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                                             ;                                           ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+---------------------------------------------+-------------------------------------------+------------+----------+--------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -121,6 +121,15 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; cont_mod10:contador_segundos|JK_FF:FFS0|TMP ; cont_mod10:contador_segundos|JK_FF:FFS2|TMP ; CLOCK      ; CLOCK    ; None                        ; None                      ; 4.000 ns                ;
 ; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; cont_mod10:contador_segundos|JK_FF:FFS3|TMP ; cont_mod10:contador_segundos|JK_FF:FFS2|TMP ; CLOCK      ; CLOCK    ; None                        ; None                      ; 4.000 ns                ;
 ; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; cont_mod10:contador_segundos|JK_FF:FFS2|TMP ; cont_mod10:contador_segundos|JK_FF:FFS2|TMP ; CLOCK      ; CLOCK    ; None                        ; None                      ; 4.000 ns                ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; cont_mod6:contador_minutos|JK_FF:FFM2|TMP   ; cont_mod6:contador_minutos|JK_FF:FFM2|TMP   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 4.000 ns                ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; cont_mod6:contador_minutos|JK_FF:FFM0|TMP   ; cont_mod6:contador_minutos|JK_FF:FFM2|TMP   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 4.000 ns                ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; cont_mod6:contador_minutos|JK_FF:FFM1|TMP   ; cont_mod6:contador_minutos|JK_FF:FFM2|TMP   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 4.000 ns                ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; cont_mod6:contador_minutos|JK_FF:FFM2|TMP   ; cont_mod6:contador_minutos|JK_FF:FFM0|TMP   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 4.000 ns                ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; cont_mod6:contador_minutos|JK_FF:FFM0|TMP   ; cont_mod6:contador_minutos|JK_FF:FFM0|TMP   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 4.000 ns                ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; cont_mod6:contador_minutos|JK_FF:FFM1|TMP   ; cont_mod6:contador_minutos|JK_FF:FFM0|TMP   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 4.000 ns                ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; cont_mod6:contador_minutos|JK_FF:FFM2|TMP   ; cont_mod6:contador_minutos|JK_FF:FFM1|TMP   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 4.000 ns                ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; cont_mod6:contador_minutos|JK_FF:FFM0|TMP   ; cont_mod6:contador_minutos|JK_FF:FFM1|TMP   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 4.000 ns                ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; cont_mod6:contador_minutos|JK_FF:FFM1|TMP   ; cont_mod6:contador_minutos|JK_FF:FFM1|TMP   ; CLOCK      ; CLOCK    ; None                        ; None                      ; 4.000 ns                ;
 +-------+----------------------------------+---------------------------------------------+---------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
 
 
@@ -131,7 +140,10 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------+--------------+------------+---------------------------------------------+--------+------------+
 ; N/A   ; None         ; 4.500 ns   ; cont_mod10:contador_segundos|JK_FF:FFS0|TMP ; SEG[0] ; CLOCK      ;
 ; N/A   ; None         ; 4.500 ns   ; cont_mod10:contador_segundos|JK_FF:FFS3|TMP ; SEG[3] ; CLOCK      ;
+; N/A   ; None         ; 4.500 ns   ; cont_mod6:contador_minutos|JK_FF:FFM0|TMP   ; MIN[0] ; CLOCK      ;
 ; N/A   ; None         ; 4.500 ns   ; cont_mod10:contador_segundos|JK_FF:FFS2|TMP ; SEG[2] ; CLOCK      ;
+; N/A   ; None         ; 4.500 ns   ; cont_mod6:contador_minutos|JK_FF:FFM1|TMP   ; MIN[1] ; CLOCK      ;
+; N/A   ; None         ; 4.500 ns   ; cont_mod6:contador_minutos|JK_FF:FFM2|TMP   ; MIN[2] ; CLOCK      ;
 ; N/A   ; None         ; 4.500 ns   ; cont_mod10:contador_segundos|JK_FF:FFS1|TMP ; SEG[1] ; CLOCK      ;
 +-------+--------------+------------+---------------------------------------------+--------+------------+
 
@@ -142,7 +154,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Sat Nov 12 09:21:45 2022
+    Info: Processing started: Sat Nov 12 09:31:13 2022
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off relogio_digital -c relogio_digital
 Info: Started post-fitting delay annotation
 Info: Delay annotation completed successfully
@@ -157,29 +169,29 @@ Info: Clock "CLOCK" has Internal fmax of 125.0 MHz between source register "cont
         Info: Total interconnect delay = 1.000 ns ( 25.00 % )
     Info: - Smallest clock skew is 0.000 ns
         Info: + Shortest clock path from clock "CLOCK" to destination register is 1.500 ns
-            Info: 1: + IC(0.000 ns) + CELL(1.500 ns) = 1.500 ns; Loc. = PIN_83; Fanout = 4; CLK Node = 'CLOCK'
+            Info: 1: + IC(0.000 ns) + CELL(1.500 ns) = 1.500 ns; Loc. = PIN_83; Fanout = 7; CLK Node = 'CLOCK'
             Info: 2: + IC(0.000 ns) + CELL(0.000 ns) = 1.500 ns; Loc. = LC3; Fanout = 7; REG Node = 'cont_mod10:contador_segundos|JK_FF:FFS1|TMP'
             Info: Total cell delay = 1.500 ns ( 100.00 % )
         Info: - Longest clock path from clock "CLOCK" to source register is 1.500 ns
-            Info: 1: + IC(0.000 ns) + CELL(1.500 ns) = 1.500 ns; Loc. = PIN_83; Fanout = 4; CLK Node = 'CLOCK'
+            Info: 1: + IC(0.000 ns) + CELL(1.500 ns) = 1.500 ns; Loc. = PIN_83; Fanout = 7; CLK Node = 'CLOCK'
             Info: 2: + IC(0.000 ns) + CELL(0.000 ns) = 1.500 ns; Loc. = LC3; Fanout = 7; REG Node = 'cont_mod10:contador_segundos|JK_FF:FFS1|TMP'
             Info: Total cell delay = 1.500 ns ( 100.00 % )
     Info: + Micro clock to output delay of source is 1.000 ns
     Info: + Micro setup delay of destination is 3.000 ns
 Info: tco from clock "CLOCK" to destination pin "SEG[0]" through register "cont_mod10:contador_segundos|JK_FF:FFS0|TMP" is 4.500 ns
     Info: + Longest clock path from clock "CLOCK" to source register is 1.500 ns
-        Info: 1: + IC(0.000 ns) + CELL(1.500 ns) = 1.500 ns; Loc. = PIN_83; Fanout = 4; CLK Node = 'CLOCK'
-        Info: 2: + IC(0.000 ns) + CELL(0.000 ns) = 1.500 ns; Loc. = LC8; Fanout = 9; REG Node = 'cont_mod10:contador_segundos|JK_FF:FFS0|TMP'
+        Info: 1: + IC(0.000 ns) + CELL(1.500 ns) = 1.500 ns; Loc. = PIN_83; Fanout = 7; CLK Node = 'CLOCK'
+        Info: 2: + IC(0.000 ns) + CELL(0.000 ns) = 1.500 ns; Loc. = LC14; Fanout = 9; REG Node = 'cont_mod10:contador_segundos|JK_FF:FFS0|TMP'
         Info: Total cell delay = 1.500 ns ( 100.00 % )
     Info: + Micro clock to output delay of source is 1.000 ns
     Info: + Longest register to pin delay is 2.000 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC8; Fanout = 9; REG Node = 'cont_mod10:contador_segundos|JK_FF:FFS0|TMP'
-        Info: 2: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_9; Fanout = 0; PIN Node = 'SEG[0]'
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC14; Fanout = 9; REG Node = 'cont_mod10:contador_segundos|JK_FF:FFS0|TMP'
+        Info: 2: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_5; Fanout = 0; PIN Node = 'SEG[0]'
         Info: Total cell delay = 2.000 ns ( 100.00 % )
 Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
     Info: Peak virtual memory: 184 megabytes
-    Info: Processing ended: Sat Nov 12 09:21:45 2022
+    Info: Processing ended: Sat Nov 12 09:31:13 2022
     Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
 
 

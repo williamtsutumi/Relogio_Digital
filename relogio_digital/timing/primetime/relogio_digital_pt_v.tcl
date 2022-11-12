@@ -16,7 +16,7 @@
 ## PROGRAM "Quartus II"
 ## VERSION "Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition"
 
-## DATE "11/12/2022 09:21:46"
+## DATE "11/12/2022 09:31:14"
 
 ## 
 ## Device: Altera EPM7128SLC84-7 Package PLCC84
@@ -82,7 +82,6 @@ set_propagated_clock [all_clocks]
 set_load -pin_load 10 [get_ports { MIN[0] } ]
 set_load -pin_load 10 [get_ports { MIN[1] } ]
 set_load -pin_load 10 [get_ports { MIN[2] } ]
-set_load -pin_load 10 [get_ports { MIN[3] } ]
 set_load -pin_load 10 [get_ports { SEG[0] } ]
 set_load -pin_load 10 [get_ports { SEG[1] } ]
 set_load -pin_load 10 [get_ports { SEG[2] } ]
