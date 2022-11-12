@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II"
 -- VERSION "Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition"
 
--- DATE "11/11/2022 22:24:28"
+-- DATE "11/12/2022 09:21:46"
 
 -- 
 -- Device: Altera EPM7128SLC84-7 Package PLCC84
@@ -60,94 +60,50 @@ SIGNAL ww_CLEAR : std_logic;
 SIGNAL ww_CLOCK : std_logic;
 SIGNAL ww_MIN : std_logic_vector(3 DOWNTO 0);
 SIGNAL ww_SEG : std_logic_vector(3 DOWNTO 0);
-SIGNAL \FFS1|TMP_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS1|TMP_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS1|TMP_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS1|TMP_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS1|TMP_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS1|TMP_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS1|TMP_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS1|TMP_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS1|TMP_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS1|TMP_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS1|TMP_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[1]~reg0_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[1]~reg0_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[1]~reg0_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[1]~reg0_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[1]~reg0_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[1]~reg0_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[1]~reg0_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[1]~reg0_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[1]~reg0_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[1]~reg0_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[1]~reg0_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS2|TMP_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS2|TMP_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS2|TMP_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS2|TMP_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS2|TMP_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS2|TMP_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS2|TMP_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS2|TMP_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS2|TMP_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS2|TMP_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS2|TMP_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[2]~reg0_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[2]~reg0_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[2]~reg0_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[2]~reg0_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[2]~reg0_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[2]~reg0_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[2]~reg0_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[2]~reg0_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[2]~reg0_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[2]~reg0_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[2]~reg0_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS3|TMP_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS3|TMP_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS3|TMP_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS3|TMP_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS3|TMP_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS3|TMP_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS3|TMP_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS3|TMP_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS3|TMP_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS3|TMP_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS3|TMP_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[3]~reg0_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[3]~reg0_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[3]~reg0_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[3]~reg0_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[3]~reg0_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[3]~reg0_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[3]~reg0_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[3]~reg0_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[3]~reg0_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[3]~reg0_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[3]~reg0_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS0|TMP_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS0|TMP_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS0|TMP_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS0|TMP_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS0|TMP_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS0|TMP_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS0|TMP_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS0|TMP_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS0|TMP_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS0|TMP_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \FFS0|TMP_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[0]~reg0_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[0]~reg0_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[0]~reg0_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[0]~reg0_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[0]~reg0_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[0]~reg0_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[0]~reg0_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[0]~reg0_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[0]~reg0_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[0]~reg0_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \SEG[0]~reg0_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS1|TMP_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS1|TMP_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS1|TMP_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS1|TMP_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS1|TMP_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS1|TMP_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS1|TMP_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS1|TMP_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS1|TMP_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS1|TMP_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS1|TMP_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS2|TMP_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS2|TMP_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS2|TMP_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS2|TMP_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS2|TMP_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS2|TMP_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS2|TMP_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS2|TMP_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS2|TMP_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS2|TMP_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS2|TMP_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS3|TMP_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS3|TMP_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS3|TMP_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS3|TMP_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS3|TMP_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS3|TMP_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS3|TMP_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS3|TMP_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS3|TMP_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS3|TMP_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS3|TMP_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS0|TMP_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS0|TMP_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS0|TMP_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS0|TMP_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS0|TMP_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS0|TMP_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS0|TMP_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS0|TMP_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS0|TMP_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS0|TMP_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS0|TMP_papre_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \~GND~0_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \~GND~0_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \~GND~0_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
@@ -198,18 +154,14 @@ SIGNAL \~GND~2~dataout\ : std_logic;
 SIGNAL \~GND~3~dataout\ : std_logic;
 SIGNAL \CLOCK~dataout\ : std_logic;
 SIGNAL \CLEAR~dataout\ : std_logic;
-SIGNAL \FFS2|TMP~dataout\ : std_logic;
-SIGNAL \FFS3|TMP~dataout\ : std_logic;
-SIGNAL \FFS0|TMP~dataout\ : std_logic;
-SIGNAL \FFS1|TMP~dataout\ : std_logic;
-SIGNAL \SEG[1]~reg0_dataout\ : std_logic;
-SIGNAL \SEG[2]~reg0_dataout\ : std_logic;
-SIGNAL \SEG[3]~reg0_dataout\ : std_logic;
-SIGNAL \SEG[0]~reg0_dataout\ : std_logic;
-SIGNAL \FFS1|ALT_INV_TMP~dataout\ : std_logic;
-SIGNAL \FFS2|ALT_INV_TMP~dataout\ : std_logic;
-SIGNAL \FFS3|ALT_INV_TMP~dataout\ : std_logic;
-SIGNAL \FFS0|ALT_INV_TMP~dataout\ : std_logic;
+SIGNAL \contador_segundos|FFS2|TMP~dataout\ : std_logic;
+SIGNAL \contador_segundos|FFS3|TMP~dataout\ : std_logic;
+SIGNAL \contador_segundos|FFS0|TMP~dataout\ : std_logic;
+SIGNAL \contador_segundos|FFS1|TMP~dataout\ : std_logic;
+SIGNAL \contador_segundos|FFS1|ALT_INV_TMP~dataout\ : std_logic;
+SIGNAL \contador_segundos|FFS2|ALT_INV_TMP~dataout\ : std_logic;
+SIGNAL \contador_segundos|FFS3|ALT_INV_TMP~dataout\ : std_logic;
+SIGNAL \contador_segundos|FFS0|ALT_INV_TMP~dataout\ : std_logic;
 SIGNAL \ALT_INV_CLEAR~dataout\ : std_logic;
 SIGNAL \ALT_INV_CLOCK~dataout\ : std_logic;
 
@@ -220,269 +172,137 @@ ww_CLOCK <= CLOCK;
 MIN <= IEEE.STD_LOGIC_1164.TO_BITVECTOR(ww_MIN);
 SEG <= IEEE.STD_LOGIC_1164.TO_BITVECTOR(ww_SEG);
 
-\FFS1|TMP_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
-gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+\contador_segundos|FFS1|TMP_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\FFS1|TMP_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \FFS1|TMP~dataout\ & NOT \FFS3|TMP~dataout\ & \FFS0|TMP~dataout\);
+\contador_segundos|FFS1|TMP_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \contador_segundos|FFS1|TMP~dataout\ & NOT \contador_segundos|FFS3|TMP~dataout\ & \contador_segundos|FFS0|TMP~dataout\);
 
-\FFS1|TMP_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \FFS1|TMP~dataout\ & NOT \FFS3|TMP~dataout\ & NOT \FFS0|TMP~dataout\);
+\contador_segundos|FFS1|TMP_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \contador_segundos|FFS1|TMP~dataout\ & NOT \contador_segundos|FFS3|TMP~dataout\ & NOT \contador_segundos|FFS0|TMP~dataout\);
 
-\FFS1|TMP_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
-gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+\contador_segundos|FFS1|TMP_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\FFS1|TMP_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
-gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+\contador_segundos|FFS1|TMP_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\FFS1|TMP_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
-gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+\contador_segundos|FFS1|TMP_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\FFS1|TMP_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+\contador_segundos|FFS1|TMP_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\FFS1|TMP_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+\contador_segundos|FFS1|TMP_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\FFS1|TMP_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
+\contador_segundos|FFS1|TMP_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
 
-\FFS1|TMP_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
-gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+\contador_segundos|FFS1|TMP_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\FFS1|TMP_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
-gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+\contador_segundos|FFS1|TMP_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\SEG[1]~reg0_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+\contador_segundos|FFS2|TMP_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\SEG[1]~reg0_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \FFS1|TMP~dataout\);
+\contador_segundos|FFS2|TMP_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \contador_segundos|FFS0|TMP~dataout\ & \contador_segundos|FFS1|TMP~dataout\ & NOT \contador_segundos|FFS3|TMP~dataout\);
 
-\SEG[1]~reg0_pterm2_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+\contador_segundos|FFS2|TMP_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \contador_segundos|FFS2|TMP~dataout\ & \contador_segundos|FFS3|TMP~dataout\);
 
-\SEG[1]~reg0_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+\contador_segundos|FFS2|TMP_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\SEG[1]~reg0_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+\contador_segundos|FFS2|TMP_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\SEG[1]~reg0_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+\contador_segundos|FFS2|TMP_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\SEG[1]~reg0_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
-gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+\contador_segundos|FFS2|TMP_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\SEG[1]~reg0_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
-gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+\contador_segundos|FFS2|TMP_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\SEG[1]~reg0_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
+\contador_segundos|FFS2|TMP_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
 
-\SEG[1]~reg0_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+\contador_segundos|FFS2|TMP_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\SEG[1]~reg0_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+\contador_segundos|FFS2|TMP_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\FFS2|TMP_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
-gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+\contador_segundos|FFS3|TMP_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\FFS2|TMP_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \FFS0|TMP~dataout\ & \FFS1|TMP~dataout\ & NOT \FFS3|TMP~dataout\);
+\contador_segundos|FFS3|TMP_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \contador_segundos|FFS3|TMP~dataout\ & \contador_segundos|FFS1|TMP~dataout\ & \contador_segundos|FFS0|TMP~dataout\ & \contador_segundos|FFS2|TMP~dataout\);
 
-\FFS2|TMP_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \FFS2|TMP~dataout\ & \FFS3|TMP~dataout\);
+\contador_segundos|FFS3|TMP_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \contador_segundos|FFS3|TMP~dataout\ & NOT \contador_segundos|FFS1|TMP~dataout\ & NOT \contador_segundos|FFS0|TMP~dataout\ & NOT \contador_segundos|FFS2|TMP~dataout\);
 
-\FFS2|TMP_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
-gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+\contador_segundos|FFS3|TMP_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\FFS2|TMP_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
-gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+\contador_segundos|FFS3|TMP_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\FFS2|TMP_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
-gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+\contador_segundos|FFS3|TMP_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\FFS2|TMP_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+\contador_segundos|FFS3|TMP_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\FFS2|TMP_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+\contador_segundos|FFS3|TMP_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\FFS2|TMP_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
+\contador_segundos|FFS3|TMP_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
 
-\FFS2|TMP_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
-gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+\contador_segundos|FFS3|TMP_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\FFS2|TMP_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
-gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+\contador_segundos|FFS3|TMP_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\SEG[2]~reg0_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+\contador_segundos|FFS0|TMP_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\SEG[2]~reg0_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \FFS2|TMP~dataout\);
+\contador_segundos|FFS0|TMP_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \contador_segundos|FFS0|TMP~dataout\ & \contador_segundos|FFS3|TMP~dataout\ & \contador_segundos|FFS1|TMP~dataout\);
 
-\SEG[2]~reg0_pterm2_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+\contador_segundos|FFS0|TMP_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \contador_segundos|FFS2|TMP~dataout\ & NOT \contador_segundos|FFS0|TMP~dataout\ & \contador_segundos|FFS3|TMP~dataout\);
 
-\SEG[2]~reg0_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+\contador_segundos|FFS0|TMP_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\SEG[2]~reg0_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+\contador_segundos|FFS0|TMP_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\SEG[2]~reg0_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+\contador_segundos|FFS0|TMP_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\SEG[2]~reg0_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
-gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+\contador_segundos|FFS0|TMP_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\SEG[2]~reg0_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
-gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+\contador_segundos|FFS0|TMP_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\SEG[2]~reg0_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
+\contador_segundos|FFS0|TMP_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
 
-\SEG[2]~reg0_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+\contador_segundos|FFS0|TMP_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\SEG[2]~reg0_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\FFS3|TMP_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
-gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\FFS3|TMP_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \FFS3|TMP~dataout\ & \FFS1|TMP~dataout\ & \FFS0|TMP~dataout\ & \FFS2|TMP~dataout\);
-
-\FFS3|TMP_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \FFS3|TMP~dataout\ & NOT \FFS1|TMP~dataout\ & NOT \FFS0|TMP~dataout\ & NOT \FFS2|TMP~dataout\);
-
-\FFS3|TMP_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
-gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\FFS3|TMP_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
-gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\FFS3|TMP_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
-gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\FFS3|TMP_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\FFS3|TMP_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\FFS3|TMP_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
-
-\FFS3|TMP_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
-gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\FFS3|TMP_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
-gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\SEG[3]~reg0_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\SEG[3]~reg0_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \FFS3|TMP~dataout\);
-
-\SEG[3]~reg0_pterm2_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\SEG[3]~reg0_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\SEG[3]~reg0_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\SEG[3]~reg0_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\SEG[3]~reg0_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
-gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\SEG[3]~reg0_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
-gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\SEG[3]~reg0_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
-
-\SEG[3]~reg0_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\SEG[3]~reg0_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\FFS0|TMP_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
-gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\FFS0|TMP_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \FFS0|TMP~dataout\ & \FFS3|TMP~dataout\ & \FFS1|TMP~dataout\);
-
-\FFS0|TMP_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \FFS2|TMP~dataout\ & NOT \FFS0|TMP~dataout\ & \FFS3|TMP~dataout\);
-
-\FFS0|TMP_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
-gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\FFS0|TMP_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
-gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\FFS0|TMP_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
-gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\FFS0|TMP_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\FFS0|TMP_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\FFS0|TMP_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
-
-\FFS0|TMP_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
-gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\FFS0|TMP_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
-gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\SEG[0]~reg0_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\SEG[0]~reg0_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
-& vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \FFS0|TMP~dataout\);
-
-\SEG[0]~reg0_pterm2_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\SEG[0]~reg0_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\SEG[0]~reg0_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\SEG[0]~reg0_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\SEG[0]~reg0_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
-gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\SEG[0]~reg0_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
-gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\SEG[0]~reg0_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
-
-\SEG[0]~reg0_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-
-\SEG[0]~reg0_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
-& gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
+\contador_segundos|FFS0|TMP_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
 \~GND~0_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
@@ -615,10 +435,10 @@ vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vc
 
 \~GND~3_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-\FFS1|ALT_INV_TMP~dataout\ <= NOT \FFS1|TMP~dataout\;
-\FFS2|ALT_INV_TMP~dataout\ <= NOT \FFS2|TMP~dataout\;
-\FFS3|ALT_INV_TMP~dataout\ <= NOT \FFS3|TMP~dataout\;
-\FFS0|ALT_INV_TMP~dataout\ <= NOT \FFS0|TMP~dataout\;
+\contador_segundos|FFS1|ALT_INV_TMP~dataout\ <= NOT \contador_segundos|FFS1|TMP~dataout\;
+\contador_segundos|FFS2|ALT_INV_TMP~dataout\ <= NOT \contador_segundos|FFS2|TMP~dataout\;
+\contador_segundos|FFS3|ALT_INV_TMP~dataout\ <= NOT \contador_segundos|FFS3|TMP~dataout\;
+\contador_segundos|FFS0|ALT_INV_TMP~dataout\ <= NOT \contador_segundos|FFS0|TMP~dataout\;
 \ALT_INV_CLEAR~dataout\ <= NOT \CLEAR~dataout\;
 \ALT_INV_CLOCK~dataout\ <= NOT \CLOCK~dataout\;
 
@@ -738,8 +558,8 @@ PORT MAP (
 	padio => ww_CLEAR,
 	dataout => \CLEAR~dataout\);
 
--- Location: LC2
-\FFS2|TMP\ : max_mcell
+-- Location: LC5
+\contador_segundos|FFS2|TMP\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
 	operation_mode => "normal",
@@ -751,21 +571,21 @@ GENERIC MAP (
 PORT MAP (
 	clk => \ALT_INV_CLOCK~dataout\,
 	aclr => \ALT_INV_CLEAR~dataout\,
-	pterm0 => \FFS2|TMP_pterm0_bus\,
-	pterm1 => \FFS2|TMP_pterm1_bus\,
-	pterm2 => \FFS2|TMP_pterm2_bus\,
-	pterm3 => \FFS2|TMP_pterm3_bus\,
-	pterm4 => \FFS2|TMP_pterm4_bus\,
-	pterm5 => \FFS2|TMP_pterm5_bus\,
-	pxor => \FFS2|TMP_pxor_bus\,
-	pclk => \FFS2|TMP_pclk_bus\,
-	papre => \FFS2|TMP_papre_bus\,
-	paclr => \FFS2|TMP_paclr_bus\,
-	pena => \FFS2|TMP_pena_bus\,
-	dataout => \FFS2|TMP~dataout\);
+	pterm0 => \contador_segundos|FFS2|TMP_pterm0_bus\,
+	pterm1 => \contador_segundos|FFS2|TMP_pterm1_bus\,
+	pterm2 => \contador_segundos|FFS2|TMP_pterm2_bus\,
+	pterm3 => \contador_segundos|FFS2|TMP_pterm3_bus\,
+	pterm4 => \contador_segundos|FFS2|TMP_pterm4_bus\,
+	pterm5 => \contador_segundos|FFS2|TMP_pterm5_bus\,
+	pxor => \contador_segundos|FFS2|TMP_pxor_bus\,
+	pclk => \contador_segundos|FFS2|TMP_pclk_bus\,
+	papre => \contador_segundos|FFS2|TMP_papre_bus\,
+	paclr => \contador_segundos|FFS2|TMP_paclr_bus\,
+	pena => \contador_segundos|FFS2|TMP_pena_bus\,
+	dataout => \contador_segundos|FFS2|TMP~dataout\);
 
--- Location: LC4
-\FFS3|TMP\ : max_mcell
+-- Location: LC6
+\contador_segundos|FFS3|TMP\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
 	operation_mode => "normal",
@@ -777,21 +597,21 @@ GENERIC MAP (
 PORT MAP (
 	clk => \ALT_INV_CLOCK~dataout\,
 	aclr => \ALT_INV_CLEAR~dataout\,
-	pterm0 => \FFS3|TMP_pterm0_bus\,
-	pterm1 => \FFS3|TMP_pterm1_bus\,
-	pterm2 => \FFS3|TMP_pterm2_bus\,
-	pterm3 => \FFS3|TMP_pterm3_bus\,
-	pterm4 => \FFS3|TMP_pterm4_bus\,
-	pterm5 => \FFS3|TMP_pterm5_bus\,
-	pxor => \FFS3|TMP_pxor_bus\,
-	pclk => \FFS3|TMP_pclk_bus\,
-	papre => \FFS3|TMP_papre_bus\,
-	paclr => \FFS3|TMP_paclr_bus\,
-	pena => \FFS3|TMP_pena_bus\,
-	dataout => \FFS3|TMP~dataout\);
+	pterm0 => \contador_segundos|FFS3|TMP_pterm0_bus\,
+	pterm1 => \contador_segundos|FFS3|TMP_pterm1_bus\,
+	pterm2 => \contador_segundos|FFS3|TMP_pterm2_bus\,
+	pterm3 => \contador_segundos|FFS3|TMP_pterm3_bus\,
+	pterm4 => \contador_segundos|FFS3|TMP_pterm4_bus\,
+	pterm5 => \contador_segundos|FFS3|TMP_pterm5_bus\,
+	pxor => \contador_segundos|FFS3|TMP_pxor_bus\,
+	pclk => \contador_segundos|FFS3|TMP_pclk_bus\,
+	papre => \contador_segundos|FFS3|TMP_papre_bus\,
+	paclr => \contador_segundos|FFS3|TMP_paclr_bus\,
+	pena => \contador_segundos|FFS3|TMP_pena_bus\,
+	dataout => \contador_segundos|FFS3|TMP~dataout\);
 
--- Location: LC7
-\FFS0|TMP\ : max_mcell
+-- Location: LC8
+\contador_segundos|FFS0|TMP\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
 	operation_mode => "invert",
@@ -803,21 +623,21 @@ GENERIC MAP (
 PORT MAP (
 	clk => \ALT_INV_CLOCK~dataout\,
 	aclr => \ALT_INV_CLEAR~dataout\,
-	pterm0 => \FFS0|TMP_pterm0_bus\,
-	pterm1 => \FFS0|TMP_pterm1_bus\,
-	pterm2 => \FFS0|TMP_pterm2_bus\,
-	pterm3 => \FFS0|TMP_pterm3_bus\,
-	pterm4 => \FFS0|TMP_pterm4_bus\,
-	pterm5 => \FFS0|TMP_pterm5_bus\,
-	pxor => \FFS0|TMP_pxor_bus\,
-	pclk => \FFS0|TMP_pclk_bus\,
-	papre => \FFS0|TMP_papre_bus\,
-	paclr => \FFS0|TMP_paclr_bus\,
-	pena => \FFS0|TMP_pena_bus\,
-	dataout => \FFS0|TMP~dataout\);
+	pterm0 => \contador_segundos|FFS0|TMP_pterm0_bus\,
+	pterm1 => \contador_segundos|FFS0|TMP_pterm1_bus\,
+	pterm2 => \contador_segundos|FFS0|TMP_pterm2_bus\,
+	pterm3 => \contador_segundos|FFS0|TMP_pterm3_bus\,
+	pterm4 => \contador_segundos|FFS0|TMP_pterm4_bus\,
+	pterm5 => \contador_segundos|FFS0|TMP_pterm5_bus\,
+	pxor => \contador_segundos|FFS0|TMP_pxor_bus\,
+	pclk => \contador_segundos|FFS0|TMP_pclk_bus\,
+	papre => \contador_segundos|FFS0|TMP_papre_bus\,
+	paclr => \contador_segundos|FFS0|TMP_paclr_bus\,
+	pena => \contador_segundos|FFS0|TMP_pena_bus\,
+	dataout => \contador_segundos|FFS0|TMP~dataout\);
 
--- Location: LC1
-\FFS1|TMP\ : max_mcell
+-- Location: LC3
+\contador_segundos|FFS1|TMP\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
 	operation_mode => "normal",
@@ -829,118 +649,18 @@ GENERIC MAP (
 PORT MAP (
 	clk => \ALT_INV_CLOCK~dataout\,
 	aclr => \ALT_INV_CLEAR~dataout\,
-	pterm0 => \FFS1|TMP_pterm0_bus\,
-	pterm1 => \FFS1|TMP_pterm1_bus\,
-	pterm2 => \FFS1|TMP_pterm2_bus\,
-	pterm3 => \FFS1|TMP_pterm3_bus\,
-	pterm4 => \FFS1|TMP_pterm4_bus\,
-	pterm5 => \FFS1|TMP_pterm5_bus\,
-	pxor => \FFS1|TMP_pxor_bus\,
-	pclk => \FFS1|TMP_pclk_bus\,
-	papre => \FFS1|TMP_papre_bus\,
-	paclr => \FFS1|TMP_paclr_bus\,
-	pena => \FFS1|TMP_pena_bus\,
-	dataout => \FFS1|TMP~dataout\);
-
--- Location: LC3
-\SEG[1]~reg0\ : max_mcell
--- pragma translate_off
-GENERIC MAP (
-	operation_mode => "normal",
-	output_mode => "reg",
-	pexp_mode => "off",
-	power_up => "low",
-	register_mode => "dff")
--- pragma translate_on
-PORT MAP (
-	clk => \ALT_INV_CLOCK~dataout\,
-	pterm0 => \SEG[1]~reg0_pterm0_bus\,
-	pterm1 => \SEG[1]~reg0_pterm1_bus\,
-	pterm2 => \SEG[1]~reg0_pterm2_bus\,
-	pterm3 => \SEG[1]~reg0_pterm3_bus\,
-	pterm4 => \SEG[1]~reg0_pterm4_bus\,
-	pterm5 => \SEG[1]~reg0_pterm5_bus\,
-	pxor => \SEG[1]~reg0_pxor_bus\,
-	pclk => \SEG[1]~reg0_pclk_bus\,
-	papre => \SEG[1]~reg0_papre_bus\,
-	paclr => \SEG[1]~reg0_paclr_bus\,
-	pena => \SEG[1]~reg0_pena_bus\,
-	dataout => \SEG[1]~reg0_dataout\);
-
--- Location: LC5
-\SEG[2]~reg0\ : max_mcell
--- pragma translate_off
-GENERIC MAP (
-	operation_mode => "normal",
-	output_mode => "reg",
-	pexp_mode => "off",
-	power_up => "low",
-	register_mode => "dff")
--- pragma translate_on
-PORT MAP (
-	clk => \ALT_INV_CLOCK~dataout\,
-	pterm0 => \SEG[2]~reg0_pterm0_bus\,
-	pterm1 => \SEG[2]~reg0_pterm1_bus\,
-	pterm2 => \SEG[2]~reg0_pterm2_bus\,
-	pterm3 => \SEG[2]~reg0_pterm3_bus\,
-	pterm4 => \SEG[2]~reg0_pterm4_bus\,
-	pterm5 => \SEG[2]~reg0_pterm5_bus\,
-	pxor => \SEG[2]~reg0_pxor_bus\,
-	pclk => \SEG[2]~reg0_pclk_bus\,
-	papre => \SEG[2]~reg0_papre_bus\,
-	paclr => \SEG[2]~reg0_paclr_bus\,
-	pena => \SEG[2]~reg0_pena_bus\,
-	dataout => \SEG[2]~reg0_dataout\);
-
--- Location: LC6
-\SEG[3]~reg0\ : max_mcell
--- pragma translate_off
-GENERIC MAP (
-	operation_mode => "normal",
-	output_mode => "reg",
-	pexp_mode => "off",
-	power_up => "low",
-	register_mode => "dff")
--- pragma translate_on
-PORT MAP (
-	clk => \ALT_INV_CLOCK~dataout\,
-	pterm0 => \SEG[3]~reg0_pterm0_bus\,
-	pterm1 => \SEG[3]~reg0_pterm1_bus\,
-	pterm2 => \SEG[3]~reg0_pterm2_bus\,
-	pterm3 => \SEG[3]~reg0_pterm3_bus\,
-	pterm4 => \SEG[3]~reg0_pterm4_bus\,
-	pterm5 => \SEG[3]~reg0_pterm5_bus\,
-	pxor => \SEG[3]~reg0_pxor_bus\,
-	pclk => \SEG[3]~reg0_pclk_bus\,
-	papre => \SEG[3]~reg0_papre_bus\,
-	paclr => \SEG[3]~reg0_paclr_bus\,
-	pena => \SEG[3]~reg0_pena_bus\,
-	dataout => \SEG[3]~reg0_dataout\);
-
--- Location: LC8
-\SEG[0]~reg0\ : max_mcell
--- pragma translate_off
-GENERIC MAP (
-	operation_mode => "normal",
-	output_mode => "reg",
-	pexp_mode => "off",
-	power_up => "low",
-	register_mode => "dff")
--- pragma translate_on
-PORT MAP (
-	clk => \ALT_INV_CLOCK~dataout\,
-	pterm0 => \SEG[0]~reg0_pterm0_bus\,
-	pterm1 => \SEG[0]~reg0_pterm1_bus\,
-	pterm2 => \SEG[0]~reg0_pterm2_bus\,
-	pterm3 => \SEG[0]~reg0_pterm3_bus\,
-	pterm4 => \SEG[0]~reg0_pterm4_bus\,
-	pterm5 => \SEG[0]~reg0_pterm5_bus\,
-	pxor => \SEG[0]~reg0_pxor_bus\,
-	pclk => \SEG[0]~reg0_pclk_bus\,
-	papre => \SEG[0]~reg0_papre_bus\,
-	paclr => \SEG[0]~reg0_paclr_bus\,
-	pena => \SEG[0]~reg0_pena_bus\,
-	dataout => \SEG[0]~reg0_dataout\);
+	pterm0 => \contador_segundos|FFS1|TMP_pterm0_bus\,
+	pterm1 => \contador_segundos|FFS1|TMP_pterm1_bus\,
+	pterm2 => \contador_segundos|FFS1|TMP_pterm2_bus\,
+	pterm3 => \contador_segundos|FFS1|TMP_pterm3_bus\,
+	pterm4 => \contador_segundos|FFS1|TMP_pterm4_bus\,
+	pterm5 => \contador_segundos|FFS1|TMP_pterm5_bus\,
+	pxor => \contador_segundos|FFS1|TMP_pxor_bus\,
+	pclk => \contador_segundos|FFS1|TMP_pclk_bus\,
+	papre => \contador_segundos|FFS1|TMP_papre_bus\,
+	paclr => \contador_segundos|FFS1|TMP_paclr_bus\,
+	pena => \contador_segundos|FFS1|TMP_pena_bus\,
+	dataout => \contador_segundos|FFS1|TMP~dataout\);
 
 -- Location: PIN_8
 \MIN[0]~I\ : max_io
@@ -1008,7 +728,7 @@ GENERIC MAP (
 	weak_pull_up => "false")
 -- pragma translate_on
 PORT MAP (
-	datain => \SEG[1]~reg0_dataout\,
+	datain => \contador_segundos|FFS1|TMP~dataout\,
 	oe => VCC,
 	padio => ww_SEG(1));
 
@@ -1022,7 +742,7 @@ GENERIC MAP (
 	weak_pull_up => "false")
 -- pragma translate_on
 PORT MAP (
-	datain => \SEG[2]~reg0_dataout\,
+	datain => \contador_segundos|FFS2|TMP~dataout\,
 	oe => VCC,
 	padio => ww_SEG(2));
 
@@ -1036,7 +756,7 @@ GENERIC MAP (
 	weak_pull_up => "false")
 -- pragma translate_on
 PORT MAP (
-	datain => \SEG[3]~reg0_dataout\,
+	datain => \contador_segundos|FFS3|TMP~dataout\,
 	oe => VCC,
 	padio => ww_SEG(3));
 
@@ -1050,7 +770,7 @@ GENERIC MAP (
 	weak_pull_up => "false")
 -- pragma translate_on
 PORT MAP (
-	datain => \SEG[0]~reg0_dataout\,
+	datain => \contador_segundos|FFS0|TMP~dataout\,
 	oe => VCC,
 	padio => ww_SEG(0));
 END structure;

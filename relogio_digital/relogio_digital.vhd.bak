@@ -3,38 +3,26 @@ USE ieee. std_logic_1164.all;
  
 ENTITY relogio_digital IS
 	PORT(CLEAR: IN BIT;
-			CLOCK: IN STD_LOGIC;
-			MIN, SEG: OUT BIT_VECTOR(3 DOWNTO 0));
+	     CLOCK: IN STD_LOGIC;
+	  MIN, SEG: OUT BIT_VECTOR(3 DOWNTO 0));
 END relogio_digital;
 
  
 ARCHITECTURE arch OF relogio_digital IS
 
-COMPONENT JK_FF IS
-	PORT( J,K,CLEAR: IN BIT;
-		      CLOCK: IN STD_LOGIC;
-		      Q, QB: OUT BIT);
+COMPONENT cont_mod10 IS
+	PORT(CLEAR: IN BIT;
+		 CLOCK: IN STD_LOGIC;
+	       SEG: OUT BIT_VECTOR(3 DOWNTO 0));
 END COMPONENT;
 
 SIGNAL Q, QM: BIT_VECTOR(3 DOWNTO 0) := "0000";
 SIGNAL QB, QBM: BIT_VECTOR(3 DOWNTO 0) := "1111";
 
 BEGIN
-	FFS0: JK_FF PORT MAP(QB(3) OR (QB(1) AND QB(2)), '1'                 , CLEAR, CLOCK, Q(0), QB(0));
-	FFS1: JK_FF PORT MAP(QB(3) AND Q(0)            , Q(0) OR Q(3)        , CLEAR, CLOCK, Q(1), QB(1));
-	FFS2: JK_FF PORT MAP(Q(0)  AND Q(1) AND QB(3)  , Q(0) AND Q(2)       , CLEAR, CLOCK, Q(2), QB(2));
-	FFS3: JK_FF PORT MAP(Q(0)  AND Q(1) AND Q(2)   , Q(0) OR Q(1) OR Q(2), CLEAR, CLOCK, Q(3), QB(3));
-	
+	contador_segundos: cont_mod10 PORT MAP(CLEAR, CLOCK, SEG);
+
 	FFM0: JK_FF PORT MAP(QBM(1) OR QBM(2), '1'           , CLEAR, CLOCK, QM(0), QBM(0));
 	FFM1: JK_FF PORT MAP(QBM(0) AND QM(2), QM(0) OR QM(2), CLEAR, CLOCK, QM(1), QBM(1));
 	FFM2: JK_FF PORT MAP(QM(0)  AND QM(1), QM(0) OR QM(1), CLEAR, CLOCK, QM(2), QBM(2));
-	PROCESS (CLOCK)
-	BEGIN
-		IF (CLOCK'EVENT and CLOCK='0') THEN
-			SEG(0) <= Q(0);
-			SEG(1) <= Q(1);
-			SEG(2) <= Q(2);
-			SEG(3) <= Q(3);
-		END IF;
-	END PROCESS;
 END arch;

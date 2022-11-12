@@ -16,7 +16,7 @@
 ## PROGRAM "Quartus II"
 ## VERSION "Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition"
 
-## DATE "11/11/2022 22:24:28"
+## DATE "11/12/2022 09:21:46"
 
 ## 
 ## Device: Altera EPM7128SLC84-7 Package PLCC84
@@ -31,7 +31,7 @@
 set report_default_significant_digits 3
 set hierarchy_separator .
 
-set quartus_root "d:/altera/quartus/"
+set quartus_root "c:/altera/91sp2/quartus/"
 set search_path [list . [format "%s%s" $quartus_root "eda/synopsys/primetime/lib"]  ]
 
 set link_path [list *  max_asynch_io_lib.db max_mcell_register_lib.db  max_asynch_mcell_lib.db max_asynch_sexp_lib.db  alt_vtl.db]

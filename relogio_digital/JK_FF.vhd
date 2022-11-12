@@ -2,7 +2,7 @@ LIBRARY ieee;
 USE ieee. std_logic_1164.all;
  
 ENTITY JK_FF IS
-	PORT( J,K,CLEAR: IN BIT;
+	PORT(J,K,CLEAR: IN BIT;
 		      CLOCK: IN STD_LOGIC;
 		      Q, QB: OUT BIT);
 END JK_FF;

@@ -1,5 +1,5 @@
 Simulator report for relogio_digital
-Fri Nov 11 22:24:42 2022
+Sat Nov 12 09:22:39 2022
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -45,9 +45,9 @@ applicable agreement for further details.
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
 ; Simulation End Time         ; 1.0 us       ;
-; Simulation Netlist Size     ; 46 nodes     ;
-; Simulation Coverage         ;      89.13 % ;
-; Total Number of Transitions ; 685          ;
+; Simulation Netlist Size     ; 42 nodes     ;
+; Simulation Coverage         ;      88.10 % ;
+; Total Number of Transitions ; 643          ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; MAX7000S     ;
 +-----------------------------+--------------+
@@ -94,10 +94,10 @@ Please use Quartus II to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      89.13 % ;
-; Total nodes checked                                 ; 46           ;
-; Total output ports checked                          ; 46           ;
-; Total output ports with complete 1/0-value coverage ; 41           ;
+; Total coverage as a percentage                      ;      88.10 % ;
+; Total nodes checked                                 ; 42           ;
+; Total output ports checked                          ; 42           ;
+; Total output ports with complete 1/0-value coverage ; 37           ;
 ; Total output ports with no 1/0-value coverage       ; 4            ;
 ; Total output ports with no 1-value coverage         ; 4            ;
 ; Total output ports with no 0-value coverage         ; 5            ;
@@ -105,53 +105,49 @@ Please use Quartus II to view the waveform report data.
 
 
 The following table displays output ports that toggle between 1 and 0 during simulation.
-+------------------------------------------------------------------------------------------------------+
-; Complete 1/0-Value Coverage                                                                          ;
-+-----------------------------------------+-----------------------------------------+------------------+
-; Node Name                               ; Output Port Name                        ; Output Port Type ;
-+-----------------------------------------+-----------------------------------------+------------------+
-; |relogio_digital|SEG[0]~reg0            ; |relogio_digital|SEG[0]~reg0            ; regout           ;
-; |relogio_digital|comb~0                 ; |relogio_digital|comb~0                 ; out0             ;
-; |relogio_digital|comb~1                 ; |relogio_digital|comb~1                 ; out0             ;
-; |relogio_digital|comb~2                 ; |relogio_digital|comb~2                 ; out0             ;
-; |relogio_digital|comb~3                 ; |relogio_digital|comb~3                 ; out0             ;
-; |relogio_digital|comb~4                 ; |relogio_digital|comb~4                 ; out0             ;
-; |relogio_digital|comb~5                 ; |relogio_digital|comb~5                 ; out0             ;
-; |relogio_digital|comb~6                 ; |relogio_digital|comb~6                 ; out0             ;
-; |relogio_digital|comb~7                 ; |relogio_digital|comb~7                 ; out0             ;
-; |relogio_digital|comb~8                 ; |relogio_digital|comb~8                 ; out0             ;
-; |relogio_digital|comb~9                 ; |relogio_digital|comb~9                 ; out0             ;
-; |relogio_digital|comb~10                ; |relogio_digital|comb~10                ; out0             ;
-; |relogio_digital|comb~11                ; |relogio_digital|comb~11                ; out0             ;
-; |relogio_digital|SEG[1]~reg0            ; |relogio_digital|SEG[1]~reg0            ; regout           ;
-; |relogio_digital|SEG[2]~reg0            ; |relogio_digital|SEG[2]~reg0            ; regout           ;
-; |relogio_digital|SEG[3]~reg0            ; |relogio_digital|SEG[3]~reg0            ; regout           ;
-; |relogio_digital|CLOCK                  ; |relogio_digital|CLOCK                  ; out              ;
-; |relogio_digital|SEG[0]                 ; |relogio_digital|SEG[0]                 ; pin_out          ;
-; |relogio_digital|SEG[1]                 ; |relogio_digital|SEG[1]                 ; pin_out          ;
-; |relogio_digital|SEG[2]                 ; |relogio_digital|SEG[2]                 ; pin_out          ;
-; |relogio_digital|SEG[3]                 ; |relogio_digital|SEG[3]                 ; pin_out          ;
-; |relogio_digital|JK_FF:FFS3|process_0~3 ; |relogio_digital|JK_FF:FFS3|process_0~3 ; out0             ;
-; |relogio_digital|JK_FF:FFS3|process_0~4 ; |relogio_digital|JK_FF:FFS3|process_0~4 ; out0             ;
-; |relogio_digital|JK_FF:FFS3|process_0~6 ; |relogio_digital|JK_FF:FFS3|process_0~6 ; out0             ;
-; |relogio_digital|JK_FF:FFS3|TMP~3       ; |relogio_digital|JK_FF:FFS3|TMP~3       ; out              ;
-; |relogio_digital|JK_FF:FFS3|TMP~4       ; |relogio_digital|JK_FF:FFS3|TMP~4       ; out              ;
-; |relogio_digital|JK_FF:FFS3|TMP         ; |relogio_digital|JK_FF:FFS3|TMP         ; regout           ;
-; |relogio_digital|JK_FF:FFS2|process_0~3 ; |relogio_digital|JK_FF:FFS2|process_0~3 ; out0             ;
-; |relogio_digital|JK_FF:FFS2|process_0~4 ; |relogio_digital|JK_FF:FFS2|process_0~4 ; out0             ;
-; |relogio_digital|JK_FF:FFS2|process_0~6 ; |relogio_digital|JK_FF:FFS2|process_0~6 ; out0             ;
-; |relogio_digital|JK_FF:FFS2|TMP~3       ; |relogio_digital|JK_FF:FFS2|TMP~3       ; out              ;
-; |relogio_digital|JK_FF:FFS2|TMP~4       ; |relogio_digital|JK_FF:FFS2|TMP~4       ; out              ;
-; |relogio_digital|JK_FF:FFS2|TMP         ; |relogio_digital|JK_FF:FFS2|TMP         ; regout           ;
-; |relogio_digital|JK_FF:FFS1|process_0~3 ; |relogio_digital|JK_FF:FFS1|process_0~3 ; out0             ;
-; |relogio_digital|JK_FF:FFS1|process_0~4 ; |relogio_digital|JK_FF:FFS1|process_0~4 ; out0             ;
-; |relogio_digital|JK_FF:FFS1|process_0~6 ; |relogio_digital|JK_FF:FFS1|process_0~6 ; out0             ;
-; |relogio_digital|JK_FF:FFS1|TMP~3       ; |relogio_digital|JK_FF:FFS1|TMP~3       ; out              ;
-; |relogio_digital|JK_FF:FFS1|TMP~4       ; |relogio_digital|JK_FF:FFS1|TMP~4       ; out              ;
-; |relogio_digital|JK_FF:FFS1|TMP         ; |relogio_digital|JK_FF:FFS1|TMP         ; regout           ;
-; |relogio_digital|JK_FF:FFS0|TMP~3       ; |relogio_digital|JK_FF:FFS0|TMP~3       ; out              ;
-; |relogio_digital|JK_FF:FFS0|TMP         ; |relogio_digital|JK_FF:FFS0|TMP         ; regout           ;
-+-----------------------------------------+-----------------------------------------+------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                    ;
++----------------------------------------------------------------------+----------------------------------------------------------------------+------------------+
+; Node Name                                                            ; Output Port Name                                                     ; Output Port Type ;
++----------------------------------------------------------------------+----------------------------------------------------------------------+------------------+
+; |relogio_digital|CLOCK                                               ; |relogio_digital|CLOCK                                               ; out              ;
+; |relogio_digital|SEG[0]                                              ; |relogio_digital|SEG[0]                                              ; pin_out          ;
+; |relogio_digital|SEG[1]                                              ; |relogio_digital|SEG[1]                                              ; pin_out          ;
+; |relogio_digital|SEG[2]                                              ; |relogio_digital|SEG[2]                                              ; pin_out          ;
+; |relogio_digital|SEG[3]                                              ; |relogio_digital|SEG[3]                                              ; pin_out          ;
+; |relogio_digital|cont_mod10:contador_segundos|comb~0                 ; |relogio_digital|cont_mod10:contador_segundos|comb~0                 ; out0             ;
+; |relogio_digital|cont_mod10:contador_segundos|comb~1                 ; |relogio_digital|cont_mod10:contador_segundos|comb~1                 ; out0             ;
+; |relogio_digital|cont_mod10:contador_segundos|comb~2                 ; |relogio_digital|cont_mod10:contador_segundos|comb~2                 ; out0             ;
+; |relogio_digital|cont_mod10:contador_segundos|comb~3                 ; |relogio_digital|cont_mod10:contador_segundos|comb~3                 ; out0             ;
+; |relogio_digital|cont_mod10:contador_segundos|comb~4                 ; |relogio_digital|cont_mod10:contador_segundos|comb~4                 ; out0             ;
+; |relogio_digital|cont_mod10:contador_segundos|comb~5                 ; |relogio_digital|cont_mod10:contador_segundos|comb~5                 ; out0             ;
+; |relogio_digital|cont_mod10:contador_segundos|comb~6                 ; |relogio_digital|cont_mod10:contador_segundos|comb~6                 ; out0             ;
+; |relogio_digital|cont_mod10:contador_segundos|comb~7                 ; |relogio_digital|cont_mod10:contador_segundos|comb~7                 ; out0             ;
+; |relogio_digital|cont_mod10:contador_segundos|comb~8                 ; |relogio_digital|cont_mod10:contador_segundos|comb~8                 ; out0             ;
+; |relogio_digital|cont_mod10:contador_segundos|comb~9                 ; |relogio_digital|cont_mod10:contador_segundos|comb~9                 ; out0             ;
+; |relogio_digital|cont_mod10:contador_segundos|comb~10                ; |relogio_digital|cont_mod10:contador_segundos|comb~10                ; out0             ;
+; |relogio_digital|cont_mod10:contador_segundos|comb~11                ; |relogio_digital|cont_mod10:contador_segundos|comb~11                ; out0             ;
+; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS3|process_0~3 ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS3|process_0~3 ; out0             ;
+; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS3|process_0~4 ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS3|process_0~4 ; out0             ;
+; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS3|process_0~6 ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS3|process_0~6 ; out0             ;
+; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS3|TMP~3       ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS3|TMP~3       ; out              ;
+; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS3|TMP~4       ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS3|TMP~4       ; out              ;
+; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS3|TMP         ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS3|TMP         ; regout           ;
+; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS2|process_0~3 ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS2|process_0~3 ; out0             ;
+; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS2|process_0~4 ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS2|process_0~4 ; out0             ;
+; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS2|process_0~6 ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS2|process_0~6 ; out0             ;
+; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS2|TMP~3       ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS2|TMP~3       ; out              ;
+; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS2|TMP~4       ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS2|TMP~4       ; out              ;
+; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS2|TMP         ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS2|TMP         ; regout           ;
+; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS1|process_0~3 ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS1|process_0~3 ; out0             ;
+; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS1|process_0~4 ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS1|process_0~4 ; out0             ;
+; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS1|process_0~6 ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS1|process_0~6 ; out0             ;
+; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS1|TMP~3       ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS1|TMP~3       ; out              ;
+; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS1|TMP~4       ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS1|TMP~4       ; out              ;
+; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS1|TMP         ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS1|TMP         ; regout           ;
+; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS0|TMP~3       ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS0|TMP~3       ; out              ;
+; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS0|TMP         ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS0|TMP         ; regout           ;
++----------------------------------------------------------------------+----------------------------------------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 1 during simulation.
@@ -194,17 +190,17 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Fri Nov 11 22:24:42 2022
+    Info: Processing started: Sat Nov 12 09:22:39 2022
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off relogio_digital -c relogio_digital
-Info: Using vector source file "D:/dev/uem/cd2/Relogio_Digital/relogio_digital/relogio_digital.vwf"
+Info: Using vector source file "C:/Users/willi/OneDrive/Área de Trabalho/work/relogio_digital/relogio_digital.vwf"
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info: Simulation partitioned into 1 sub-simulations
-Info: Simulation coverage is      89.13 %
-Info: Number of transitions in simulation is 685
+Info: Simulation coverage is      88.10 %
+Info: Number of transitions in simulation is 643
 Info: Quartus II Simulator was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 151 megabytes
-    Info: Processing ended: Fri Nov 11 22:24:42 2022
+    Info: Peak virtual memory: 162 megabytes
+    Info: Processing ended: Sat Nov 12 09:22:39 2022
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 

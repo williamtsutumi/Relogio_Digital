@@ -14,7 +14,7 @@ BEGIN
 	BEGIN
 		IF (CLEAR = '0') THEN
 			TMP := '0';
-		ELSIF (CLOCK'EVENT and CLOCK='0') THEN
+		ELSIF (CLOCK = '0' AND CLOCK'EVENT) THEN
 			IF (J = '0' AND K = '0') THEN
 				TMP := TMP;
 			ELSIF (J = '1' AND K = '1') THEN

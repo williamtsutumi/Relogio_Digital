@@ -24,7 +24,7 @@
 (DELAYFILE
   (SDFVERSION "2.1")
   (DESIGN "relogio_digital")
-  (DATE "11/11/2022 22:24:28")
+  (DATE "11/12/2022 09:21:46")
   (VENDOR "Altera")
   (PROGRAM "Quartus II")
   (VERSION "Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition")
@@ -51,7 +51,7 @@
   )
   (CELL
     (CELLTYPE "max_asynch_mcell")
-    (INSTANCE FFS2\|TMP.pcom)
+    (INSTANCE contador_segundos\|FFS2\|TMP.pcom)
     (DELAY
       (ABSOLUTE
         (PORT pterm1[0] (1000:1000:1000) (1000:1000:1000))
@@ -70,7 +70,7 @@
   )
   (CELL
     (CELLTYPE "max_mcell_register")
-    (INSTANCE FFS2\|TMP.preg)
+    (INSTANCE contador_segundos\|FFS2\|TMP.preg)
     (DELAY
       (ABSOLUTE
         (PORT aclr (0:0:0) (0:0:0))
@@ -86,7 +86,7 @@
   )
   (CELL
     (CELLTYPE "max_asynch_mcell")
-    (INSTANCE FFS3\|TMP.pcom)
+    (INSTANCE contador_segundos\|FFS3\|TMP.pcom)
     (DELAY
       (ABSOLUTE
         (PORT pterm1[0] (1000:1000:1000) (1000:1000:1000))
@@ -111,7 +111,7 @@
   )
   (CELL
     (CELLTYPE "max_mcell_register")
-    (INSTANCE FFS3\|TMP.preg)
+    (INSTANCE contador_segundos\|FFS3\|TMP.preg)
     (DELAY
       (ABSOLUTE
         (PORT aclr (0:0:0) (0:0:0))
@@ -127,7 +127,7 @@
   )
   (CELL
     (CELLTYPE "max_asynch_mcell")
-    (INSTANCE FFS0\|TMP.pcom)
+    (INSTANCE contador_segundos\|FFS0\|TMP.pcom)
     (DELAY
       (ABSOLUTE
         (PORT pterm1[0] (1000:1000:1000) (1000:1000:1000))
@@ -148,7 +148,7 @@
   )
   (CELL
     (CELLTYPE "max_mcell_register")
-    (INSTANCE FFS0\|TMP.preg)
+    (INSTANCE contador_segundos\|FFS0\|TMP.preg)
     (DELAY
       (ABSOLUTE
         (PORT aclr (0:0:0) (0:0:0))
@@ -164,7 +164,7 @@
   )
   (CELL
     (CELLTYPE "max_asynch_mcell")
-    (INSTANCE FFS1\|TMP.pcom)
+    (INSTANCE contador_segundos\|FFS1\|TMP.pcom)
     (DELAY
       (ABSOLUTE
         (PORT pterm1[0] (1000:1000:1000) (1000:1000:1000))
@@ -185,113 +185,13 @@
   )
   (CELL
     (CELLTYPE "max_mcell_register")
-    (INSTANCE FFS1\|TMP.preg)
+    (INSTANCE contador_segundos\|FFS1\|TMP.preg)
     (DELAY
       (ABSOLUTE
         (PORT aclr (0:0:0) (0:0:0))
         (PORT clk (0:0:0) (0:0:0))
         (IOPATH (posedge clk) regout (1000:1000:1000) (1000:1000:1000))
         (IOPATH (posedge aclr) regout (2000:2000:2000) (2000:2000:2000))
-      )
-    )
-    (TIMINGCHECK
-      (SETUP datain (posedge clk) (3000:3000:3000))
-      (HOLD datain (posedge clk) (2000:2000:2000))
-    )
-  )
-  (CELL
-    (CELLTYPE "max_asynch_mcell")
-    (INSTANCE SEG\[1\]\~reg0.pcom)
-    (DELAY
-      (ABSOLUTE
-        (PORT pterm1[0] (1000:1000:1000) (1000:1000:1000))
-        (IOPATH pterm1[0] regin (3000:3000:3000) (3000:3000:3000))
-        (IOPATH fbkin regin (4000:4000:4000) (4000:4000:4000))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "max_mcell_register")
-    (INSTANCE SEG\[1\]\~reg0.preg)
-    (DELAY
-      (ABSOLUTE
-        (PORT clk (0:0:0) (0:0:0))
-        (IOPATH (posedge clk) regout (1000:1000:1000) (1000:1000:1000))
-      )
-    )
-    (TIMINGCHECK
-      (SETUP datain (posedge clk) (3000:3000:3000))
-      (HOLD datain (posedge clk) (2000:2000:2000))
-    )
-  )
-  (CELL
-    (CELLTYPE "max_asynch_mcell")
-    (INSTANCE SEG\[2\]\~reg0.pcom)
-    (DELAY
-      (ABSOLUTE
-        (PORT pterm1[0] (1000:1000:1000) (1000:1000:1000))
-        (IOPATH pterm1[0] regin (3000:3000:3000) (3000:3000:3000))
-        (IOPATH fbkin regin (4000:4000:4000) (4000:4000:4000))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "max_mcell_register")
-    (INSTANCE SEG\[2\]\~reg0.preg)
-    (DELAY
-      (ABSOLUTE
-        (PORT clk (0:0:0) (0:0:0))
-        (IOPATH (posedge clk) regout (1000:1000:1000) (1000:1000:1000))
-      )
-    )
-    (TIMINGCHECK
-      (SETUP datain (posedge clk) (3000:3000:3000))
-      (HOLD datain (posedge clk) (2000:2000:2000))
-    )
-  )
-  (CELL
-    (CELLTYPE "max_asynch_mcell")
-    (INSTANCE SEG\[3\]\~reg0.pcom)
-    (DELAY
-      (ABSOLUTE
-        (PORT pterm1[0] (1000:1000:1000) (1000:1000:1000))
-        (IOPATH pterm1[0] regin (3000:3000:3000) (3000:3000:3000))
-        (IOPATH fbkin regin (4000:4000:4000) (4000:4000:4000))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "max_mcell_register")
-    (INSTANCE SEG\[3\]\~reg0.preg)
-    (DELAY
-      (ABSOLUTE
-        (PORT clk (0:0:0) (0:0:0))
-        (IOPATH (posedge clk) regout (1000:1000:1000) (1000:1000:1000))
-      )
-    )
-    (TIMINGCHECK
-      (SETUP datain (posedge clk) (3000:3000:3000))
-      (HOLD datain (posedge clk) (2000:2000:2000))
-    )
-  )
-  (CELL
-    (CELLTYPE "max_asynch_mcell")
-    (INSTANCE SEG\[0\]\~reg0.pcom)
-    (DELAY
-      (ABSOLUTE
-        (PORT pterm1[0] (1000:1000:1000) (1000:1000:1000))
-        (IOPATH pterm1[0] regin (3000:3000:3000) (3000:3000:3000))
-        (IOPATH fbkin regin (4000:4000:4000) (4000:4000:4000))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "max_mcell_register")
-    (INSTANCE SEG\[0\]\~reg0.preg)
-    (DELAY
-      (ABSOLUTE
-        (PORT clk (0:0:0) (0:0:0))
-        (IOPATH (posedge clk) regout (1000:1000:1000) (1000:1000:1000))
       )
     )
     (TIMINGCHECK

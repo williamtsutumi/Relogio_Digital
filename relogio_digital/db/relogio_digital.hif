@@ -20,45 +20,6 @@ mentor.lmf
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
-JK_FF
-# storage
-db|relogio_digital.(1).cnf
-db|relogio_digital.(1).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-jk_ff.vhd
-7929b2d2f31683d0ac768b7dfbf48fd
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-JK_FF:FFS0
-JK_FF:FFS1
-JK_FF:FFS2
-JK_FF:FFS3
-JK_FF:FFM0
-JK_FF:FFM1
-JK_FF:FFM2
-}
-# lmf
-|altera|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
 relogio_digital
 # storage
 db|relogio_digital.(0).cnf
@@ -70,7 +31,7 @@ ON
 # case_insensitive
 # source_file
 relogio_digital.vhd
-4a84a7253382aadeaf52a9ed555f94e5
+381c22bdd811cc2e789c1ae86fb76ba
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -86,7 +47,82 @@ ON
 |
 }
 # lmf
-|altera|quartus|lmf|maxplus2.lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+cont_mod10
+# storage
+db|relogio_digital.(1).cnf
+db|relogio_digital.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+cont_segundos.vhd
+851b3dcaebafc077b77b6c27ac35e362
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(seg)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+cont_mod10:contador_segundos
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+JK_FF
+# storage
+db|relogio_digital.(2).cnf
+db|relogio_digital.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+jk_ff.vhd
+67836ef94ebad2ddd964a53ee877ec9
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+cont_mod10:contador_segundos|JK_FF:FFS0
+cont_mod10:contador_segundos|JK_FF:FFS1
+cont_mod10:contador_segundos|JK_FF:FFS2
+cont_mod10:contador_segundos|JK_FF:FFS3
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
 a36c8ec425c8a2589af98b2d4daabc3
 # macro_sequence
 
