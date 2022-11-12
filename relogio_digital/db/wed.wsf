@@ -504,10 +504,10 @@ VECTOR("D:/dev/uem/cd2/Relogio_Digital/relogio_digital/relogio_digital.vwf")
 VECTOR("D:/dev/uem/cd2/Relogio_Digital/relogio_digital/db/relogio_digital.sim.cvwf")
 {
 	ZOOM{
-		ZBEGIN = 327707754;
-		ZEND = 328581513;
+		ZBEGIN = 649372844;
+		ZEND = 650148291;
 		NUMERATOR = 791;
-		DENOMINATOR = 873759;
+		DENOMINATOR = 775447;
 		TOP_INDEX = 5;
 	}
 	CLOCK{
