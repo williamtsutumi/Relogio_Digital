@@ -4,20 +4,34 @@ CLEAR => cont_mod6:contador_segundos1.CLEAR
 CLEAR => cont_mod10:contador_minutos0.CLEAR
 CLEAR => cont_mod6:contador_minutos1.CLEAR
 CLOCK => cont_mod10:contador_segundos0.CLOCK
-SEG0[0] << cont_mod10:contador_segundos0.OUTPUT[0]
-SEG0[1] << cont_mod10:contador_segundos0.OUTPUT[1]
-SEG0[2] << cont_mod10:contador_segundos0.OUTPUT[2]
-SEG0[3] << cont_mod10:contador_segundos0.OUTPUT[3]
-SEG1[0] << cont_mod6:contador_segundos1.OUTPUT[0]
-SEG1[1] << cont_mod6:contador_segundos1.OUTPUT[1]
-SEG1[2] << cont_mod6:contador_segundos1.OUTPUT[2]
-MIN0[0] << cont_mod10:contador_minutos0.OUTPUT[0]
-MIN0[1] << cont_mod10:contador_minutos0.OUTPUT[1]
-MIN0[2] << cont_mod10:contador_minutos0.OUTPUT[2]
-MIN0[3] << cont_mod10:contador_minutos0.OUTPUT[3]
-MIN1[0] << cont_mod6:contador_minutos1.OUTPUT[0]
-MIN1[1] << cont_mod6:contador_minutos1.OUTPUT[1]
-MIN1[2] << cont_mod6:contador_minutos1.OUTPUT[2]
+DISPLAYS0[6] <= decodificador:decodificadors0.leds[6]
+DISPLAYS0[5] <= decodificador:decodificadors0.leds[5]
+DISPLAYS0[4] <= decodificador:decodificadors0.leds[4]
+DISPLAYS0[3] <= decodificador:decodificadors0.leds[3]
+DISPLAYS0[2] <= decodificador:decodificadors0.leds[2]
+DISPLAYS0[1] <= decodificador:decodificadors0.leds[1]
+DISPLAYS0[0] <= decodificador:decodificadors0.leds[0]
+DISPLAYS1[6] <= decodificador:decodificadors1.leds[6]
+DISPLAYS1[5] <= decodificador:decodificadors1.leds[5]
+DISPLAYS1[4] <= decodificador:decodificadors1.leds[4]
+DISPLAYS1[3] <= decodificador:decodificadors1.leds[3]
+DISPLAYS1[2] <= decodificador:decodificadors1.leds[2]
+DISPLAYS1[1] <= decodificador:decodificadors1.leds[1]
+DISPLAYS1[0] <= decodificador:decodificadors1.leds[0]
+DISPLAYM0[6] <= decodificador:decodificadorm0.leds[6]
+DISPLAYM0[5] <= decodificador:decodificadorm0.leds[5]
+DISPLAYM0[4] <= decodificador:decodificadorm0.leds[4]
+DISPLAYM0[3] <= decodificador:decodificadorm0.leds[3]
+DISPLAYM0[2] <= decodificador:decodificadorm0.leds[2]
+DISPLAYM0[1] <= decodificador:decodificadorm0.leds[1]
+DISPLAYM0[0] <= decodificador:decodificadorm0.leds[0]
+DISPLAYM1[6] <= decodificador:decodificadorm1.leds[6]
+DISPLAYM1[5] <= decodificador:decodificadorm1.leds[5]
+DISPLAYM1[4] <= decodificador:decodificadorm1.leds[4]
+DISPLAYM1[3] <= decodificador:decodificadorm1.leds[3]
+DISPLAYM1[2] <= decodificador:decodificadorm1.leds[2]
+DISPLAYM1[1] <= decodificador:decodificadorm1.leds[1]
+DISPLAYM1[0] <= decodificador:decodificadorm1.leds[0]
 
 
 |relogio_digital|cont_mod10:contador_segundos0
@@ -93,6 +107,7 @@ CLOCK => JK_FF:FFM2.CLOCK
 OUTPUT[0] <= JK_FF:FFM0.Q
 OUTPUT[1] <= JK_FF:FFM1.Q
 OUTPUT[2] <= JK_FF:FFM2.Q
+OUTPUT[3] <= <GND>
 
 
 |relogio_digital|cont_mod6:contador_segundos1|JK_FF:FFM0
@@ -204,6 +219,7 @@ CLOCK => JK_FF:FFM2.CLOCK
 OUTPUT[0] <= JK_FF:FFM0.Q
 OUTPUT[1] <= JK_FF:FFM1.Q
 OUTPUT[2] <= JK_FF:FFM2.Q
+OUTPUT[3] <= <GND>
 
 
 |relogio_digital|cont_mod6:contador_minutos1|JK_FF:FFM0
@@ -240,5 +256,157 @@ CLEAR => process_0~0.IN0
 CLOCK => process_0~1.IN0
 Q <= AUX.DB_MAX_OUTPUT_PORT_TYPE
 QB <= AUX~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|relogio_digital|decodificador:decodificadors0
+bcd[0] => Mux0.IN19
+bcd[0] => Mux1.IN19
+bcd[0] => Mux2.IN19
+bcd[0] => Mux3.IN19
+bcd[0] => Mux4.IN19
+bcd[0] => Mux5.IN19
+bcd[0] => Mux6.IN19
+bcd[1] => Mux0.IN18
+bcd[1] => Mux1.IN18
+bcd[1] => Mux2.IN18
+bcd[1] => Mux3.IN18
+bcd[1] => Mux4.IN18
+bcd[1] => Mux5.IN18
+bcd[1] => Mux6.IN18
+bcd[2] => Mux0.IN17
+bcd[2] => Mux1.IN17
+bcd[2] => Mux2.IN17
+bcd[2] => Mux3.IN17
+bcd[2] => Mux4.IN17
+bcd[2] => Mux5.IN17
+bcd[2] => Mux6.IN17
+bcd[3] => Mux0.IN16
+bcd[3] => Mux1.IN16
+bcd[3] => Mux2.IN16
+bcd[3] => Mux3.IN16
+bcd[3] => Mux4.IN16
+bcd[3] => Mux5.IN16
+bcd[3] => Mux6.IN16
+leds[6] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+leds[5] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+leds[4] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+leds[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+leds[2] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+leds[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+leds[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|relogio_digital|decodificador:decodificadors1
+bcd[0] => Mux0.IN19
+bcd[0] => Mux1.IN19
+bcd[0] => Mux2.IN19
+bcd[0] => Mux3.IN19
+bcd[0] => Mux4.IN19
+bcd[0] => Mux5.IN19
+bcd[0] => Mux6.IN19
+bcd[1] => Mux0.IN18
+bcd[1] => Mux1.IN18
+bcd[1] => Mux2.IN18
+bcd[1] => Mux3.IN18
+bcd[1] => Mux4.IN18
+bcd[1] => Mux5.IN18
+bcd[1] => Mux6.IN18
+bcd[2] => Mux0.IN17
+bcd[2] => Mux1.IN17
+bcd[2] => Mux2.IN17
+bcd[2] => Mux3.IN17
+bcd[2] => Mux4.IN17
+bcd[2] => Mux5.IN17
+bcd[2] => Mux6.IN17
+bcd[3] => Mux0.IN16
+bcd[3] => Mux1.IN16
+bcd[3] => Mux2.IN16
+bcd[3] => Mux3.IN16
+bcd[3] => Mux4.IN16
+bcd[3] => Mux5.IN16
+bcd[3] => Mux6.IN16
+leds[6] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+leds[5] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+leds[4] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+leds[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+leds[2] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+leds[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+leds[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|relogio_digital|decodificador:decodificadorm0
+bcd[0] => Mux0.IN19
+bcd[0] => Mux1.IN19
+bcd[0] => Mux2.IN19
+bcd[0] => Mux3.IN19
+bcd[0] => Mux4.IN19
+bcd[0] => Mux5.IN19
+bcd[0] => Mux6.IN19
+bcd[1] => Mux0.IN18
+bcd[1] => Mux1.IN18
+bcd[1] => Mux2.IN18
+bcd[1] => Mux3.IN18
+bcd[1] => Mux4.IN18
+bcd[1] => Mux5.IN18
+bcd[1] => Mux6.IN18
+bcd[2] => Mux0.IN17
+bcd[2] => Mux1.IN17
+bcd[2] => Mux2.IN17
+bcd[2] => Mux3.IN17
+bcd[2] => Mux4.IN17
+bcd[2] => Mux5.IN17
+bcd[2] => Mux6.IN17
+bcd[3] => Mux0.IN16
+bcd[3] => Mux1.IN16
+bcd[3] => Mux2.IN16
+bcd[3] => Mux3.IN16
+bcd[3] => Mux4.IN16
+bcd[3] => Mux5.IN16
+bcd[3] => Mux6.IN16
+leds[6] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+leds[5] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+leds[4] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+leds[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+leds[2] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+leds[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+leds[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|relogio_digital|decodificador:decodificadorm1
+bcd[0] => Mux0.IN19
+bcd[0] => Mux1.IN19
+bcd[0] => Mux2.IN19
+bcd[0] => Mux3.IN19
+bcd[0] => Mux4.IN19
+bcd[0] => Mux5.IN19
+bcd[0] => Mux6.IN19
+bcd[1] => Mux0.IN18
+bcd[1] => Mux1.IN18
+bcd[1] => Mux2.IN18
+bcd[1] => Mux3.IN18
+bcd[1] => Mux4.IN18
+bcd[1] => Mux5.IN18
+bcd[1] => Mux6.IN18
+bcd[2] => Mux0.IN17
+bcd[2] => Mux1.IN17
+bcd[2] => Mux2.IN17
+bcd[2] => Mux3.IN17
+bcd[2] => Mux4.IN17
+bcd[2] => Mux5.IN17
+bcd[2] => Mux6.IN17
+bcd[3] => Mux0.IN16
+bcd[3] => Mux1.IN16
+bcd[3] => Mux2.IN16
+bcd[3] => Mux3.IN16
+bcd[3] => Mux4.IN16
+bcd[3] => Mux5.IN16
+bcd[3] => Mux6.IN16
+leds[6] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+leds[5] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+leds[4] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+leds[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+leds[2] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+leds[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+leds[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 

@@ -20,72 +20,6 @@ mentor.lmf
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
-cont_mod10
-# storage
-db|relogio_digital.(1).cnf
-db|relogio_digital.(1).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-cont_mod10.vhd
-9c9f6283fe1a18ed5c6a5fef01dfb62
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-cont_mod10:contador_segundos
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-cont_mod6
-# storage
-db|relogio_digital.(3).cnf
-db|relogio_digital.(3).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-cont_mod6.vhd
-b1711fad1b55135c40cc97b28e29cfd
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-cont_mod6:contador_minutos
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
 relogio_digital
 # storage
 db|relogio_digital.(0).cnf
@@ -97,7 +31,7 @@ ON
 # case_insensitive
 # source_file
 relogio_digital.vhd
-5b3edf5d7ab9f315640333082d7ba55
+3f2226e1cb81f645a5960d6ed89a0af
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -113,7 +47,47 @@ ON
 |
 }
 # lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
+|altera|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+cont_mod10
+# storage
+db|relogio_digital.(1).cnf
+db|relogio_digital.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+cont_mod10.vhd
+44622c585ecd4cf5a1884974bb793f
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(output)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+cont_mod10:contador_segundos0
+cont_mod10:contador_minutos0
+}
+# lmf
+|altera|quartus|lmf|maxplus2.lmf
 a36c8ec425c8a2589af98b2d4daabc3
 # macro_sequence
 
@@ -130,7 +104,7 @@ ON
 # case_insensitive
 # source_file
 jk_ff.vhd
-887536f1da3a7fb4b24edf3282a5ba12
+5b2ed88e363069f9d36f332998898d8
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -143,16 +117,109 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-cont_mod10:contador_segundos|JK_FF:FFS0
-cont_mod10:contador_segundos|JK_FF:FFS1
-cont_mod10:contador_segundos|JK_FF:FFS2
-cont_mod10:contador_segundos|JK_FF:FFS3
-cont_mod6:contador_minutos|JK_FF:FFM0
-cont_mod6:contador_minutos|JK_FF:FFM1
-cont_mod6:contador_minutos|JK_FF:FFM2
+cont_mod10:contador_segundos0|JK_FF:FFS0
+cont_mod10:contador_segundos0|JK_FF:FFS1
+cont_mod10:contador_segundos0|JK_FF:FFS2
+cont_mod10:contador_segundos0|JK_FF:FFS3
+cont_mod6:contador_segundos1|JK_FF:FFM0
+cont_mod6:contador_segundos1|JK_FF:FFM1
+cont_mod6:contador_segundos1|JK_FF:FFM2
+cont_mod10:contador_minutos0|JK_FF:FFS0
+cont_mod10:contador_minutos0|JK_FF:FFS1
+cont_mod10:contador_minutos0|JK_FF:FFS2
+cont_mod10:contador_minutos0|JK_FF:FFS3
+cont_mod6:contador_minutos1|JK_FF:FFM0
+cont_mod6:contador_minutos1|JK_FF:FFM1
+cont_mod6:contador_minutos1|JK_FF:FFM2
 }
 # lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
+|altera|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+cont_mod6
+# storage
+db|relogio_digital.(3).cnf
+db|relogio_digital.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+cont_mod6.vhd
+a2f2c746d6d465fb10efe2446680b164
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(output)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+cont_mod6:contador_segundos1
+cont_mod6:contador_minutos1
+}
+# lmf
+|altera|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+decodificador
+# storage
+db|relogio_digital.(4).cnf
+db|relogio_digital.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+decodificador.vhd
+5bbed14fa489ee74dd576c14774e199
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(bcd)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(leds)
+0 to 6
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+decodificador:decodificadors0
+decodificador:decodificadors1
+decodificador:decodificadorm0
+decodificador:decodificadorm1
+}
+# lmf
+|altera|quartus|lmf|maxplus2.lmf
 a36c8ec425c8a2589af98b2d4daabc3
 # macro_sequence
 

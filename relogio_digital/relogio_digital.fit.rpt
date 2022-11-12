@@ -1,5 +1,5 @@
 Fitter report for relogio_digital
-Sat Nov 12 11:23:29 2022
+Sat Nov 12 14:40:39 2022
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -53,15 +53,15 @@ applicable agreement for further details.
 +----------------------------------------------------------------------+
 ; Fitter Summary                                                       ;
 +-----------------------+----------------------------------------------+
-; Fitter Status         ; Successful - Sat Nov 12 11:23:29 2022        ;
+; Fitter Status         ; Successful - Sat Nov 12 14:40:39 2022        ;
 ; Quartus II Version    ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name         ; relogio_digital                              ;
 ; Top-level Entity Name ; relogio_digital                              ;
 ; Family                ; MAX7000S                                     ;
 ; Device                ; EPM7128SLC84-7                               ;
 ; Timing Models         ; Final                                        ;
-; Total macrocells      ; 7 / 128 ( 5 % )                              ;
-; Total pins            ; 13 / 68 ( 19 % )                             ;
+; Total macrocells      ; 42 / 128 ( 33 % )                            ;
+; Total pins            ; 34 / 68 ( 50 % )                             ;
 +-----------------------+----------------------------------------------+
 
 
@@ -93,7 +93,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 12     ;
+; Number detected on machine ; 6      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -101,32 +101,32 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/willi/OneDrive/Área de Trabalho/work/relogio_digital/relogio_digital.pin.
+The pin-out file can be found in D:/dev/uem/cd2/Relogio_Digital/relogio_digital/relogio_digital.pin.
 
 
-+---------------------------------------------------------------------------------+
-; Fitter Resource Usage Summary                                                   ;
-+-----------------------------------+---------------------------------------------+
-; Resource                          ; Usage                                       ;
-+-----------------------------------+---------------------------------------------+
-; Logic cells                       ; 7 / 128 ( 5 % )                             ;
-; Registers                         ; 7 / 128 ( 5 % )                             ;
-; Number of pterms used             ; 13                                          ;
-; User inserted logic elements      ; 0                                           ;
-; I/O pins                          ; 13 / 68 ( 19 % )                            ;
-;     -- Clock pins                 ; 1 / 2 ( 50 % )                              ;
-;     -- Dedicated input pins       ; 1 / 2 ( 50 % )                              ;
-; Global signals                    ; 2                                           ;
-; Shareable expanders               ; 0 / 128 ( 0 % )                             ;
-; Parallel expanders                ; 0 / 120 ( 0 % )                             ;
-; Cells using turbo bit             ; 7 / 128 ( 5 % )                             ;
-; Maximum fan-out node              ; CLEAR                                       ;
-; Maximum fan-out                   ; 7                                           ;
-; Highest non-global fan-out signal ; cont_mod10:contador_segundos|JK_FF:FFS1|AUX ;
-; Highest non-global fan-out        ; 5                                           ;
-; Total fan-out                     ; 45                                          ;
-; Average fan-out                   ; 2.25                                        ;
-+-----------------------------------+---------------------------------------------+
++----------------------------------------------------------------------------------+
+; Fitter Resource Usage Summary                                                    ;
++-----------------------------------+----------------------------------------------+
+; Resource                          ; Usage                                        ;
++-----------------------------------+----------------------------------------------+
+; Logic cells                       ; 42 / 128 ( 33 % )                            ;
+; Registers                         ; 14 / 128 ( 11 % )                            ;
+; Number of pterms used             ; 128                                          ;
+; User inserted logic elements      ; 0                                            ;
+; I/O pins                          ; 34 / 68 ( 50 % )                             ;
+;     -- Clock pins                 ; 1 / 2 ( 50 % )                               ;
+;     -- Dedicated input pins       ; 1 / 2 ( 50 % )                               ;
+; Global signals                    ; 2                                            ;
+; Shareable expanders               ; 0 / 128 ( 0 % )                              ;
+; Parallel expanders                ; 0 / 120 ( 0 % )                              ;
+; Cells using turbo bit             ; 42 / 128 ( 33 % )                            ;
+; Maximum fan-out node              ; cont_mod10:contador_segundos0|JK_FF:FFS1|AUX ;
+; Maximum fan-out                   ; 14                                           ;
+; Highest non-global fan-out signal ; cont_mod10:contador_segundos0|JK_FF:FFS1|AUX ;
+; Highest non-global fan-out        ; 14                                           ;
+; Total fan-out                     ; 228                                          ;
+; Average fan-out                   ; 3.00                                         ;
++-----------------------------------+----------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------+
@@ -134,24 +134,45 @@ The pin-out file can be found in C:/Users/willi/OneDrive/Área de Trabalho/work/r
 +-------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
 ; Name  ; Pin # ; I/O Bank ; LAB ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; I/O Standard ; Location assigned by ;
 +-------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
-; CLEAR ; 1     ; --       ; --  ; 7                     ; 0                  ; yes    ; no             ; TTL          ; Fitter               ;
-; CLOCK ; 83    ; --       ; --  ; 7                     ; 0                  ; yes    ; no             ; TTL          ; Fitter               ;
+; CLEAR ; 1     ; --       ; --  ; 14                    ; 0                  ; yes    ; no             ; TTL          ; Fitter               ;
+; CLOCK ; 83    ; --       ; --  ; 4                     ; 0                  ; yes    ; no             ; TTL          ; Fitter               ;
 +-------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Output Pins                                                                                                                                                                                ;
-+--------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
-; Name   ; Pin # ; I/O Bank ; LAB ; Output Register ; Slow Slew Rate ; Open Drain ; TRI Primitive ; I/O Standard ; Location assigned by ; Load  ; Output Enable Source ; Output Enable Group ;
-+--------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
-; MIN[0] ; 8     ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
-; MIN[1] ; 10    ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
-; MIN[2] ; 11    ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
-; SEG[0] ; 5     ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
-; SEG[1] ; 12    ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
-; SEG[2] ; 9     ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
-; SEG[3] ; 6     ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
-+--------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                                      ;
++--------------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
+; Name         ; Pin # ; I/O Bank ; LAB ; Output Register ; Slow Slew Rate ; Open Drain ; TRI Primitive ; I/O Standard ; Location assigned by ; Load  ; Output Enable Source ; Output Enable Group ;
++--------------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
+; DISPLAYM0[0] ; 24    ; --       ; 3   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; DISPLAYM0[1] ; 28    ; --       ; 3   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; DISPLAYM0[2] ; 27    ; --       ; 3   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; DISPLAYM0[3] ; 29    ; --       ; 3   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; DISPLAYM0[4] ; 30    ; --       ; 3   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; DISPLAYM0[5] ; 25    ; --       ; 3   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; DISPLAYM0[6] ; 31    ; --       ; 3   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; DISPLAYM1[0] ; 18    ; --       ; 2   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; DISPLAYM1[1] ; 16    ; --       ; 2   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; DISPLAYM1[2] ; 21    ; --       ; 2   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; DISPLAYM1[3] ; 22    ; --       ; 2   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; DISPLAYM1[4] ; 17    ; --       ; 2   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; DISPLAYM1[5] ; 20    ; --       ; 2   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; DISPLAYM1[6] ; 15    ; --       ; 2   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; DISPLAYS0[0] ; 4     ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; DISPLAYS0[1] ; 12    ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; DISPLAYS0[2] ; 8     ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; DISPLAYS0[3] ; 9     ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; DISPLAYS0[4] ; 10    ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; DISPLAYS0[5] ; 6     ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; DISPLAYS0[6] ; 11    ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; DISPLAYS1[0] ; 39    ; --       ; 4   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; DISPLAYS1[1] ; 37    ; --       ; 4   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; DISPLAYS1[2] ; 40    ; --       ; 4   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; DISPLAYS1[3] ; 35    ; --       ; 4   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; DISPLAYS1[4] ; 41    ; --       ; 4   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; DISPLAYS1[5] ; 5     ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
+; DISPLAYS1[6] ; 36    ; --       ; 4   ; no              ; no             ; no         ; no            ; TTL          ; Fitter               ; 10 pF ; -                    ; -                   ;
++--------------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
 
 
 +-------------------------------------------------------------------------------------------------------+
@@ -162,44 +183,44 @@ The pin-out file can be found in C:/Users/willi/OneDrive/Área de Trabalho/work/r
 ; 1        ; 0          ; --       ; CLEAR          ; input  ; TTL          ;         ; N               ;
 ; 2        ; 1          ; --       ; GND+           ;        ;              ;         ;                 ;
 ; 3        ; 2          ; --       ; VCCINT         ; power  ;              ; 5.0V    ;                 ;
-; 4        ; 3          ; --       ; RESERVED       ;        ;              ;         ;                 ;
-; 5        ; 4          ; --       ; SEG[0]         ; output ; TTL          ;         ; N               ;
-; 6        ; 5          ; --       ; SEG[3]         ; output ; TTL          ;         ; N               ;
+; 4        ; 3          ; --       ; DISPLAYS0[0]   ; output ; TTL          ;         ; N               ;
+; 5        ; 4          ; --       ; DISPLAYS1[5]   ; output ; TTL          ;         ; N               ;
+; 6        ; 5          ; --       ; DISPLAYS0[5]   ; output ; TTL          ;         ; N               ;
 ; 7        ; 6          ; --       ; GND            ; gnd    ;              ;         ;                 ;
-; 8        ; 7          ; --       ; MIN[0]         ; output ; TTL          ;         ; N               ;
-; 9        ; 8          ; --       ; SEG[2]         ; output ; TTL          ;         ; N               ;
-; 10       ; 9          ; --       ; MIN[1]         ; output ; TTL          ;         ; N               ;
-; 11       ; 10         ; --       ; MIN[2]         ; output ; TTL          ;         ; N               ;
-; 12       ; 11         ; --       ; SEG[1]         ; output ; TTL          ;         ; N               ;
+; 8        ; 7          ; --       ; DISPLAYS0[2]   ; output ; TTL          ;         ; N               ;
+; 9        ; 8          ; --       ; DISPLAYS0[3]   ; output ; TTL          ;         ; N               ;
+; 10       ; 9          ; --       ; DISPLAYS0[4]   ; output ; TTL          ;         ; N               ;
+; 11       ; 10         ; --       ; DISPLAYS0[6]   ; output ; TTL          ;         ; N               ;
+; 12       ; 11         ; --       ; DISPLAYS0[1]   ; output ; TTL          ;         ; N               ;
 ; 13       ; 12         ; --       ; VCCIO          ; power  ;              ; 5.0V    ;                 ;
 ; 14       ; 13         ; --       ; TDI            ; input  ; TTL          ;         ; N               ;
-; 15       ; 14         ; --       ; RESERVED       ;        ;              ;         ;                 ;
-; 16       ; 15         ; --       ; RESERVED       ;        ;              ;         ;                 ;
-; 17       ; 16         ; --       ; RESERVED       ;        ;              ;         ;                 ;
-; 18       ; 17         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 15       ; 14         ; --       ; DISPLAYM1[6]   ; output ; TTL          ;         ; N               ;
+; 16       ; 15         ; --       ; DISPLAYM1[1]   ; output ; TTL          ;         ; N               ;
+; 17       ; 16         ; --       ; DISPLAYM1[4]   ; output ; TTL          ;         ; N               ;
+; 18       ; 17         ; --       ; DISPLAYM1[0]   ; output ; TTL          ;         ; N               ;
 ; 19       ; 18         ; --       ; GND            ; gnd    ;              ;         ;                 ;
-; 20       ; 19         ; --       ; RESERVED       ;        ;              ;         ;                 ;
-; 21       ; 20         ; --       ; RESERVED       ;        ;              ;         ;                 ;
-; 22       ; 21         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 20       ; 19         ; --       ; DISPLAYM1[5]   ; output ; TTL          ;         ; N               ;
+; 21       ; 20         ; --       ; DISPLAYM1[2]   ; output ; TTL          ;         ; N               ;
+; 22       ; 21         ; --       ; DISPLAYM1[3]   ; output ; TTL          ;         ; N               ;
 ; 23       ; 22         ; --       ; TMS            ; input  ; TTL          ;         ; N               ;
-; 24       ; 23         ; --       ; RESERVED       ;        ;              ;         ;                 ;
-; 25       ; 24         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 24       ; 23         ; --       ; DISPLAYM0[0]   ; output ; TTL          ;         ; N               ;
+; 25       ; 24         ; --       ; DISPLAYM0[5]   ; output ; TTL          ;         ; N               ;
 ; 26       ; 25         ; --       ; VCCIO          ; power  ;              ; 5.0V    ;                 ;
-; 27       ; 26         ; --       ; RESERVED       ;        ;              ;         ;                 ;
-; 28       ; 27         ; --       ; RESERVED       ;        ;              ;         ;                 ;
-; 29       ; 28         ; --       ; RESERVED       ;        ;              ;         ;                 ;
-; 30       ; 29         ; --       ; RESERVED       ;        ;              ;         ;                 ;
-; 31       ; 30         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 27       ; 26         ; --       ; DISPLAYM0[2]   ; output ; TTL          ;         ; N               ;
+; 28       ; 27         ; --       ; DISPLAYM0[1]   ; output ; TTL          ;         ; N               ;
+; 29       ; 28         ; --       ; DISPLAYM0[3]   ; output ; TTL          ;         ; N               ;
+; 30       ; 29         ; --       ; DISPLAYM0[4]   ; output ; TTL          ;         ; N               ;
+; 31       ; 30         ; --       ; DISPLAYM0[6]   ; output ; TTL          ;         ; N               ;
 ; 32       ; 31         ; --       ; GND            ; gnd    ;              ;         ;                 ;
 ; 33       ; 32         ; --       ; RESERVED       ;        ;              ;         ;                 ;
 ; 34       ; 33         ; --       ; RESERVED       ;        ;              ;         ;                 ;
-; 35       ; 34         ; --       ; RESERVED       ;        ;              ;         ;                 ;
-; 36       ; 35         ; --       ; RESERVED       ;        ;              ;         ;                 ;
-; 37       ; 36         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 35       ; 34         ; --       ; DISPLAYS1[3]   ; output ; TTL          ;         ; N               ;
+; 36       ; 35         ; --       ; DISPLAYS1[6]   ; output ; TTL          ;         ; N               ;
+; 37       ; 36         ; --       ; DISPLAYS1[1]   ; output ; TTL          ;         ; N               ;
 ; 38       ; 37         ; --       ; VCCIO          ; power  ;              ; 5.0V    ;                 ;
-; 39       ; 38         ; --       ; RESERVED       ;        ;              ;         ;                 ;
-; 40       ; 39         ; --       ; RESERVED       ;        ;              ;         ;                 ;
-; 41       ; 40         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 39       ; 38         ; --       ; DISPLAYS1[0]   ; output ; TTL          ;         ; N               ;
+; 40       ; 39         ; --       ; DISPLAYS1[2]   ; output ; TTL          ;         ; N               ;
+; 41       ; 40         ; --       ; DISPLAYS1[4]   ; output ; TTL          ;         ; N               ;
 ; 42       ; 41         ; --       ; GND            ; gnd    ;              ;         ;                 ;
 ; 43       ; 42         ; --       ; VCCINT         ; power  ;              ; 5.0V    ;                 ;
 ; 44       ; 43         ; --       ; RESERVED       ;        ;              ;         ;                 ;
@@ -278,32 +299,56 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                           ;
-+-----------------------------------+------------+------+----------------------------------------------------------+--------------+
-; Compilation Hierarchy Node        ; Macrocells ; Pins ; Full Hierarchy Name                                      ; Library Name ;
-+-----------------------------------+------------+------+----------------------------------------------------------+--------------+
-; |relogio_digital                  ; 7          ; 13   ; |relogio_digital                                         ; work         ;
-;    |cont_mod10:contador_segundos| ; 4          ; 0    ; |relogio_digital|cont_mod10:contador_segundos            ; work         ;
-;       |JK_FF:FFS0|                ; 1          ; 0    ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS0 ; work         ;
-;       |JK_FF:FFS1|                ; 1          ; 0    ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS1 ; work         ;
-;       |JK_FF:FFS2|                ; 1          ; 0    ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS2 ; work         ;
-;       |JK_FF:FFS3|                ; 1          ; 0    ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS3 ; work         ;
-;    |cont_mod6:contador_minutos|   ; 3          ; 0    ; |relogio_digital|cont_mod6:contador_minutos              ; work         ;
-;       |JK_FF:FFM0|                ; 1          ; 0    ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM0   ; work         ;
-;       |JK_FF:FFM1|                ; 1          ; 0    ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM1   ; work         ;
-;       |JK_FF:FFM2|                ; 1          ; 0    ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM2   ; work         ;
-+-----------------------------------+------------+------+----------------------------------------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                             ;
++------------------------------------+------------+------+-----------------------------------------------------------+--------------+
+; Compilation Hierarchy Node         ; Macrocells ; Pins ; Full Hierarchy Name                                       ; Library Name ;
++------------------------------------+------------+------+-----------------------------------------------------------+--------------+
+; |relogio_digital                   ; 42         ; 34   ; |relogio_digital                                          ; work         ;
+;    |cont_mod10:contador_minutos0|  ; 4          ; 0    ; |relogio_digital|cont_mod10:contador_minutos0             ; work         ;
+;       |JK_FF:FFS0|                 ; 1          ; 0    ; |relogio_digital|cont_mod10:contador_minutos0|JK_FF:FFS0  ; work         ;
+;       |JK_FF:FFS1|                 ; 1          ; 0    ; |relogio_digital|cont_mod10:contador_minutos0|JK_FF:FFS1  ; work         ;
+;       |JK_FF:FFS2|                 ; 1          ; 0    ; |relogio_digital|cont_mod10:contador_minutos0|JK_FF:FFS2  ; work         ;
+;       |JK_FF:FFS3|                 ; 1          ; 0    ; |relogio_digital|cont_mod10:contador_minutos0|JK_FF:FFS3  ; work         ;
+;    |cont_mod10:contador_segundos0| ; 4          ; 0    ; |relogio_digital|cont_mod10:contador_segundos0            ; work         ;
+;       |JK_FF:FFS0|                 ; 1          ; 0    ; |relogio_digital|cont_mod10:contador_segundos0|JK_FF:FFS0 ; work         ;
+;       |JK_FF:FFS1|                 ; 1          ; 0    ; |relogio_digital|cont_mod10:contador_segundos0|JK_FF:FFS1 ; work         ;
+;       |JK_FF:FFS2|                 ; 1          ; 0    ; |relogio_digital|cont_mod10:contador_segundos0|JK_FF:FFS2 ; work         ;
+;       |JK_FF:FFS3|                 ; 1          ; 0    ; |relogio_digital|cont_mod10:contador_segundos0|JK_FF:FFS3 ; work         ;
+;    |cont_mod6:contador_minutos1|   ; 3          ; 0    ; |relogio_digital|cont_mod6:contador_minutos1              ; work         ;
+;       |JK_FF:FFM0|                 ; 1          ; 0    ; |relogio_digital|cont_mod6:contador_minutos1|JK_FF:FFM0   ; work         ;
+;       |JK_FF:FFM1|                 ; 1          ; 0    ; |relogio_digital|cont_mod6:contador_minutos1|JK_FF:FFM1   ; work         ;
+;       |JK_FF:FFM2|                 ; 1          ; 0    ; |relogio_digital|cont_mod6:contador_minutos1|JK_FF:FFM2   ; work         ;
+;    |cont_mod6:contador_segundos1|  ; 3          ; 0    ; |relogio_digital|cont_mod6:contador_segundos1             ; work         ;
+;       |JK_FF:FFM0|                 ; 1          ; 0    ; |relogio_digital|cont_mod6:contador_segundos1|JK_FF:FFM0  ; work         ;
+;       |JK_FF:FFM1|                 ; 1          ; 0    ; |relogio_digital|cont_mod6:contador_segundos1|JK_FF:FFM1  ; work         ;
+;       |JK_FF:FFM2|                 ; 1          ; 0    ; |relogio_digital|cont_mod6:contador_segundos1|JK_FF:FFM2  ; work         ;
+;    |decodificador:decodificadorm0| ; 7          ; 0    ; |relogio_digital|decodificador:decodificadorm0            ; work         ;
+;    |decodificador:decodificadorm1| ; 7          ; 0    ; |relogio_digital|decodificador:decodificadorm1            ; work         ;
+;    |decodificador:decodificadors0| ; 7          ; 0    ; |relogio_digital|decodificador:decodificadors0            ; work         ;
+;    |decodificador:decodificadors1| ; 7          ; 0    ; |relogio_digital|decodificador:decodificadors1            ; work         ;
++------------------------------------+------------+------+-----------------------------------------------------------+--------------+
 
 
-+----------------------------------------------------------------------------------------------+
-; Control Signals                                                                              ;
-+-------+----------+---------+--------------+--------+----------------------+------------------+
-; Name  ; Location ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ;
-+-------+----------+---------+--------------+--------+----------------------+------------------+
-; CLEAR ; PIN_1    ; 7       ; Async. clear ; yes    ; On                   ; --               ;
-; CLOCK ; PIN_83   ; 7       ; Clock        ; yes    ; On                   ; --               ;
-+-------+----------+---------+--------------+--------+----------------------+------------------+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                     ;
++----------------------------------------------+----------+---------+--------------+--------+----------------------+------------------+
+; Name                                         ; Location ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ;
++----------------------------------------------+----------+---------+--------------+--------+----------------------+------------------+
+; CLEAR                                        ; PIN_1    ; 14      ; Async. clear ; yes    ; On                   ; --               ;
+; CLOCK                                        ; PIN_83   ; 4       ; Clock        ; yes    ; On                   ; --               ;
+; cont_mod10:contador_minutos0|JK_FF:FFS0|AUX  ; LC23     ; 14      ; Clock        ; no     ; --                   ; --               ;
+; cont_mod10:contador_minutos0|JK_FF:FFS1|AUX  ; LC18     ; 14      ; Clock        ; no     ; --                   ; --               ;
+; cont_mod10:contador_minutos0|JK_FF:FFS2|AUX  ; LC20     ; 13      ; Clock        ; no     ; --                   ; --               ;
+; cont_mod10:contador_minutos0|JK_FF:FFS3|AUX  ; LC22     ; 14      ; Clock        ; no     ; --                   ; --               ;
+; cont_mod10:contador_segundos0|JK_FF:FFS0|AUX ; LC12     ; 14      ; Clock        ; no     ; --                   ; --               ;
+; cont_mod10:contador_segundos0|JK_FF:FFS1|AUX ; LC10     ; 14      ; Clock        ; no     ; --                   ; --               ;
+; cont_mod10:contador_segundos0|JK_FF:FFS2|AUX ; LC9      ; 13      ; Clock        ; no     ; --                   ; --               ;
+; cont_mod10:contador_segundos0|JK_FF:FFS3|AUX ; LC7      ; 14      ; Clock        ; no     ; --                   ; --               ;
+; cont_mod6:contador_segundos1|JK_FF:FFM0|AUX  ; LC1      ; 14      ; Clock        ; no     ; --                   ; --               ;
+; cont_mod6:contador_segundos1|JK_FF:FFM1|AUX  ; LC4      ; 14      ; Clock        ; no     ; --                   ; --               ;
+; cont_mod6:contador_segundos1|JK_FF:FFM2|AUX  ; LC2      ; 14      ; Clock        ; no     ; --                   ; --               ;
++----------------------------------------------+----------+---------+--------------+--------+----------------------+------------------+
 
 
 +----------------------------------------------------------------------+
@@ -311,82 +356,163 @@ Note: User assignments will override these defaults. The user specified values a
 +-------+----------+---------+----------------------+------------------+
 ; Name  ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ;
 +-------+----------+---------+----------------------+------------------+
-; CLEAR ; PIN_1    ; 7       ; On                   ; --               ;
-; CLOCK ; PIN_83   ; 7       ; On                   ; --               ;
+; CLEAR ; PIN_1    ; 14      ; On                   ; --               ;
+; CLOCK ; PIN_83   ; 4       ; On                   ; --               ;
 +-------+----------+---------+----------------------+------------------+
 
 
-+-------------------------------------------------------+
-; Non-Global High Fan-Out Signals                       ;
-+---------------------------------------------+---------+
-; Name                                        ; Fan-Out ;
-+---------------------------------------------+---------+
-; cont_mod10:contador_segundos|JK_FF:FFS0|AUX ; 5       ;
-; cont_mod10:contador_segundos|JK_FF:FFS3|AUX ; 5       ;
-; cont_mod10:contador_segundos|JK_FF:FFS1|AUX ; 5       ;
-; cont_mod6:contador_minutos|JK_FF:FFM0|AUX   ; 4       ;
-; cont_mod10:contador_segundos|JK_FF:FFS2|AUX ; 4       ;
-; cont_mod6:contador_minutos|JK_FF:FFM1|AUX   ; 4       ;
-; cont_mod6:contador_minutos|JK_FF:FFM2|AUX   ; 4       ;
-+---------------------------------------------+---------+
++--------------------------------------------------------+
+; Non-Global High Fan-Out Signals                        ;
++----------------------------------------------+---------+
+; Name                                         ; Fan-Out ;
++----------------------------------------------+---------+
+; cont_mod10:contador_minutos0|JK_FF:FFS3|AUX  ; 14      ;
+; cont_mod10:contador_minutos0|JK_FF:FFS0|AUX  ; 14      ;
+; cont_mod10:contador_minutos0|JK_FF:FFS1|AUX  ; 14      ;
+; cont_mod6:contador_segundos1|JK_FF:FFM1|AUX  ; 14      ;
+; cont_mod6:contador_segundos1|JK_FF:FFM2|AUX  ; 14      ;
+; cont_mod6:contador_segundos1|JK_FF:FFM0|AUX  ; 14      ;
+; cont_mod10:contador_segundos0|JK_FF:FFS3|AUX ; 14      ;
+; cont_mod10:contador_segundos0|JK_FF:FFS0|AUX ; 14      ;
+; cont_mod10:contador_segundos0|JK_FF:FFS1|AUX ; 14      ;
+; cont_mod10:contador_minutos0|JK_FF:FFS2|AUX  ; 13      ;
+; cont_mod10:contador_segundos0|JK_FF:FFS2|AUX ; 13      ;
+; cont_mod6:contador_minutos1|JK_FF:FFM1|AUX   ; 10      ;
+; cont_mod6:contador_minutos1|JK_FF:FFM2|AUX   ; 10      ;
+; cont_mod6:contador_minutos1|JK_FF:FFM0|AUX   ; 10      ;
+; decodificador:decodificadorm0|Mux0~7         ; 1       ;
+; decodificador:decodificadorm0|Mux5~9         ; 1       ;
+; decodificador:decodificadorm0|Mux2~5         ; 1       ;
+; decodificador:decodificadorm0|Mux1~9         ; 1       ;
+; decodificador:decodificadorm0|Mux3~10        ; 1       ;
+; decodificador:decodificadorm0|Mux4~5         ; 1       ;
+; decodificador:decodificadorm0|Mux6~8         ; 1       ;
+; decodificador:decodificadorm1|Mux3~8         ; 1       ;
+; decodificador:decodificadorm1|Mux6~7         ; 1       ;
+; decodificador:decodificadorm1|Mux1~4         ; 1       ;
+; decodificador:decodificadorm1|Mux4~3         ; 1       ;
+; decodificador:decodificadorm1|Mux0~4         ; 1       ;
+; decodificador:decodificadorm1|Mux5~6         ; 1       ;
+; decodificador:decodificadorm1|Mux2~3         ; 1       ;
+; decodificador:decodificadors1|Mux3~8         ; 1       ;
+; decodificador:decodificadors1|Mux6~7         ; 1       ;
+; decodificador:decodificadors1|Mux1~4         ; 1       ;
+; decodificador:decodificadors1|Mux4~3         ; 1       ;
+; decodificador:decodificadors1|Mux0~4         ; 1       ;
+; decodificador:decodificadors1|Mux2~2         ; 1       ;
+; decodificador:decodificadors0|Mux0~7         ; 1       ;
+; decodificador:decodificadors1|Mux5~6         ; 1       ;
+; decodificador:decodificadors0|Mux5~9         ; 1       ;
+; decodificador:decodificadors0|Mux2~5         ; 1       ;
+; decodificador:decodificadors0|Mux1~9         ; 1       ;
+; decodificador:decodificadors0|Mux3~10        ; 1       ;
+; decodificador:decodificadors0|Mux4~5         ; 1       ;
+; decodificador:decodificadors0|Mux6~8         ; 1       ;
++----------------------------------------------+---------+
 
 
-+----------------------------------------------+
-; Interconnect Usage Summary                   ;
-+----------------------------+-----------------+
-; Interconnect Resource Type ; Usage           ;
-+----------------------------+-----------------+
-; Output enables             ; 0 / 6 ( 0 % )   ;
-; PIA buffers                ; 7 / 288 ( 2 % ) ;
-; PIAs                       ; 7 / 288 ( 2 % ) ;
-+----------------------------+-----------------+
++-----------------------------------------------+
+; Interconnect Usage Summary                    ;
++----------------------------+------------------+
+; Interconnect Resource Type ; Usage            ;
++----------------------------+------------------+
+; Output enables             ; 0 / 6 ( 0 % )    ;
+; PIA buffers                ; 24 / 288 ( 8 % ) ;
+; PIAs                       ; 24 / 288 ( 8 % ) ;
++----------------------------+------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB External Interconnect                                                  ;
 +----------------------------------------------+-----------------------------+
-; LAB External Interconnects  (Average = 0.88) ; Number of LABs  (Total = 1) ;
+; LAB External Interconnects  (Average = 3.00) ; Number of LABs  (Total = 4) ;
 +----------------------------------------------+-----------------------------+
-; 0                                            ; 7                           ;
+; 0                                            ; 4                           ;
 ; 1                                            ; 0                           ;
 ; 2                                            ; 0                           ;
-; 3                                            ; 0                           ;
-; 4                                            ; 0                           ;
+; 3                                            ; 1                           ;
+; 4                                            ; 1                           ;
 ; 5                                            ; 0                           ;
 ; 6                                            ; 0                           ;
 ; 7                                            ; 1                           ;
+; 8                                            ; 0                           ;
+; 9                                            ; 0                           ;
+; 10                                           ; 1                           ;
 +----------------------------------------------+-----------------------------+
 
 
 +----------------------------------------------------------------------+
 ; LAB Macrocells                                                       ;
 +----------------------------------------+-----------------------------+
-; Number of Macrocells  (Average = 0.88) ; Number of LABs  (Total = 1) ;
+; Number of Macrocells  (Average = 5.25) ; Number of LABs  (Total = 4) ;
 +----------------------------------------+-----------------------------+
-; 0                                      ; 7                           ;
+; 0                                      ; 4                           ;
 ; 1                                      ; 0                           ;
 ; 2                                      ; 0                           ;
 ; 3                                      ; 0                           ;
 ; 4                                      ; 0                           ;
 ; 5                                      ; 0                           ;
-; 6                                      ; 0                           ;
+; 6                                      ; 1                           ;
 ; 7                                      ; 1                           ;
+; 8                                      ; 0                           ;
+; 9                                      ; 0                           ;
+; 10                                     ; 0                           ;
+; 11                                     ; 0                           ;
+; 12                                     ; 0                           ;
+; 13                                     ; 0                           ;
+; 14                                     ; 1                           ;
+; 15                                     ; 1                           ;
 +----------------------------------------+-----------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Logic Cell Interconnection                                                                                                                                                                                                                                                                                                                                                                                       ;
-+-----+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; LAB ; Logic Cell ; Input                                                                                                                                                                                            ; Output                                                                                                                                                                                     ;
-+-----+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-;  A  ; LC3        ; CLOCK, CLEAR, cont_mod10:contador_segundos|JK_FF:FFS0|AUX, cont_mod10:contador_segundos|JK_FF:FFS3|AUX, cont_mod10:contador_segundos|JK_FF:FFS1|AUX                                              ; cont_mod10:contador_segundos|JK_FF:FFS1|AUX, SEG[1], cont_mod10:contador_segundos|JK_FF:FFS2|AUX, cont_mod10:contador_segundos|JK_FF:FFS3|AUX, cont_mod10:contador_segundos|JK_FF:FFS0|AUX ;
-;  A  ; LC5        ; CLOCK, CLEAR, cont_mod6:contador_minutos|JK_FF:FFM0|AUX, cont_mod6:contador_minutos|JK_FF:FFM1|AUX, cont_mod6:contador_minutos|JK_FF:FFM2|AUX                                                    ; cont_mod6:contador_minutos|JK_FF:FFM2|AUX, MIN[2], cont_mod6:contador_minutos|JK_FF:FFM1|AUX, cont_mod6:contador_minutos|JK_FF:FFM0|AUX                                                    ;
-;  A  ; LC6        ; CLOCK, CLEAR, cont_mod6:contador_minutos|JK_FF:FFM2|AUX, cont_mod6:contador_minutos|JK_FF:FFM0|AUX, cont_mod6:contador_minutos|JK_FF:FFM1|AUX                                                    ; cont_mod6:contador_minutos|JK_FF:FFM2|AUX, cont_mod6:contador_minutos|JK_FF:FFM1|AUX, MIN[1], cont_mod6:contador_minutos|JK_FF:FFM0|AUX                                                    ;
-;  A  ; LC8        ; CLOCK, CLEAR, cont_mod10:contador_segundos|JK_FF:FFS3|AUX, cont_mod10:contador_segundos|JK_FF:FFS1|AUX, cont_mod10:contador_segundos|JK_FF:FFS0|AUX, cont_mod10:contador_segundos|JK_FF:FFS2|AUX ; cont_mod10:contador_segundos|JK_FF:FFS2|AUX, SEG[2], cont_mod10:contador_segundos|JK_FF:FFS3|AUX, cont_mod10:contador_segundos|JK_FF:FFS0|AUX                                              ;
-;  A  ; LC11       ; CLOCK, CLEAR, cont_mod6:contador_minutos|JK_FF:FFM1|AUX, cont_mod6:contador_minutos|JK_FF:FFM2|AUX, cont_mod6:contador_minutos|JK_FF:FFM0|AUX                                                    ; cont_mod6:contador_minutos|JK_FF:FFM2|AUX, cont_mod6:contador_minutos|JK_FF:FFM1|AUX, cont_mod6:contador_minutos|JK_FF:FFM0|AUX, MIN[0]                                                    ;
-;  A  ; LC13       ; CLOCK, CLEAR, cont_mod10:contador_segundos|JK_FF:FFS2|AUX, cont_mod10:contador_segundos|JK_FF:FFS0|AUX, cont_mod10:contador_segundos|JK_FF:FFS1|AUX, cont_mod10:contador_segundos|JK_FF:FFS3|AUX ; cont_mod10:contador_segundos|JK_FF:FFS1|AUX, cont_mod10:contador_segundos|JK_FF:FFS2|AUX, cont_mod10:contador_segundos|JK_FF:FFS3|AUX, SEG[3], cont_mod10:contador_segundos|JK_FF:FFS0|AUX ;
-;  A  ; LC14       ; CLOCK, CLEAR, cont_mod10:contador_segundos|JK_FF:FFS1|AUX, cont_mod10:contador_segundos|JK_FF:FFS3|AUX, cont_mod10:contador_segundos|JK_FF:FFS0|AUX, cont_mod10:contador_segundos|JK_FF:FFS2|AUX ; cont_mod10:contador_segundos|JK_FF:FFS1|AUX, cont_mod10:contador_segundos|JK_FF:FFS2|AUX, cont_mod10:contador_segundos|JK_FF:FFS3|AUX, cont_mod10:contador_segundos|JK_FF:FFS0|AUX, SEG[0] ;
-+-----+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Logic Cell Interconnection                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ;
++-----+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; LAB ; Logic Cell ; Input                                                                                                                                                                                                                                                                                                                                ; Output                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ;
++-----+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+;  A  ; LC10       ; CLOCK, CLEAR, cont_mod10:contador_segundos0|JK_FF:FFS0|AUX, cont_mod10:contador_segundos0|JK_FF:FFS3|AUX, cont_mod10:contador_segundos0|JK_FF:FFS1|AUX                                                                                                                                                                               ; cont_mod10:contador_segundos0|JK_FF:FFS1|AUX, cont_mod10:contador_segundos0|JK_FF:FFS0|AUX, cont_mod10:contador_segundos0|JK_FF:FFS3|AUX, cont_mod6:contador_segundos1|JK_FF:FFM0|AUX, cont_mod10:contador_segundos0|JK_FF:FFS2|AUX, cont_mod6:contador_segundos1|JK_FF:FFM2|AUX, decodificador:decodificadors0|Mux6~8, decodificador:decodificadors0|Mux4~5, decodificador:decodificadors0|Mux3~10, decodificador:decodificadors0|Mux1~9, decodificador:decodificadors0|Mux2~5, decodificador:decodificadors0|Mux5~9, decodificador:decodificadors0|Mux0~7, cont_mod6:contador_segundos1|JK_FF:FFM1|AUX ;
+;  A  ; LC12       ; CLOCK, CLEAR, cont_mod10:contador_segundos0|JK_FF:FFS1|AUX, cont_mod10:contador_segundos0|JK_FF:FFS3|AUX, cont_mod10:contador_segundos0|JK_FF:FFS0|AUX, cont_mod10:contador_segundos0|JK_FF:FFS2|AUX                                                                                                                                 ; cont_mod10:contador_segundos0|JK_FF:FFS1|AUX, cont_mod10:contador_segundos0|JK_FF:FFS0|AUX, cont_mod10:contador_segundos0|JK_FF:FFS3|AUX, cont_mod6:contador_segundos1|JK_FF:FFM0|AUX, cont_mod10:contador_segundos0|JK_FF:FFS2|AUX, cont_mod6:contador_segundos1|JK_FF:FFM2|AUX, decodificador:decodificadors0|Mux6~8, decodificador:decodificadors0|Mux4~5, decodificador:decodificadors0|Mux3~10, decodificador:decodificadors0|Mux1~9, decodificador:decodificadors0|Mux2~5, decodificador:decodificadors0|Mux5~9, decodificador:decodificadors0|Mux0~7, cont_mod6:contador_segundos1|JK_FF:FFM1|AUX ;
+;  A  ; LC7        ; CLOCK, CLEAR, cont_mod10:contador_segundos0|JK_FF:FFS2|AUX, cont_mod10:contador_segundos0|JK_FF:FFS0|AUX, cont_mod10:contador_segundos0|JK_FF:FFS1|AUX, cont_mod10:contador_segundos0|JK_FF:FFS3|AUX                                                                                                                                 ; cont_mod10:contador_segundos0|JK_FF:FFS1|AUX, cont_mod10:contador_segundos0|JK_FF:FFS0|AUX, cont_mod10:contador_segundos0|JK_FF:FFS3|AUX, cont_mod6:contador_segundos1|JK_FF:FFM0|AUX, cont_mod10:contador_segundos0|JK_FF:FFS2|AUX, cont_mod6:contador_segundos1|JK_FF:FFM2|AUX, decodificador:decodificadors0|Mux6~8, decodificador:decodificadors0|Mux4~5, decodificador:decodificadors0|Mux3~10, decodificador:decodificadors0|Mux1~9, decodificador:decodificadors0|Mux2~5, decodificador:decodificadors0|Mux5~9, decodificador:decodificadors0|Mux0~7, cont_mod6:contador_segundos1|JK_FF:FFM1|AUX ;
+;  A  ; LC1        ; CLEAR, cont_mod6:contador_segundos1|JK_FF:FFM1|AUX, cont_mod6:contador_segundos1|JK_FF:FFM2|AUX, cont_mod6:contador_segundos1|JK_FF:FFM0|AUX, cont_mod10:contador_segundos0|JK_FF:FFS1|AUX, cont_mod10:contador_segundos0|JK_FF:FFS2|AUX, cont_mod10:contador_segundos0|JK_FF:FFS0|AUX, cont_mod10:contador_segundos0|JK_FF:FFS3|AUX ; cont_mod6:contador_segundos1|JK_FF:FFM0|AUX, cont_mod6:contador_segundos1|JK_FF:FFM2|AUX, decodificador:decodificadors1|Mux5~6, cont_mod6:contador_segundos1|JK_FF:FFM1|AUX, decodificador:decodificadors1|Mux2~2, decodificador:decodificadors1|Mux0~4, cont_mod10:contador_minutos0|JK_FF:FFS1|AUX, decodificador:decodificadors1|Mux4~3, decodificador:decodificadors1|Mux1~4, decodificador:decodificadors1|Mux6~7, decodificador:decodificadors1|Mux3~8, cont_mod10:contador_minutos0|JK_FF:FFS0|AUX, cont_mod10:contador_minutos0|JK_FF:FFS3|AUX, cont_mod10:contador_minutos0|JK_FF:FFS2|AUX      ;
+;  A  ; LC9        ; CLOCK, CLEAR, cont_mod10:contador_segundos0|JK_FF:FFS3|AUX, cont_mod10:contador_segundos0|JK_FF:FFS1|AUX, cont_mod10:contador_segundos0|JK_FF:FFS0|AUX, cont_mod10:contador_segundos0|JK_FF:FFS2|AUX                                                                                                                                 ; cont_mod10:contador_segundos0|JK_FF:FFS0|AUX, cont_mod10:contador_segundos0|JK_FF:FFS3|AUX, cont_mod6:contador_segundos1|JK_FF:FFM0|AUX, cont_mod10:contador_segundos0|JK_FF:FFS2|AUX, cont_mod6:contador_segundos1|JK_FF:FFM2|AUX, decodificador:decodificadors0|Mux6~8, decodificador:decodificadors0|Mux4~5, decodificador:decodificadors0|Mux3~10, decodificador:decodificadors0|Mux1~9, decodificador:decodificadors0|Mux2~5, decodificador:decodificadors0|Mux5~9, decodificador:decodificadors0|Mux0~7, cont_mod6:contador_segundos1|JK_FF:FFM1|AUX                                               ;
+;  A  ; LC2        ; CLEAR, cont_mod6:contador_segundos1|JK_FF:FFM2|AUX, cont_mod6:contador_segundos1|JK_FF:FFM0|AUX, cont_mod6:contador_segundos1|JK_FF:FFM1|AUX, cont_mod10:contador_segundos0|JK_FF:FFS1|AUX, cont_mod10:contador_segundos0|JK_FF:FFS2|AUX, cont_mod10:contador_segundos0|JK_FF:FFS0|AUX, cont_mod10:contador_segundos0|JK_FF:FFS3|AUX ; cont_mod6:contador_segundos1|JK_FF:FFM0|AUX, cont_mod6:contador_segundos1|JK_FF:FFM2|AUX, decodificador:decodificadors1|Mux5~6, cont_mod6:contador_segundos1|JK_FF:FFM1|AUX, decodificador:decodificadors1|Mux2~2, decodificador:decodificadors1|Mux0~4, cont_mod10:contador_minutos0|JK_FF:FFS1|AUX, decodificador:decodificadors1|Mux4~3, decodificador:decodificadors1|Mux1~4, decodificador:decodificadors1|Mux6~7, decodificador:decodificadors1|Mux3~8, cont_mod10:contador_minutos0|JK_FF:FFS0|AUX, cont_mod10:contador_minutos0|JK_FF:FFS3|AUX, cont_mod10:contador_minutos0|JK_FF:FFS2|AUX      ;
+;  A  ; LC5        ; cont_mod10:contador_segundos0|JK_FF:FFS0|AUX, cont_mod10:contador_segundos0|JK_FF:FFS2|AUX, cont_mod10:contador_segundos0|JK_FF:FFS3|AUX, cont_mod10:contador_segundos0|JK_FF:FFS1|AUX                                                                                                                                               ; DISPLAYS0[6]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  A  ; LC6        ; cont_mod10:contador_segundos0|JK_FF:FFS2|AUX, cont_mod10:contador_segundos0|JK_FF:FFS1|AUX, cont_mod10:contador_segundos0|JK_FF:FFS3|AUX, cont_mod10:contador_segundos0|JK_FF:FFS0|AUX                                                                                                                                               ; DISPLAYS0[4]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  A  ; LC8        ; cont_mod10:contador_segundos0|JK_FF:FFS3|AUX, cont_mod10:contador_segundos0|JK_FF:FFS1|AUX, cont_mod10:contador_segundos0|JK_FF:FFS2|AUX, cont_mod10:contador_segundos0|JK_FF:FFS0|AUX                                                                                                                                               ; DISPLAYS0[3]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  A  ; LC3        ; cont_mod10:contador_segundos0|JK_FF:FFS3|AUX, cont_mod10:contador_segundos0|JK_FF:FFS1|AUX, cont_mod10:contador_segundos0|JK_FF:FFS2|AUX, cont_mod10:contador_segundos0|JK_FF:FFS0|AUX                                                                                                                                               ; DISPLAYS0[1]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  A  ; LC11       ; cont_mod10:contador_segundos0|JK_FF:FFS3|AUX, cont_mod10:contador_segundos0|JK_FF:FFS1|AUX, cont_mod10:contador_segundos0|JK_FF:FFS2|AUX, cont_mod10:contador_segundos0|JK_FF:FFS0|AUX                                                                                                                                               ; DISPLAYS0[2]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  A  ; LC13       ; cont_mod10:contador_segundos0|JK_FF:FFS3|AUX, cont_mod10:contador_segundos0|JK_FF:FFS2|AUX, cont_mod10:contador_segundos0|JK_FF:FFS0|AUX, cont_mod10:contador_segundos0|JK_FF:FFS1|AUX                                                                                                                                               ; DISPLAYS0[5]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  A  ; LC14       ; cont_mod6:contador_segundos1|JK_FF:FFM0|AUX, cont_mod6:contador_segundos1|JK_FF:FFM1|AUX, cont_mod6:contador_segundos1|JK_FF:FFM2|AUX                                                                                                                                                                                                ; DISPLAYS1[5]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  A  ; LC16       ; cont_mod10:contador_segundos0|JK_FF:FFS1|AUX, cont_mod10:contador_segundos0|JK_FF:FFS3|AUX, cont_mod10:contador_segundos0|JK_FF:FFS2|AUX, cont_mod10:contador_segundos0|JK_FF:FFS0|AUX                                                                                                                                               ; DISPLAYS0[0]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  A  ; LC4        ; CLEAR, cont_mod6:contador_segundos1|JK_FF:FFM2|AUX, cont_mod6:contador_segundos1|JK_FF:FFM1|AUX, cont_mod6:contador_segundos1|JK_FF:FFM0|AUX, cont_mod10:contador_segundos0|JK_FF:FFS1|AUX, cont_mod10:contador_segundos0|JK_FF:FFS2|AUX, cont_mod10:contador_segundos0|JK_FF:FFS0|AUX, cont_mod10:contador_segundos0|JK_FF:FFS3|AUX ; cont_mod6:contador_segundos1|JK_FF:FFM0|AUX, cont_mod6:contador_segundos1|JK_FF:FFM2|AUX, decodificador:decodificadors1|Mux5~6, cont_mod6:contador_segundos1|JK_FF:FFM1|AUX, decodificador:decodificadors1|Mux2~2, decodificador:decodificadors1|Mux0~4, cont_mod10:contador_minutos0|JK_FF:FFS1|AUX, decodificador:decodificadors1|Mux4~3, decodificador:decodificadors1|Mux1~4, decodificador:decodificadors1|Mux6~7, decodificador:decodificadors1|Mux3~8, cont_mod10:contador_minutos0|JK_FF:FFS0|AUX, cont_mod10:contador_minutos0|JK_FF:FFS3|AUX, cont_mod10:contador_minutos0|JK_FF:FFS2|AUX      ;
+;  B  ; LC19       ; cont_mod6:contador_minutos1|JK_FF:FFM2|AUX, cont_mod6:contador_minutos1|JK_FF:FFM0|AUX, cont_mod6:contador_minutos1|JK_FF:FFM1|AUX                                                                                                                                                                                                   ; DISPLAYM1[2]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  B  ; LC21       ; cont_mod6:contador_minutos1|JK_FF:FFM0|AUX, cont_mod6:contador_minutos1|JK_FF:FFM1|AUX, cont_mod6:contador_minutos1|JK_FF:FFM2|AUX                                                                                                                                                                                                   ; DISPLAYM1[5]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  B  ; LC18       ; CLEAR, cont_mod10:contador_minutos0|JK_FF:FFS3|AUX, cont_mod10:contador_minutos0|JK_FF:FFS1|AUX, cont_mod10:contador_minutos0|JK_FF:FFS0|AUX, cont_mod6:contador_segundos1|JK_FF:FFM1|AUX, cont_mod6:contador_segundos1|JK_FF:FFM0|AUX, cont_mod6:contador_segundos1|JK_FF:FFM2|AUX                                                  ; cont_mod10:contador_minutos0|JK_FF:FFS1|AUX, cont_mod6:contador_minutos1|JK_FF:FFM0|AUX, cont_mod10:contador_minutos0|JK_FF:FFS0|AUX, cont_mod6:contador_minutos1|JK_FF:FFM2|AUX, cont_mod10:contador_minutos0|JK_FF:FFS3|AUX, cont_mod6:contador_minutos1|JK_FF:FFM1|AUX, cont_mod10:contador_minutos0|JK_FF:FFS2|AUX, decodificador:decodificadorm0|Mux6~8, decodificador:decodificadorm0|Mux4~5, decodificador:decodificadorm0|Mux3~10, decodificador:decodificadorm0|Mux1~9, decodificador:decodificadorm0|Mux2~5, decodificador:decodificadorm0|Mux5~9, decodificador:decodificadorm0|Mux0~7        ;
+;  B  ; LC28       ; CLEAR, cont_mod6:contador_minutos1|JK_FF:FFM2|AUX, cont_mod6:contador_minutos1|JK_FF:FFM0|AUX, cont_mod6:contador_minutos1|JK_FF:FFM1|AUX, cont_mod10:contador_minutos0|JK_FF:FFS1|AUX, cont_mod10:contador_minutos0|JK_FF:FFS2|AUX, cont_mod10:contador_minutos0|JK_FF:FFS0|AUX, cont_mod10:contador_minutos0|JK_FF:FFS3|AUX        ; cont_mod6:contador_minutos1|JK_FF:FFM0|AUX, cont_mod6:contador_minutos1|JK_FF:FFM2|AUX, decodificador:decodificadorm1|Mux2~3, decodificador:decodificadorm1|Mux5~6, cont_mod6:contador_minutos1|JK_FF:FFM1|AUX, decodificador:decodificadorm1|Mux0~4, decodificador:decodificadorm1|Mux4~3, decodificador:decodificadorm1|Mux1~4, decodificador:decodificadorm1|Mux6~7, decodificador:decodificadorm1|Mux3~8                                                                                                                                                                                             ;
+;  B  ; LC23       ; CLEAR, cont_mod10:contador_minutos0|JK_FF:FFS1|AUX, cont_mod10:contador_minutos0|JK_FF:FFS3|AUX, cont_mod10:contador_minutos0|JK_FF:FFS0|AUX, cont_mod10:contador_minutos0|JK_FF:FFS2|AUX, cont_mod6:contador_segundos1|JK_FF:FFM1|AUX, cont_mod6:contador_segundos1|JK_FF:FFM0|AUX, cont_mod6:contador_segundos1|JK_FF:FFM2|AUX     ; cont_mod10:contador_minutos0|JK_FF:FFS1|AUX, cont_mod6:contador_minutos1|JK_FF:FFM0|AUX, cont_mod10:contador_minutos0|JK_FF:FFS0|AUX, cont_mod6:contador_minutos1|JK_FF:FFM2|AUX, cont_mod10:contador_minutos0|JK_FF:FFS3|AUX, cont_mod6:contador_minutos1|JK_FF:FFM1|AUX, cont_mod10:contador_minutos0|JK_FF:FFS2|AUX, decodificador:decodificadorm0|Mux6~8, decodificador:decodificadorm0|Mux4~5, decodificador:decodificadorm0|Mux3~10, decodificador:decodificadorm0|Mux1~9, decodificador:decodificadorm0|Mux2~5, decodificador:decodificadorm0|Mux5~9, decodificador:decodificadorm0|Mux0~7        ;
+;  B  ; LC30       ; CLEAR, cont_mod6:contador_minutos1|JK_FF:FFM1|AUX, cont_mod6:contador_minutos1|JK_FF:FFM2|AUX, cont_mod6:contador_minutos1|JK_FF:FFM0|AUX, cont_mod10:contador_minutos0|JK_FF:FFS1|AUX, cont_mod10:contador_minutos0|JK_FF:FFS2|AUX, cont_mod10:contador_minutos0|JK_FF:FFS0|AUX, cont_mod10:contador_minutos0|JK_FF:FFS3|AUX        ; cont_mod6:contador_minutos1|JK_FF:FFM0|AUX, cont_mod6:contador_minutos1|JK_FF:FFM2|AUX, decodificador:decodificadorm1|Mux2~3, decodificador:decodificadorm1|Mux5~6, cont_mod6:contador_minutos1|JK_FF:FFM1|AUX, decodificador:decodificadorm1|Mux0~4, decodificador:decodificadorm1|Mux4~3, decodificador:decodificadorm1|Mux1~4, decodificador:decodificadorm1|Mux6~7, decodificador:decodificadorm1|Mux3~8                                                                                                                                                                                             ;
+;  B  ; LC22       ; CLEAR, cont_mod10:contador_minutos0|JK_FF:FFS2|AUX, cont_mod10:contador_minutos0|JK_FF:FFS0|AUX, cont_mod10:contador_minutos0|JK_FF:FFS1|AUX, cont_mod10:contador_minutos0|JK_FF:FFS3|AUX, cont_mod6:contador_segundos1|JK_FF:FFM1|AUX, cont_mod6:contador_segundos1|JK_FF:FFM0|AUX, cont_mod6:contador_segundos1|JK_FF:FFM2|AUX     ; cont_mod10:contador_minutos0|JK_FF:FFS1|AUX, cont_mod6:contador_minutos1|JK_FF:FFM0|AUX, cont_mod10:contador_minutos0|JK_FF:FFS0|AUX, cont_mod6:contador_minutos1|JK_FF:FFM2|AUX, cont_mod10:contador_minutos0|JK_FF:FFS3|AUX, cont_mod6:contador_minutos1|JK_FF:FFM1|AUX, cont_mod10:contador_minutos0|JK_FF:FFS2|AUX, decodificador:decodificadorm0|Mux6~8, decodificador:decodificadorm0|Mux4~5, decodificador:decodificadorm0|Mux3~10, decodificador:decodificadorm0|Mux1~9, decodificador:decodificadorm0|Mux2~5, decodificador:decodificadorm0|Mux5~9, decodificador:decodificadorm0|Mux0~7        ;
+;  B  ; LC26       ; CLEAR, cont_mod6:contador_minutos1|JK_FF:FFM2|AUX, cont_mod6:contador_minutos1|JK_FF:FFM1|AUX, cont_mod6:contador_minutos1|JK_FF:FFM0|AUX, cont_mod10:contador_minutos0|JK_FF:FFS1|AUX, cont_mod10:contador_minutos0|JK_FF:FFS2|AUX, cont_mod10:contador_minutos0|JK_FF:FFS0|AUX, cont_mod10:contador_minutos0|JK_FF:FFS3|AUX        ; cont_mod6:contador_minutos1|JK_FF:FFM0|AUX, cont_mod6:contador_minutos1|JK_FF:FFM2|AUX, decodificador:decodificadorm1|Mux2~3, decodificador:decodificadorm1|Mux5~6, cont_mod6:contador_minutos1|JK_FF:FFM1|AUX, decodificador:decodificadorm1|Mux0~4, decodificador:decodificadorm1|Mux4~3, decodificador:decodificadorm1|Mux1~4, decodificador:decodificadorm1|Mux6~7, decodificador:decodificadorm1|Mux3~8                                                                                                                                                                                             ;
+;  B  ; LC24       ; cont_mod6:contador_minutos1|JK_FF:FFM0|AUX, cont_mod6:contador_minutos1|JK_FF:FFM2|AUX, cont_mod6:contador_minutos1|JK_FF:FFM1|AUX                                                                                                                                                                                                   ; DISPLAYM1[0]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  B  ; LC25       ; cont_mod6:contador_minutos1|JK_FF:FFM1|AUX, cont_mod6:contador_minutos1|JK_FF:FFM2|AUX, cont_mod6:contador_minutos1|JK_FF:FFM0|AUX                                                                                                                                                                                                   ; DISPLAYM1[4]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  B  ; LC27       ; cont_mod6:contador_minutos1|JK_FF:FFM0|AUX, cont_mod6:contador_minutos1|JK_FF:FFM1|AUX, cont_mod6:contador_minutos1|JK_FF:FFM2|AUX                                                                                                                                                                                                   ; DISPLAYM1[1]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  B  ; LC29       ; cont_mod6:contador_minutos1|JK_FF:FFM2|AUX, cont_mod6:contador_minutos1|JK_FF:FFM1|AUX, cont_mod6:contador_minutos1|JK_FF:FFM0|AUX                                                                                                                                                                                                   ; DISPLAYM1[6]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  B  ; LC17       ; cont_mod6:contador_minutos1|JK_FF:FFM0|AUX, cont_mod6:contador_minutos1|JK_FF:FFM2|AUX, cont_mod6:contador_minutos1|JK_FF:FFM1|AUX                                                                                                                                                                                                   ; DISPLAYM1[3]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  B  ; LC20       ; CLEAR, cont_mod10:contador_minutos0|JK_FF:FFS0|AUX, cont_mod10:contador_minutos0|JK_FF:FFS1|AUX, cont_mod10:contador_minutos0|JK_FF:FFS3|AUX, cont_mod10:contador_minutos0|JK_FF:FFS2|AUX, cont_mod6:contador_segundos1|JK_FF:FFM1|AUX, cont_mod6:contador_segundos1|JK_FF:FFM0|AUX, cont_mod6:contador_segundos1|JK_FF:FFM2|AUX     ; cont_mod6:contador_minutos1|JK_FF:FFM0|AUX, cont_mod10:contador_minutos0|JK_FF:FFS0|AUX, cont_mod6:contador_minutos1|JK_FF:FFM2|AUX, cont_mod10:contador_minutos0|JK_FF:FFS3|AUX, cont_mod6:contador_minutos1|JK_FF:FFM1|AUX, cont_mod10:contador_minutos0|JK_FF:FFS2|AUX, decodificador:decodificadorm0|Mux6~8, decodificador:decodificadorm0|Mux4~5, decodificador:decodificadorm0|Mux3~10, decodificador:decodificadorm0|Mux1~9, decodificador:decodificadorm0|Mux2~5, decodificador:decodificadorm0|Mux5~9, decodificador:decodificadorm0|Mux0~7                                                     ;
+;  C  ; LC37       ; cont_mod10:contador_minutos0|JK_FF:FFS2|AUX, cont_mod10:contador_minutos0|JK_FF:FFS1|AUX, cont_mod10:contador_minutos0|JK_FF:FFS3|AUX, cont_mod10:contador_minutos0|JK_FF:FFS0|AUX                                                                                                                                                   ; DISPLAYM0[4]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  C  ; LC35       ; cont_mod10:contador_minutos0|JK_FF:FFS0|AUX, cont_mod10:contador_minutos0|JK_FF:FFS2|AUX, cont_mod10:contador_minutos0|JK_FF:FFS3|AUX, cont_mod10:contador_minutos0|JK_FF:FFS1|AUX                                                                                                                                                   ; DISPLAYM0[6]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  C  ; LC38       ; cont_mod10:contador_minutos0|JK_FF:FFS3|AUX, cont_mod10:contador_minutos0|JK_FF:FFS1|AUX, cont_mod10:contador_minutos0|JK_FF:FFS2|AUX, cont_mod10:contador_minutos0|JK_FF:FFS0|AUX                                                                                                                                                   ; DISPLAYM0[3]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  C  ; LC40       ; cont_mod10:contador_minutos0|JK_FF:FFS3|AUX, cont_mod10:contador_minutos0|JK_FF:FFS1|AUX, cont_mod10:contador_minutos0|JK_FF:FFS2|AUX, cont_mod10:contador_minutos0|JK_FF:FFS0|AUX                                                                                                                                                   ; DISPLAYM0[1]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  C  ; LC43       ; cont_mod10:contador_minutos0|JK_FF:FFS3|AUX, cont_mod10:contador_minutos0|JK_FF:FFS1|AUX, cont_mod10:contador_minutos0|JK_FF:FFS2|AUX, cont_mod10:contador_minutos0|JK_FF:FFS0|AUX                                                                                                                                                   ; DISPLAYM0[2]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  C  ; LC45       ; cont_mod10:contador_minutos0|JK_FF:FFS3|AUX, cont_mod10:contador_minutos0|JK_FF:FFS2|AUX, cont_mod10:contador_minutos0|JK_FF:FFS0|AUX, cont_mod10:contador_minutos0|JK_FF:FFS1|AUX                                                                                                                                                   ; DISPLAYM0[5]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  C  ; LC46       ; cont_mod10:contador_minutos0|JK_FF:FFS1|AUX, cont_mod10:contador_minutos0|JK_FF:FFS3|AUX, cont_mod10:contador_minutos0|JK_FF:FFS2|AUX, cont_mod10:contador_minutos0|JK_FF:FFS0|AUX                                                                                                                                                   ; DISPLAYM0[0]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  D  ; LC53       ; cont_mod6:contador_segundos1|JK_FF:FFM0|AUX, cont_mod6:contador_segundos1|JK_FF:FFM2|AUX, cont_mod6:contador_segundos1|JK_FF:FFM1|AUX                                                                                                                                                                                                ; DISPLAYS1[0]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  D  ; LC59       ; cont_mod6:contador_segundos1|JK_FF:FFM0|AUX, cont_mod6:contador_segundos1|JK_FF:FFM2|AUX, cont_mod6:contador_segundos1|JK_FF:FFM1|AUX                                                                                                                                                                                                ; DISPLAYS1[3]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  D  ; LC57       ; cont_mod6:contador_segundos1|JK_FF:FFM2|AUX, cont_mod6:contador_segundos1|JK_FF:FFM1|AUX, cont_mod6:contador_segundos1|JK_FF:FFM0|AUX                                                                                                                                                                                                ; DISPLAYS1[6]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  D  ; LC56       ; cont_mod6:contador_segundos1|JK_FF:FFM0|AUX, cont_mod6:contador_segundos1|JK_FF:FFM1|AUX, cont_mod6:contador_segundos1|JK_FF:FFM2|AUX                                                                                                                                                                                                ; DISPLAYS1[1]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  D  ; LC49       ; cont_mod6:contador_segundos1|JK_FF:FFM1|AUX, cont_mod6:contador_segundos1|JK_FF:FFM2|AUX, cont_mod6:contador_segundos1|JK_FF:FFM0|AUX                                                                                                                                                                                                ; DISPLAYS1[4]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  D  ; LC51       ; cont_mod6:contador_segundos1|JK_FF:FFM1|AUX, cont_mod6:contador_segundos1|JK_FF:FFM0|AUX, cont_mod6:contador_segundos1|JK_FF:FFM2|AUX                                                                                                                                                                                                ; DISPLAYS1[2]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
++-----+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------+
@@ -410,13 +536,13 @@ Note: User assignments will override these defaults. The user specified values a
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Sat Nov 12 11:23:29 2022
+    Info: Processing started: Sat Nov 12 14:40:39 2022
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off relogio_digital -c relogio_digital
 Info: Selected device EPM7128SLC84-7 for design "relogio_digital"
 Info: Quartus II Fitter was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 216 megabytes
-    Info: Processing ended: Sat Nov 12 11:23:29 2022
+    Info: Peak virtual memory: 225 megabytes
+    Info: Processing ended: Sat Nov 12 14:40:39 2022
     Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
 
 

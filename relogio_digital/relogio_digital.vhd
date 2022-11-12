@@ -4,10 +4,10 @@ USE ieee. std_logic_1164.all;
 ENTITY relogio_digital IS
 	PORT(CLEAR: IN BIT;
 	     CLOCK: IN STD_LOGIC;
-	       SEG0: BUFFER BIT_VECTOR(3 DOWNTO 0);
-	       SEG1: BUFFER BIT_VECTOR(2 DOWNTO 0);
-	       MIN0: BUFFER BIT_VECTOR(3 DOWNTO 0);
-	       MIN1: BUFFER BIT_VECTOR(2 DOWNTO 0));
+	     DISPLAYS0: OUT BIT_VECTOR(0 TO 6);
+	     DISPLAYS1: OUT BIT_VECTOR(0 TO 6);
+	     DISPLAYM0: OUT BIT_VECTOR(0 TO 6);
+	     DISPLAYM1: OUT BIT_VECTOR(0 TO 6));
 	       
 END relogio_digital;
 
@@ -31,10 +31,16 @@ END COMPONENT;
 COMPONENT cont_mod6 IS
 	PORT(CLEAR: IN BIT;
 		 CLOCK: IN STD_LOGIC;
-	    OUTPUT: OUT BIT_VECTOR(2 DOWNTO 0));
+	    OUTPUT: OUT BIT_VECTOR(3 DOWNTO 0));
+END COMPONENT;	    
+COMPONENT decodificador IS
+	PORT (bcd : IN BIT_VECTOR(3 DOWNTO 0);
+		  leds: OUT BIT_VECTOR(0 TO 6));
 END COMPONENT;
 
 SIGNAL SEG1_CLK, MIN0_CLK, MIN1_CLK: STD_LOGIC;
+SIGNAL SEG0, SEG1, MIN0, MIN1: BIT_VECTOR(3 DOWNTO 0) := "0000";
+
 
 BEGIN
 	contador_segundos0: cont_mod10 PORT MAP(CLEAR, CLOCK, SEG0);
@@ -50,4 +56,10 @@ BEGIN
 	MIN1_CLK <= to_std_logic(NOT(NOT MIN0(0) AND NOT MIN0(1) AND NOT MIN0(2) AND NOT MIN0(3)));
 	
 	contador_minutos1: cont_mod6 PORT MAP(CLEAR, MIN1_CLK, MIN1);
+	
+	decodificadors0: decodificador PORT MAP(SEG0, DISPLAYS0);
+	decodificadors1: decodificador PORT MAP(SEG1, DISPLAYS1);
+	decodificadorm0: decodificador PORT MAP(MIN0, DISPLAYM0);
+	decodificadorm1: decodificador PORT MAP(MIN1, DISPLAYM1);
+	
 END arch;

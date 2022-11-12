@@ -16,7 +16,7 @@
 ## PROGRAM "Quartus II"
 ## VERSION "Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition"
 
-## DATE "11/12/2022 11:23:33"
+## DATE "11/12/2022 14:40:43"
 
 ## 
 ## Device: Altera EPM7128SLC84-7 Package PLCC84
@@ -31,7 +31,7 @@
 set report_default_significant_digits 3
 set hierarchy_separator .
 
-set quartus_root "c:/altera/91sp2/quartus/"
+set quartus_root "d:/altera/quartus/"
 set search_path [list . [format "%s%s" $quartus_root "eda/synopsys/primetime/lib"]  ]
 
 set link_path [list *  max_asynch_io_lib.db max_mcell_register_lib.db  max_asynch_mcell_lib.db max_asynch_sexp_lib.db  alt_vtl.db]
@@ -79,13 +79,34 @@ set_propagated_clock [all_clocks]
 ## End individual pin commands definition ##
 
 ## Start Output pin capacitance definition ##
-set_load -pin_load 10 [get_ports { MIN[0] } ]
-set_load -pin_load 10 [get_ports { MIN[1] } ]
-set_load -pin_load 10 [get_ports { MIN[2] } ]
-set_load -pin_load 10 [get_ports { SEG[0] } ]
-set_load -pin_load 10 [get_ports { SEG[1] } ]
-set_load -pin_load 10 [get_ports { SEG[2] } ]
-set_load -pin_load 10 [get_ports { SEG[3] } ]
+set_load -pin_load 10 [get_ports { DISPLAYM0[0] } ]
+set_load -pin_load 10 [get_ports { DISPLAYM0[1] } ]
+set_load -pin_load 10 [get_ports { DISPLAYM0[2] } ]
+set_load -pin_load 10 [get_ports { DISPLAYM0[3] } ]
+set_load -pin_load 10 [get_ports { DISPLAYM0[4] } ]
+set_load -pin_load 10 [get_ports { DISPLAYM0[5] } ]
+set_load -pin_load 10 [get_ports { DISPLAYM0[6] } ]
+set_load -pin_load 10 [get_ports { DISPLAYM1[0] } ]
+set_load -pin_load 10 [get_ports { DISPLAYM1[1] } ]
+set_load -pin_load 10 [get_ports { DISPLAYM1[2] } ]
+set_load -pin_load 10 [get_ports { DISPLAYM1[3] } ]
+set_load -pin_load 10 [get_ports { DISPLAYM1[4] } ]
+set_load -pin_load 10 [get_ports { DISPLAYM1[5] } ]
+set_load -pin_load 10 [get_ports { DISPLAYM1[6] } ]
+set_load -pin_load 10 [get_ports { DISPLAYS0[0] } ]
+set_load -pin_load 10 [get_ports { DISPLAYS0[1] } ]
+set_load -pin_load 10 [get_ports { DISPLAYS0[2] } ]
+set_load -pin_load 10 [get_ports { DISPLAYS0[3] } ]
+set_load -pin_load 10 [get_ports { DISPLAYS0[4] } ]
+set_load -pin_load 10 [get_ports { DISPLAYS0[5] } ]
+set_load -pin_load 10 [get_ports { DISPLAYS0[6] } ]
+set_load -pin_load 10 [get_ports { DISPLAYS1[0] } ]
+set_load -pin_load 10 [get_ports { DISPLAYS1[1] } ]
+set_load -pin_load 10 [get_ports { DISPLAYS1[2] } ]
+set_load -pin_load 10 [get_ports { DISPLAYS1[3] } ]
+set_load -pin_load 10 [get_ports { DISPLAYS1[4] } ]
+set_load -pin_load 10 [get_ports { DISPLAYS1[5] } ]
+set_load -pin_load 10 [get_ports { DISPLAYS1[6] } ]
 ## End Output pin capacitance definition ##
 
 ## Start clock uncertainty definition ##

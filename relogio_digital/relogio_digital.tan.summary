@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 4.500 ns
-From           : cont_mod10:contador_segundos|JK_FF:FFS1|AUX
-To             : SEG[1]
+Actual Time    : 24.500 ns
+From           : cont_mod6:contador_minutos1|JK_FF:FFM2|AUX
+To             : DISPLAYM1[2]
 From Clock     : CLOCK
 To Clock       : --
 Failed Paths   : 0
@@ -16,8 +16,8 @@ Type           : Clock Setup: 'CLOCK'
 Slack          : N/A
 Required Time  : None
 Actual Time    : 125.00 MHz ( period = 8.000 ns )
-From           : cont_mod6:contador_minutos|JK_FF:FFM1|AUX
-To             : cont_mod6:contador_minutos|JK_FF:FFM1|AUX
+From           : cont_mod6:contador_minutos1|JK_FF:FFM2|AUX
+To             : cont_mod6:contador_minutos1|JK_FF:FFM2|AUX
 From Clock     : CLOCK
 To Clock       : CLOCK
 Failed Paths   : 0

@@ -67,44 +67,44 @@ Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage 
 CLEAR                        : 1         : input  : TTL               :         :           : N              
 GND+                         : 2         :        :                   :         :           :                
 VCCINT                       : 3         : power  :                   : 5.0V    :           :                
-RESERVED                     : 4         :        :                   :         :           :                
-SEG[0]                       : 5         : output : TTL               :         :           : N              
-SEG[3]                       : 6         : output : TTL               :         :           : N              
+DISPLAYS0[0]                 : 4         : output : TTL               :         :           : N              
+DISPLAYS1[5]                 : 5         : output : TTL               :         :           : N              
+DISPLAYS0[5]                 : 6         : output : TTL               :         :           : N              
 GND                          : 7         : gnd    :                   :         :           :                
-MIN[0]                       : 8         : output : TTL               :         :           : N              
-SEG[2]                       : 9         : output : TTL               :         :           : N              
-MIN[1]                       : 10        : output : TTL               :         :           : N              
-MIN[2]                       : 11        : output : TTL               :         :           : N              
-SEG[1]                       : 12        : output : TTL               :         :           : N              
+DISPLAYS0[2]                 : 8         : output : TTL               :         :           : N              
+DISPLAYS0[3]                 : 9         : output : TTL               :         :           : N              
+DISPLAYS0[4]                 : 10        : output : TTL               :         :           : N              
+DISPLAYS0[6]                 : 11        : output : TTL               :         :           : N              
+DISPLAYS0[1]                 : 12        : output : TTL               :         :           : N              
 VCCIO                        : 13        : power  :                   : 5.0V    :           :                
 TDI                          : 14        : input  : TTL               :         :           : N              
-RESERVED                     : 15        :        :                   :         :           :                
-RESERVED                     : 16        :        :                   :         :           :                
-RESERVED                     : 17        :        :                   :         :           :                
-RESERVED                     : 18        :        :                   :         :           :                
+DISPLAYM1[6]                 : 15        : output : TTL               :         :           : N              
+DISPLAYM1[1]                 : 16        : output : TTL               :         :           : N              
+DISPLAYM1[4]                 : 17        : output : TTL               :         :           : N              
+DISPLAYM1[0]                 : 18        : output : TTL               :         :           : N              
 GND                          : 19        : gnd    :                   :         :           :                
-RESERVED                     : 20        :        :                   :         :           :                
-RESERVED                     : 21        :        :                   :         :           :                
-RESERVED                     : 22        :        :                   :         :           :                
+DISPLAYM1[5]                 : 20        : output : TTL               :         :           : N              
+DISPLAYM1[2]                 : 21        : output : TTL               :         :           : N              
+DISPLAYM1[3]                 : 22        : output : TTL               :         :           : N              
 TMS                          : 23        : input  : TTL               :         :           : N              
-RESERVED                     : 24        :        :                   :         :           :                
-RESERVED                     : 25        :        :                   :         :           :                
+DISPLAYM0[0]                 : 24        : output : TTL               :         :           : N              
+DISPLAYM0[5]                 : 25        : output : TTL               :         :           : N              
 VCCIO                        : 26        : power  :                   : 5.0V    :           :                
-RESERVED                     : 27        :        :                   :         :           :                
-RESERVED                     : 28        :        :                   :         :           :                
-RESERVED                     : 29        :        :                   :         :           :                
-RESERVED                     : 30        :        :                   :         :           :                
-RESERVED                     : 31        :        :                   :         :           :                
+DISPLAYM0[2]                 : 27        : output : TTL               :         :           : N              
+DISPLAYM0[1]                 : 28        : output : TTL               :         :           : N              
+DISPLAYM0[3]                 : 29        : output : TTL               :         :           : N              
+DISPLAYM0[4]                 : 30        : output : TTL               :         :           : N              
+DISPLAYM0[6]                 : 31        : output : TTL               :         :           : N              
 GND                          : 32        : gnd    :                   :         :           :                
 RESERVED                     : 33        :        :                   :         :           :                
 RESERVED                     : 34        :        :                   :         :           :                
-RESERVED                     : 35        :        :                   :         :           :                
-RESERVED                     : 36        :        :                   :         :           :                
-RESERVED                     : 37        :        :                   :         :           :                
+DISPLAYS1[3]                 : 35        : output : TTL               :         :           : N              
+DISPLAYS1[6]                 : 36        : output : TTL               :         :           : N              
+DISPLAYS1[1]                 : 37        : output : TTL               :         :           : N              
 VCCIO                        : 38        : power  :                   : 5.0V    :           :                
-RESERVED                     : 39        :        :                   :         :           :                
-RESERVED                     : 40        :        :                   :         :           :                
-RESERVED                     : 41        :        :                   :         :           :                
+DISPLAYS1[0]                 : 39        : output : TTL               :         :           : N              
+DISPLAYS1[2]                 : 40        : output : TTL               :         :           : N              
+DISPLAYS1[4]                 : 41        : output : TTL               :         :           : N              
 GND                          : 42        : gnd    :                   :         :           :                
 VCCINT                       : 43        : power  :                   : 5.0V    :           :                
 RESERVED                     : 44        :        :                   :         :           :                

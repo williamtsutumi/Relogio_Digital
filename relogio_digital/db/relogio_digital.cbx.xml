@@ -1,5 +1,33 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="relogio_digital">
+		<CBX_INST_ENTRY INSTANCE_NAME="|relogio_digital|decodificador:decodificadorm0|lpm_mux:Mux1" CBX_FILE_NAME="mux_kdc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|relogio_digital|decodificador:decodificadorm1|lpm_mux:Mux0" CBX_FILE_NAME="mux_kdc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|relogio_digital|decodificador:decodificadors0|lpm_mux:Mux3" CBX_FILE_NAME="mux_kdc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|relogio_digital|decodificador:decodificadors1|lpm_mux:Mux2" CBX_FILE_NAME="mux_kdc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|relogio_digital|decodificador:decodificadorm0|lpm_mux:Mux2" CBX_FILE_NAME="mux_kdc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|relogio_digital|decodificador:decodificadorm1|lpm_mux:Mux1" CBX_FILE_NAME="mux_kdc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|relogio_digital|decodificador:decodificadors0|lpm_mux:Mux4" CBX_FILE_NAME="mux_kdc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|relogio_digital|decodificador:decodificadors1|lpm_mux:Mux3" CBX_FILE_NAME="mux_kdc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|relogio_digital|decodificador:decodificadorm0|lpm_mux:Mux3" CBX_FILE_NAME="mux_kdc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|relogio_digital|decodificador:decodificadorm1|lpm_mux:Mux2" CBX_FILE_NAME="mux_kdc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|relogio_digital|decodificador:decodificadors0|lpm_mux:Mux5" CBX_FILE_NAME="mux_kdc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|relogio_digital|decodificador:decodificadors1|lpm_mux:Mux4" CBX_FILE_NAME="mux_kdc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|relogio_digital|decodificador:decodificadorm0|lpm_mux:Mux0" CBX_FILE_NAME="mux_kdc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|relogio_digital|decodificador:decodificadorm0|lpm_mux:Mux4" CBX_FILE_NAME="mux_kdc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|relogio_digital|decodificador:decodificadorm1|lpm_mux:Mux3" CBX_FILE_NAME="mux_kdc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|relogio_digital|decodificador:decodificadors0|lpm_mux:Mux2" CBX_FILE_NAME="mux_kdc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|relogio_digital|decodificador:decodificadors0|lpm_mux:Mux6" CBX_FILE_NAME="mux_kdc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|relogio_digital|decodificador:decodificadors1|lpm_mux:Mux1" CBX_FILE_NAME="mux_kdc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|relogio_digital|decodificador:decodificadors1|lpm_mux:Mux5" CBX_FILE_NAME="mux_kdc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|relogio_digital|decodificador:decodificadorm0|lpm_mux:Mux5" CBX_FILE_NAME="mux_kdc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|relogio_digital|decodificador:decodificadorm1|lpm_mux:Mux4" CBX_FILE_NAME="mux_kdc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|relogio_digital|decodificador:decodificadors1|lpm_mux:Mux6" CBX_FILE_NAME="mux_kdc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|relogio_digital|decodificador:decodificadorm0|lpm_mux:Mux6" CBX_FILE_NAME="mux_kdc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|relogio_digital|decodificador:decodificadorm1|lpm_mux:Mux5" CBX_FILE_NAME="mux_kdc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|relogio_digital|decodificador:decodificadors0|lpm_mux:Mux0" CBX_FILE_NAME="mux_kdc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|relogio_digital|decodificador:decodificadorm1|lpm_mux:Mux6" CBX_FILE_NAME="mux_kdc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|relogio_digital|decodificador:decodificadors0|lpm_mux:Mux1" CBX_FILE_NAME="mux_kdc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|relogio_digital|decodificador:decodificadors1|lpm_mux:Mux0" CBX_FILE_NAME="mux_kdc.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
