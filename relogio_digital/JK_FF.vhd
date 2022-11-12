@@ -10,22 +10,22 @@ END JK_FF;
 ARCHITECTURE arch OF JK_FF IS
 BEGIN
 	PROCESS (CLOCK)
-		VARIABLE TMP: BIT;
+		VARIABLE AUX: BIT;
 	BEGIN
 		IF (CLEAR = '0') THEN
-			TMP := '0';
+			AUX := '0';
 		ELSIF (CLOCK = '0' AND CLOCK'EVENT) THEN
 			IF (J = '0' AND K = '0') THEN
-				TMP := TMP;
+				AUX:= AUX;
 			ELSIF (J = '1' AND K = '1') THEN
-				TMP := NOT TMP;
+				AUX:= NOT AUX;
 			ELSIF (J = '0' AND K = '1') THEN
-				TMP := '0';
+				AUX := '0';
 			ELSE
-				TMP := '1';
+				AUX := '1';
 			END IF;
 		END IF;
-		Q <= TMP;
-		QB <= NOT TMP;
+		Q <= AUX;
+		QB <= NOT AUX;
 	END PROCESS;
 END arch;

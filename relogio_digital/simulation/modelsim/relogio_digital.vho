@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II"
 -- VERSION "Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition"
 
--- DATE "11/12/2022 09:31:14"
+-- DATE "11/12/2022 11:23:33"
 
 -- 
 -- Device: Altera EPM7128SLC84-7 Package PLCC84
@@ -35,8 +35,8 @@ ENTITY 	relogio_digital IS
     PORT (
 	CLEAR : IN std_logic;
 	CLOCK : IN std_logic;
-	SEG : OUT STD.STANDARD.bit_vector(3 DOWNTO 0);
-	MIN : OUT STD.STANDARD.bit_vector(2 DOWNTO 0)
+	SEG : OUT std_logic_vector(3 DOWNTO 0);
+	MIN : OUT std_logic_vector(2 DOWNTO 0)
 	);
 END relogio_digital;
 
@@ -59,99 +59,99 @@ SIGNAL ww_CLEAR : std_logic;
 SIGNAL ww_CLOCK : std_logic;
 SIGNAL ww_SEG : std_logic_vector(3 DOWNTO 0);
 SIGNAL ww_MIN : std_logic_vector(2 DOWNTO 0);
-SIGNAL \contador_segundos|FFS1|TMP_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS1|TMP_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS1|TMP_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS1|TMP_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS1|TMP_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS1|TMP_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS1|TMP_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS1|TMP_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS1|TMP_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS1|TMP_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS1|TMP_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_minutos|FFM2|TMP_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_minutos|FFM2|TMP_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_minutos|FFM2|TMP_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_minutos|FFM2|TMP_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_minutos|FFM2|TMP_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_minutos|FFM2|TMP_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_minutos|FFM2|TMP_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_minutos|FFM2|TMP_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_minutos|FFM2|TMP_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_minutos|FFM2|TMP_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_minutos|FFM2|TMP_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_minutos|FFM1|TMP_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_minutos|FFM1|TMP_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_minutos|FFM1|TMP_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_minutos|FFM1|TMP_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_minutos|FFM1|TMP_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_minutos|FFM1|TMP_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_minutos|FFM1|TMP_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_minutos|FFM1|TMP_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_minutos|FFM1|TMP_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_minutos|FFM1|TMP_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_minutos|FFM1|TMP_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS2|TMP_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS2|TMP_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS2|TMP_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS2|TMP_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS2|TMP_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS2|TMP_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS2|TMP_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS2|TMP_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS2|TMP_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS2|TMP_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS2|TMP_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_minutos|FFM0|TMP_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_minutos|FFM0|TMP_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_minutos|FFM0|TMP_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_minutos|FFM0|TMP_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_minutos|FFM0|TMP_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_minutos|FFM0|TMP_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_minutos|FFM0|TMP_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_minutos|FFM0|TMP_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_minutos|FFM0|TMP_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_minutos|FFM0|TMP_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_minutos|FFM0|TMP_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS3|TMP_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS3|TMP_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS3|TMP_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS3|TMP_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS3|TMP_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS3|TMP_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS3|TMP_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS3|TMP_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS3|TMP_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS3|TMP_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS3|TMP_papre_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS0|TMP_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS0|TMP_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS0|TMP_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS0|TMP_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS0|TMP_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS0|TMP_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS0|TMP_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS0|TMP_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS0|TMP_pena_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS0|TMP_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
-SIGNAL \contador_segundos|FFS0|TMP_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS1|AUX_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS1|AUX_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS1|AUX_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS1|AUX_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS1|AUX_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS1|AUX_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS1|AUX_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS1|AUX_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS1|AUX_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS1|AUX_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS1|AUX_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_minutos|FFM2|AUX_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_minutos|FFM2|AUX_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_minutos|FFM2|AUX_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_minutos|FFM2|AUX_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_minutos|FFM2|AUX_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_minutos|FFM2|AUX_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_minutos|FFM2|AUX_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_minutos|FFM2|AUX_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_minutos|FFM2|AUX_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_minutos|FFM2|AUX_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_minutos|FFM2|AUX_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_minutos|FFM1|AUX_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_minutos|FFM1|AUX_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_minutos|FFM1|AUX_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_minutos|FFM1|AUX_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_minutos|FFM1|AUX_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_minutos|FFM1|AUX_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_minutos|FFM1|AUX_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_minutos|FFM1|AUX_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_minutos|FFM1|AUX_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_minutos|FFM1|AUX_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_minutos|FFM1|AUX_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS2|AUX_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS2|AUX_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS2|AUX_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS2|AUX_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS2|AUX_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS2|AUX_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS2|AUX_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS2|AUX_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS2|AUX_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS2|AUX_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS2|AUX_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_minutos|FFM0|AUX_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_minutos|FFM0|AUX_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_minutos|FFM0|AUX_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_minutos|FFM0|AUX_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_minutos|FFM0|AUX_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_minutos|FFM0|AUX_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_minutos|FFM0|AUX_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_minutos|FFM0|AUX_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_minutos|FFM0|AUX_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_minutos|FFM0|AUX_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_minutos|FFM0|AUX_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS3|AUX_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS3|AUX_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS3|AUX_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS3|AUX_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS3|AUX_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS3|AUX_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS3|AUX_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS3|AUX_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS3|AUX_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS3|AUX_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS3|AUX_papre_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS0|AUX_pterm0_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS0|AUX_pterm1_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS0|AUX_pterm2_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS0|AUX_pterm3_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS0|AUX_pterm4_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS0|AUX_pterm5_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS0|AUX_pxor_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS0|AUX_pclk_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS0|AUX_pena_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS0|AUX_paclr_bus\ : std_logic_vector(51 DOWNTO 0);
+SIGNAL \contador_segundos|FFS0|AUX_papre_bus\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \CLOCK~dataout\ : std_logic;
 SIGNAL \CLEAR~dataout\ : std_logic;
-SIGNAL \contador_segundos|FFS2|TMP~dataout\ : std_logic;
-SIGNAL \contador_segundos|FFS3|TMP~dataout\ : std_logic;
-SIGNAL \contador_segundos|FFS0|TMP~dataout\ : std_logic;
-SIGNAL \contador_segundos|FFS1|TMP~dataout\ : std_logic;
-SIGNAL \contador_minutos|FFM1|TMP~dataout\ : std_logic;
-SIGNAL \contador_minutos|FFM0|TMP~dataout\ : std_logic;
-SIGNAL \contador_minutos|FFM2|TMP~dataout\ : std_logic;
-SIGNAL \contador_segundos|FFS1|ALT_INV_TMP~dataout\ : std_logic;
-SIGNAL \contador_minutos|FFM2|ALT_INV_TMP~dataout\ : std_logic;
-SIGNAL \contador_minutos|FFM1|ALT_INV_TMP~dataout\ : std_logic;
-SIGNAL \contador_segundos|FFS2|ALT_INV_TMP~dataout\ : std_logic;
-SIGNAL \contador_minutos|FFM0|ALT_INV_TMP~dataout\ : std_logic;
-SIGNAL \contador_segundos|FFS3|ALT_INV_TMP~dataout\ : std_logic;
-SIGNAL \contador_segundos|FFS0|ALT_INV_TMP~dataout\ : std_logic;
+SIGNAL \contador_segundos|FFS2|AUX~dataout\ : std_logic;
+SIGNAL \contador_segundos|FFS3|AUX~dataout\ : std_logic;
+SIGNAL \contador_segundos|FFS0|AUX~dataout\ : std_logic;
+SIGNAL \contador_segundos|FFS1|AUX~dataout\ : std_logic;
+SIGNAL \contador_minutos|FFM1|AUX~dataout\ : std_logic;
+SIGNAL \contador_minutos|FFM0|AUX~dataout\ : std_logic;
+SIGNAL \contador_minutos|FFM2|AUX~dataout\ : std_logic;
+SIGNAL \contador_segundos|FFS1|ALT_INV_AUX~dataout\ : std_logic;
+SIGNAL \contador_minutos|FFM2|ALT_INV_AUX~dataout\ : std_logic;
+SIGNAL \contador_minutos|FFM1|ALT_INV_AUX~dataout\ : std_logic;
+SIGNAL \contador_segundos|FFS2|ALT_INV_AUX~dataout\ : std_logic;
+SIGNAL \contador_minutos|FFM0|ALT_INV_AUX~dataout\ : std_logic;
+SIGNAL \contador_segundos|FFS3|ALT_INV_AUX~dataout\ : std_logic;
+SIGNAL \contador_segundos|FFS0|ALT_INV_AUX~dataout\ : std_logic;
 SIGNAL \ALT_INV_CLEAR~dataout\ : std_logic;
 SIGNAL \ALT_INV_CLOCK~dataout\ : std_logic;
 
@@ -159,246 +159,246 @@ BEGIN
 
 ww_CLEAR <= CLEAR;
 ww_CLOCK <= CLOCK;
-SEG <= IEEE.STD_LOGIC_1164.TO_BITVECTOR(ww_SEG);
-MIN <= IEEE.STD_LOGIC_1164.TO_BITVECTOR(ww_MIN);
+SEG <= ww_SEG;
+MIN <= ww_MIN;
 
-\contador_segundos|FFS1|TMP_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\contador_segundos|FFS1|AUX_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_segundos|FFS1|TMP_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \contador_segundos|FFS1|TMP~dataout\ & NOT \contador_segundos|FFS3|TMP~dataout\ & \contador_segundos|FFS0|TMP~dataout\);
+\contador_segundos|FFS1|AUX_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \contador_segundos|FFS1|AUX~dataout\ & NOT \contador_segundos|FFS3|AUX~dataout\ & \contador_segundos|FFS0|AUX~dataout\);
 
-\contador_segundos|FFS1|TMP_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \contador_segundos|FFS1|TMP~dataout\ & NOT \contador_segundos|FFS3|TMP~dataout\ & NOT \contador_segundos|FFS0|TMP~dataout\);
+\contador_segundos|FFS1|AUX_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \contador_segundos|FFS1|AUX~dataout\ & NOT \contador_segundos|FFS3|AUX~dataout\ & NOT \contador_segundos|FFS0|AUX~dataout\);
 
-\contador_segundos|FFS1|TMP_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\contador_segundos|FFS1|AUX_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_segundos|FFS1|TMP_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\contador_segundos|FFS1|AUX_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_segundos|FFS1|TMP_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\contador_segundos|FFS1|AUX_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_segundos|FFS1|TMP_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\contador_segundos|FFS1|AUX_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_segundos|FFS1|TMP_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\contador_segundos|FFS1|AUX_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_segundos|FFS1|TMP_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+\contador_segundos|FFS1|AUX_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
 & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
 
-\contador_segundos|FFS1|TMP_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\contador_segundos|FFS1|AUX_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_segundos|FFS1|TMP_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\contador_segundos|FFS1|AUX_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_minutos|FFM2|TMP_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\contador_minutos|FFM2|AUX_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_minutos|FFM2|TMP_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \contador_minutos|FFM2|TMP~dataout\ & \contador_minutos|FFM1|TMP~dataout\ & \contador_minutos|FFM0|TMP~dataout\);
+\contador_minutos|FFM2|AUX_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \contador_minutos|FFM2|AUX~dataout\ & \contador_minutos|FFM1|AUX~dataout\ & \contador_minutos|FFM0|AUX~dataout\);
 
-\contador_minutos|FFM2|TMP_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \contador_minutos|FFM2|TMP~dataout\ & NOT \contador_minutos|FFM1|TMP~dataout\ & NOT \contador_minutos|FFM0|TMP~dataout\);
+\contador_minutos|FFM2|AUX_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \contador_minutos|FFM2|AUX~dataout\ & NOT \contador_minutos|FFM1|AUX~dataout\ & NOT \contador_minutos|FFM0|AUX~dataout\);
 
-\contador_minutos|FFM2|TMP_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\contador_minutos|FFM2|AUX_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_minutos|FFM2|TMP_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\contador_minutos|FFM2|AUX_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_minutos|FFM2|TMP_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\contador_minutos|FFM2|AUX_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_minutos|FFM2|TMP_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\contador_minutos|FFM2|AUX_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_minutos|FFM2|TMP_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\contador_minutos|FFM2|AUX_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_minutos|FFM2|TMP_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+\contador_minutos|FFM2|AUX_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
 & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
 
-\contador_minutos|FFM2|TMP_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\contador_minutos|FFM2|AUX_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_minutos|FFM2|TMP_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\contador_minutos|FFM2|AUX_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_minutos|FFM1|TMP_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\contador_minutos|FFM1|AUX_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_minutos|FFM1|TMP_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \contador_minutos|FFM1|TMP~dataout\ & NOT \contador_minutos|FFM0|TMP~dataout\ & \contador_minutos|FFM2|TMP~dataout\);
+\contador_minutos|FFM1|AUX_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \contador_minutos|FFM1|AUX~dataout\ & NOT \contador_minutos|FFM0|AUX~dataout\ & \contador_minutos|FFM2|AUX~dataout\);
 
-\contador_minutos|FFM1|TMP_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \contador_minutos|FFM1|TMP~dataout\ & NOT \contador_minutos|FFM0|TMP~dataout\ & NOT \contador_minutos|FFM2|TMP~dataout\);
+\contador_minutos|FFM1|AUX_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \contador_minutos|FFM1|AUX~dataout\ & NOT \contador_minutos|FFM0|AUX~dataout\ & NOT \contador_minutos|FFM2|AUX~dataout\);
 
-\contador_minutos|FFM1|TMP_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\contador_minutos|FFM1|AUX_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_minutos|FFM1|TMP_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\contador_minutos|FFM1|AUX_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_minutos|FFM1|TMP_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\contador_minutos|FFM1|AUX_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_minutos|FFM1|TMP_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\contador_minutos|FFM1|AUX_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_minutos|FFM1|TMP_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\contador_minutos|FFM1|AUX_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_minutos|FFM1|TMP_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+\contador_minutos|FFM1|AUX_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
 & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
 
-\contador_minutos|FFM1|TMP_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\contador_minutos|FFM1|AUX_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_minutos|FFM1|TMP_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\contador_minutos|FFM1|AUX_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_segundos|FFS2|TMP_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\contador_segundos|FFS2|AUX_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_segundos|FFS2|TMP_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \contador_segundos|FFS0|TMP~dataout\ & \contador_segundos|FFS1|TMP~dataout\ & NOT \contador_segundos|FFS3|TMP~dataout\);
+\contador_segundos|FFS2|AUX_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \contador_segundos|FFS0|AUX~dataout\ & \contador_segundos|FFS1|AUX~dataout\ & NOT \contador_segundos|FFS3|AUX~dataout\);
 
-\contador_segundos|FFS2|TMP_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \contador_segundos|FFS2|TMP~dataout\ & \contador_segundos|FFS3|TMP~dataout\);
+\contador_segundos|FFS2|AUX_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \contador_segundos|FFS2|AUX~dataout\ & \contador_segundos|FFS3|AUX~dataout\);
 
-\contador_segundos|FFS2|TMP_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\contador_segundos|FFS2|AUX_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_segundos|FFS2|TMP_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\contador_segundos|FFS2|AUX_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_segundos|FFS2|TMP_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\contador_segundos|FFS2|AUX_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_segundos|FFS2|TMP_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\contador_segundos|FFS2|AUX_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_segundos|FFS2|TMP_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\contador_segundos|FFS2|AUX_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_segundos|FFS2|TMP_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+\contador_segundos|FFS2|AUX_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
 & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
 
-\contador_segundos|FFS2|TMP_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\contador_segundos|FFS2|AUX_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_segundos|FFS2|TMP_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\contador_segundos|FFS2|AUX_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_minutos|FFM0|TMP_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\contador_minutos|FFM0|AUX_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_minutos|FFM0|TMP_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \contador_minutos|FFM0|TMP~dataout\ & \contador_minutos|FFM2|TMP~dataout\ & \contador_minutos|FFM1|TMP~dataout\);
+\contador_minutos|FFM0|AUX_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \contador_minutos|FFM0|AUX~dataout\ & \contador_minutos|FFM2|AUX~dataout\ & \contador_minutos|FFM1|AUX~dataout\);
 
-\contador_minutos|FFM0|TMP_pterm2_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\contador_minutos|FFM0|AUX_pterm2_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_minutos|FFM0|TMP_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\contador_minutos|FFM0|AUX_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_minutos|FFM0|TMP_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\contador_minutos|FFM0|AUX_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_minutos|FFM0|TMP_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\contador_minutos|FFM0|AUX_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_minutos|FFM0|TMP_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\contador_minutos|FFM0|AUX_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_minutos|FFM0|TMP_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\contador_minutos|FFM0|AUX_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_minutos|FFM0|TMP_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+\contador_minutos|FFM0|AUX_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
 & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
 
-\contador_minutos|FFM0|TMP_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\contador_minutos|FFM0|AUX_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_minutos|FFM0|TMP_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\contador_minutos|FFM0|AUX_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_segundos|FFS3|TMP_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\contador_segundos|FFS3|AUX_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_segundos|FFS3|TMP_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \contador_segundos|FFS3|TMP~dataout\ & \contador_segundos|FFS1|TMP~dataout\ & \contador_segundos|FFS0|TMP~dataout\ & \contador_segundos|FFS2|TMP~dataout\);
+\contador_segundos|FFS3|AUX_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \contador_segundos|FFS3|AUX~dataout\ & \contador_segundos|FFS1|AUX~dataout\ & \contador_segundos|FFS0|AUX~dataout\ & \contador_segundos|FFS2|AUX~dataout\);
 
-\contador_segundos|FFS3|TMP_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \contador_segundos|FFS3|TMP~dataout\ & NOT \contador_segundos|FFS1|TMP~dataout\ & NOT \contador_segundos|FFS0|TMP~dataout\ & NOT \contador_segundos|FFS2|TMP~dataout\);
+\contador_segundos|FFS3|AUX_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \contador_segundos|FFS3|AUX~dataout\ & NOT \contador_segundos|FFS1|AUX~dataout\ & NOT \contador_segundos|FFS0|AUX~dataout\ & NOT \contador_segundos|FFS2|AUX~dataout\);
 
-\contador_segundos|FFS3|TMP_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\contador_segundos|FFS3|AUX_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_segundos|FFS3|TMP_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\contador_segundos|FFS3|AUX_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_segundos|FFS3|TMP_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\contador_segundos|FFS3|AUX_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_segundos|FFS3|TMP_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\contador_segundos|FFS3|AUX_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_segundos|FFS3|TMP_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\contador_segundos|FFS3|AUX_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_segundos|FFS3|TMP_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+\contador_segundos|FFS3|AUX_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
 & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
 
-\contador_segundos|FFS3|TMP_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\contador_segundos|FFS3|AUX_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_segundos|FFS3|TMP_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\contador_segundos|FFS3|AUX_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_segundos|FFS0|TMP_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\contador_segundos|FFS0|AUX_pterm0_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_segundos|FFS0|TMP_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \contador_segundos|FFS0|TMP~dataout\ & \contador_segundos|FFS3|TMP~dataout\ & \contador_segundos|FFS1|TMP~dataout\);
+\contador_segundos|FFS0|AUX_pterm1_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & NOT \contador_segundos|FFS0|AUX~dataout\ & \contador_segundos|FFS3|AUX~dataout\ & \contador_segundos|FFS1|AUX~dataout\);
 
-\contador_segundos|FFS0|TMP_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
-vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \contador_segundos|FFS2|TMP~dataout\ & NOT \contador_segundos|FFS0|TMP~dataout\ & \contador_segundos|FFS3|TMP~dataout\);
+\contador_segundos|FFS0|AUX_pterm2_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & 
+vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & \contador_segundos|FFS2|AUX~dataout\ & NOT \contador_segundos|FFS0|AUX~dataout\ & \contador_segundos|FFS3|AUX~dataout\);
 
-\contador_segundos|FFS0|TMP_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\contador_segundos|FFS0|AUX_pterm3_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_segundos|FFS0|TMP_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\contador_segundos|FFS0|AUX_pterm4_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_segundos|FFS0|TMP_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\contador_segundos|FFS0|AUX_pterm5_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_segundos|FFS0|TMP_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\contador_segundos|FFS0|AUX_pxor_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_segundos|FFS0|TMP_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
+\contador_segundos|FFS0|AUX_pclk_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd
 & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_segundos|FFS0|TMP_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
+\contador_segundos|FFS0|AUX_pena_bus\ <= (vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc
 & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc & vcc);
 
-\contador_segundos|FFS0|TMP_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\contador_segundos|FFS0|AUX_paclr_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
 
-\contador_segundos|FFS0|TMP_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
+\contador_segundos|FFS0|AUX_papre_bus\ <= (gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & 
 gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd & gnd);
-\contador_segundos|FFS1|ALT_INV_TMP~dataout\ <= NOT \contador_segundos|FFS1|TMP~dataout\;
-\contador_minutos|FFM2|ALT_INV_TMP~dataout\ <= NOT \contador_minutos|FFM2|TMP~dataout\;
-\contador_minutos|FFM1|ALT_INV_TMP~dataout\ <= NOT \contador_minutos|FFM1|TMP~dataout\;
-\contador_segundos|FFS2|ALT_INV_TMP~dataout\ <= NOT \contador_segundos|FFS2|TMP~dataout\;
-\contador_minutos|FFM0|ALT_INV_TMP~dataout\ <= NOT \contador_minutos|FFM0|TMP~dataout\;
-\contador_segundos|FFS3|ALT_INV_TMP~dataout\ <= NOT \contador_segundos|FFS3|TMP~dataout\;
-\contador_segundos|FFS0|ALT_INV_TMP~dataout\ <= NOT \contador_segundos|FFS0|TMP~dataout\;
+\contador_segundos|FFS1|ALT_INV_AUX~dataout\ <= NOT \contador_segundos|FFS1|AUX~dataout\;
+\contador_minutos|FFM2|ALT_INV_AUX~dataout\ <= NOT \contador_minutos|FFM2|AUX~dataout\;
+\contador_minutos|FFM1|ALT_INV_AUX~dataout\ <= NOT \contador_minutos|FFM1|AUX~dataout\;
+\contador_segundos|FFS2|ALT_INV_AUX~dataout\ <= NOT \contador_segundos|FFS2|AUX~dataout\;
+\contador_minutos|FFM0|ALT_INV_AUX~dataout\ <= NOT \contador_minutos|FFM0|AUX~dataout\;
+\contador_segundos|FFS3|ALT_INV_AUX~dataout\ <= NOT \contador_segundos|FFS3|AUX~dataout\;
+\contador_segundos|FFS0|ALT_INV_AUX~dataout\ <= NOT \contador_segundos|FFS0|AUX~dataout\;
 \ALT_INV_CLEAR~dataout\ <= NOT \CLEAR~dataout\;
 \ALT_INV_CLOCK~dataout\ <= NOT \CLOCK~dataout\;
 
@@ -431,7 +431,7 @@ PORT MAP (
 	dataout => \CLEAR~dataout\);
 
 -- Location: LC8
-\contador_segundos|FFS2|TMP\ : max_mcell
+\contador_segundos|FFS2|AUX\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
 	operation_mode => "normal",
@@ -443,21 +443,21 @@ GENERIC MAP (
 PORT MAP (
 	clk => \ALT_INV_CLOCK~dataout\,
 	aclr => \ALT_INV_CLEAR~dataout\,
-	pterm0 => \contador_segundos|FFS2|TMP_pterm0_bus\,
-	pterm1 => \contador_segundos|FFS2|TMP_pterm1_bus\,
-	pterm2 => \contador_segundos|FFS2|TMP_pterm2_bus\,
-	pterm3 => \contador_segundos|FFS2|TMP_pterm3_bus\,
-	pterm4 => \contador_segundos|FFS2|TMP_pterm4_bus\,
-	pterm5 => \contador_segundos|FFS2|TMP_pterm5_bus\,
-	pxor => \contador_segundos|FFS2|TMP_pxor_bus\,
-	pclk => \contador_segundos|FFS2|TMP_pclk_bus\,
-	papre => \contador_segundos|FFS2|TMP_papre_bus\,
-	paclr => \contador_segundos|FFS2|TMP_paclr_bus\,
-	pena => \contador_segundos|FFS2|TMP_pena_bus\,
-	dataout => \contador_segundos|FFS2|TMP~dataout\);
+	pterm0 => \contador_segundos|FFS2|AUX_pterm0_bus\,
+	pterm1 => \contador_segundos|FFS2|AUX_pterm1_bus\,
+	pterm2 => \contador_segundos|FFS2|AUX_pterm2_bus\,
+	pterm3 => \contador_segundos|FFS2|AUX_pterm3_bus\,
+	pterm4 => \contador_segundos|FFS2|AUX_pterm4_bus\,
+	pterm5 => \contador_segundos|FFS2|AUX_pterm5_bus\,
+	pxor => \contador_segundos|FFS2|AUX_pxor_bus\,
+	pclk => \contador_segundos|FFS2|AUX_pclk_bus\,
+	papre => \contador_segundos|FFS2|AUX_papre_bus\,
+	paclr => \contador_segundos|FFS2|AUX_paclr_bus\,
+	pena => \contador_segundos|FFS2|AUX_pena_bus\,
+	dataout => \contador_segundos|FFS2|AUX~dataout\);
 
 -- Location: LC13
-\contador_segundos|FFS3|TMP\ : max_mcell
+\contador_segundos|FFS3|AUX\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
 	operation_mode => "normal",
@@ -469,21 +469,21 @@ GENERIC MAP (
 PORT MAP (
 	clk => \ALT_INV_CLOCK~dataout\,
 	aclr => \ALT_INV_CLEAR~dataout\,
-	pterm0 => \contador_segundos|FFS3|TMP_pterm0_bus\,
-	pterm1 => \contador_segundos|FFS3|TMP_pterm1_bus\,
-	pterm2 => \contador_segundos|FFS3|TMP_pterm2_bus\,
-	pterm3 => \contador_segundos|FFS3|TMP_pterm3_bus\,
-	pterm4 => \contador_segundos|FFS3|TMP_pterm4_bus\,
-	pterm5 => \contador_segundos|FFS3|TMP_pterm5_bus\,
-	pxor => \contador_segundos|FFS3|TMP_pxor_bus\,
-	pclk => \contador_segundos|FFS3|TMP_pclk_bus\,
-	papre => \contador_segundos|FFS3|TMP_papre_bus\,
-	paclr => \contador_segundos|FFS3|TMP_paclr_bus\,
-	pena => \contador_segundos|FFS3|TMP_pena_bus\,
-	dataout => \contador_segundos|FFS3|TMP~dataout\);
+	pterm0 => \contador_segundos|FFS3|AUX_pterm0_bus\,
+	pterm1 => \contador_segundos|FFS3|AUX_pterm1_bus\,
+	pterm2 => \contador_segundos|FFS3|AUX_pterm2_bus\,
+	pterm3 => \contador_segundos|FFS3|AUX_pterm3_bus\,
+	pterm4 => \contador_segundos|FFS3|AUX_pterm4_bus\,
+	pterm5 => \contador_segundos|FFS3|AUX_pterm5_bus\,
+	pxor => \contador_segundos|FFS3|AUX_pxor_bus\,
+	pclk => \contador_segundos|FFS3|AUX_pclk_bus\,
+	papre => \contador_segundos|FFS3|AUX_papre_bus\,
+	paclr => \contador_segundos|FFS3|AUX_paclr_bus\,
+	pena => \contador_segundos|FFS3|AUX_pena_bus\,
+	dataout => \contador_segundos|FFS3|AUX~dataout\);
 
 -- Location: LC14
-\contador_segundos|FFS0|TMP\ : max_mcell
+\contador_segundos|FFS0|AUX\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
 	operation_mode => "invert",
@@ -495,21 +495,21 @@ GENERIC MAP (
 PORT MAP (
 	clk => \ALT_INV_CLOCK~dataout\,
 	aclr => \ALT_INV_CLEAR~dataout\,
-	pterm0 => \contador_segundos|FFS0|TMP_pterm0_bus\,
-	pterm1 => \contador_segundos|FFS0|TMP_pterm1_bus\,
-	pterm2 => \contador_segundos|FFS0|TMP_pterm2_bus\,
-	pterm3 => \contador_segundos|FFS0|TMP_pterm3_bus\,
-	pterm4 => \contador_segundos|FFS0|TMP_pterm4_bus\,
-	pterm5 => \contador_segundos|FFS0|TMP_pterm5_bus\,
-	pxor => \contador_segundos|FFS0|TMP_pxor_bus\,
-	pclk => \contador_segundos|FFS0|TMP_pclk_bus\,
-	papre => \contador_segundos|FFS0|TMP_papre_bus\,
-	paclr => \contador_segundos|FFS0|TMP_paclr_bus\,
-	pena => \contador_segundos|FFS0|TMP_pena_bus\,
-	dataout => \contador_segundos|FFS0|TMP~dataout\);
+	pterm0 => \contador_segundos|FFS0|AUX_pterm0_bus\,
+	pterm1 => \contador_segundos|FFS0|AUX_pterm1_bus\,
+	pterm2 => \contador_segundos|FFS0|AUX_pterm2_bus\,
+	pterm3 => \contador_segundos|FFS0|AUX_pterm3_bus\,
+	pterm4 => \contador_segundos|FFS0|AUX_pterm4_bus\,
+	pterm5 => \contador_segundos|FFS0|AUX_pterm5_bus\,
+	pxor => \contador_segundos|FFS0|AUX_pxor_bus\,
+	pclk => \contador_segundos|FFS0|AUX_pclk_bus\,
+	papre => \contador_segundos|FFS0|AUX_papre_bus\,
+	paclr => \contador_segundos|FFS0|AUX_paclr_bus\,
+	pena => \contador_segundos|FFS0|AUX_pena_bus\,
+	dataout => \contador_segundos|FFS0|AUX~dataout\);
 
 -- Location: LC3
-\contador_segundos|FFS1|TMP\ : max_mcell
+\contador_segundos|FFS1|AUX\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
 	operation_mode => "normal",
@@ -521,21 +521,21 @@ GENERIC MAP (
 PORT MAP (
 	clk => \ALT_INV_CLOCK~dataout\,
 	aclr => \ALT_INV_CLEAR~dataout\,
-	pterm0 => \contador_segundos|FFS1|TMP_pterm0_bus\,
-	pterm1 => \contador_segundos|FFS1|TMP_pterm1_bus\,
-	pterm2 => \contador_segundos|FFS1|TMP_pterm2_bus\,
-	pterm3 => \contador_segundos|FFS1|TMP_pterm3_bus\,
-	pterm4 => \contador_segundos|FFS1|TMP_pterm4_bus\,
-	pterm5 => \contador_segundos|FFS1|TMP_pterm5_bus\,
-	pxor => \contador_segundos|FFS1|TMP_pxor_bus\,
-	pclk => \contador_segundos|FFS1|TMP_pclk_bus\,
-	papre => \contador_segundos|FFS1|TMP_papre_bus\,
-	paclr => \contador_segundos|FFS1|TMP_paclr_bus\,
-	pena => \contador_segundos|FFS1|TMP_pena_bus\,
-	dataout => \contador_segundos|FFS1|TMP~dataout\);
+	pterm0 => \contador_segundos|FFS1|AUX_pterm0_bus\,
+	pterm1 => \contador_segundos|FFS1|AUX_pterm1_bus\,
+	pterm2 => \contador_segundos|FFS1|AUX_pterm2_bus\,
+	pterm3 => \contador_segundos|FFS1|AUX_pterm3_bus\,
+	pterm4 => \contador_segundos|FFS1|AUX_pterm4_bus\,
+	pterm5 => \contador_segundos|FFS1|AUX_pterm5_bus\,
+	pxor => \contador_segundos|FFS1|AUX_pxor_bus\,
+	pclk => \contador_segundos|FFS1|AUX_pclk_bus\,
+	papre => \contador_segundos|FFS1|AUX_papre_bus\,
+	paclr => \contador_segundos|FFS1|AUX_paclr_bus\,
+	pena => \contador_segundos|FFS1|AUX_pena_bus\,
+	dataout => \contador_segundos|FFS1|AUX~dataout\);
 
 -- Location: LC6
-\contador_minutos|FFM1|TMP\ : max_mcell
+\contador_minutos|FFM1|AUX\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
 	operation_mode => "normal",
@@ -547,21 +547,21 @@ GENERIC MAP (
 PORT MAP (
 	clk => \ALT_INV_CLOCK~dataout\,
 	aclr => \ALT_INV_CLEAR~dataout\,
-	pterm0 => \contador_minutos|FFM1|TMP_pterm0_bus\,
-	pterm1 => \contador_minutos|FFM1|TMP_pterm1_bus\,
-	pterm2 => \contador_minutos|FFM1|TMP_pterm2_bus\,
-	pterm3 => \contador_minutos|FFM1|TMP_pterm3_bus\,
-	pterm4 => \contador_minutos|FFM1|TMP_pterm4_bus\,
-	pterm5 => \contador_minutos|FFM1|TMP_pterm5_bus\,
-	pxor => \contador_minutos|FFM1|TMP_pxor_bus\,
-	pclk => \contador_minutos|FFM1|TMP_pclk_bus\,
-	papre => \contador_minutos|FFM1|TMP_papre_bus\,
-	paclr => \contador_minutos|FFM1|TMP_paclr_bus\,
-	pena => \contador_minutos|FFM1|TMP_pena_bus\,
-	dataout => \contador_minutos|FFM1|TMP~dataout\);
+	pterm0 => \contador_minutos|FFM1|AUX_pterm0_bus\,
+	pterm1 => \contador_minutos|FFM1|AUX_pterm1_bus\,
+	pterm2 => \contador_minutos|FFM1|AUX_pterm2_bus\,
+	pterm3 => \contador_minutos|FFM1|AUX_pterm3_bus\,
+	pterm4 => \contador_minutos|FFM1|AUX_pterm4_bus\,
+	pterm5 => \contador_minutos|FFM1|AUX_pterm5_bus\,
+	pxor => \contador_minutos|FFM1|AUX_pxor_bus\,
+	pclk => \contador_minutos|FFM1|AUX_pclk_bus\,
+	papre => \contador_minutos|FFM1|AUX_papre_bus\,
+	paclr => \contador_minutos|FFM1|AUX_paclr_bus\,
+	pena => \contador_minutos|FFM1|AUX_pena_bus\,
+	dataout => \contador_minutos|FFM1|AUX~dataout\);
 
 -- Location: LC11
-\contador_minutos|FFM0|TMP\ : max_mcell
+\contador_minutos|FFM0|AUX\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
 	operation_mode => "invert",
@@ -573,21 +573,21 @@ GENERIC MAP (
 PORT MAP (
 	clk => \ALT_INV_CLOCK~dataout\,
 	aclr => \ALT_INV_CLEAR~dataout\,
-	pterm0 => \contador_minutos|FFM0|TMP_pterm0_bus\,
-	pterm1 => \contador_minutos|FFM0|TMP_pterm1_bus\,
-	pterm2 => \contador_minutos|FFM0|TMP_pterm2_bus\,
-	pterm3 => \contador_minutos|FFM0|TMP_pterm3_bus\,
-	pterm4 => \contador_minutos|FFM0|TMP_pterm4_bus\,
-	pterm5 => \contador_minutos|FFM0|TMP_pterm5_bus\,
-	pxor => \contador_minutos|FFM0|TMP_pxor_bus\,
-	pclk => \contador_minutos|FFM0|TMP_pclk_bus\,
-	papre => \contador_minutos|FFM0|TMP_papre_bus\,
-	paclr => \contador_minutos|FFM0|TMP_paclr_bus\,
-	pena => \contador_minutos|FFM0|TMP_pena_bus\,
-	dataout => \contador_minutos|FFM0|TMP~dataout\);
+	pterm0 => \contador_minutos|FFM0|AUX_pterm0_bus\,
+	pterm1 => \contador_minutos|FFM0|AUX_pterm1_bus\,
+	pterm2 => \contador_minutos|FFM0|AUX_pterm2_bus\,
+	pterm3 => \contador_minutos|FFM0|AUX_pterm3_bus\,
+	pterm4 => \contador_minutos|FFM0|AUX_pterm4_bus\,
+	pterm5 => \contador_minutos|FFM0|AUX_pterm5_bus\,
+	pxor => \contador_minutos|FFM0|AUX_pxor_bus\,
+	pclk => \contador_minutos|FFM0|AUX_pclk_bus\,
+	papre => \contador_minutos|FFM0|AUX_papre_bus\,
+	paclr => \contador_minutos|FFM0|AUX_paclr_bus\,
+	pena => \contador_minutos|FFM0|AUX_pena_bus\,
+	dataout => \contador_minutos|FFM0|AUX~dataout\);
 
 -- Location: LC5
-\contador_minutos|FFM2|TMP\ : max_mcell
+\contador_minutos|FFM2|AUX\ : max_mcell
 -- pragma translate_off
 GENERIC MAP (
 	operation_mode => "normal",
@@ -599,18 +599,18 @@ GENERIC MAP (
 PORT MAP (
 	clk => \ALT_INV_CLOCK~dataout\,
 	aclr => \ALT_INV_CLEAR~dataout\,
-	pterm0 => \contador_minutos|FFM2|TMP_pterm0_bus\,
-	pterm1 => \contador_minutos|FFM2|TMP_pterm1_bus\,
-	pterm2 => \contador_minutos|FFM2|TMP_pterm2_bus\,
-	pterm3 => \contador_minutos|FFM2|TMP_pterm3_bus\,
-	pterm4 => \contador_minutos|FFM2|TMP_pterm4_bus\,
-	pterm5 => \contador_minutos|FFM2|TMP_pterm5_bus\,
-	pxor => \contador_minutos|FFM2|TMP_pxor_bus\,
-	pclk => \contador_minutos|FFM2|TMP_pclk_bus\,
-	papre => \contador_minutos|FFM2|TMP_papre_bus\,
-	paclr => \contador_minutos|FFM2|TMP_paclr_bus\,
-	pena => \contador_minutos|FFM2|TMP_pena_bus\,
-	dataout => \contador_minutos|FFM2|TMP~dataout\);
+	pterm0 => \contador_minutos|FFM2|AUX_pterm0_bus\,
+	pterm1 => \contador_minutos|FFM2|AUX_pterm1_bus\,
+	pterm2 => \contador_minutos|FFM2|AUX_pterm2_bus\,
+	pterm3 => \contador_minutos|FFM2|AUX_pterm3_bus\,
+	pterm4 => \contador_minutos|FFM2|AUX_pterm4_bus\,
+	pterm5 => \contador_minutos|FFM2|AUX_pterm5_bus\,
+	pxor => \contador_minutos|FFM2|AUX_pxor_bus\,
+	pclk => \contador_minutos|FFM2|AUX_pclk_bus\,
+	papre => \contador_minutos|FFM2|AUX_papre_bus\,
+	paclr => \contador_minutos|FFM2|AUX_paclr_bus\,
+	pena => \contador_minutos|FFM2|AUX_pena_bus\,
+	dataout => \contador_minutos|FFM2|AUX~dataout\);
 
 -- Location: PIN_12
 \SEG[1]~I\ : max_io
@@ -622,7 +622,7 @@ GENERIC MAP (
 	weak_pull_up => "false")
 -- pragma translate_on
 PORT MAP (
-	datain => \contador_segundos|FFS1|TMP~dataout\,
+	datain => \contador_segundos|FFS1|AUX~dataout\,
 	oe => VCC,
 	padio => ww_SEG(1));
 
@@ -636,7 +636,7 @@ GENERIC MAP (
 	weak_pull_up => "false")
 -- pragma translate_on
 PORT MAP (
-	datain => \contador_minutos|FFM2|TMP~dataout\,
+	datain => \contador_minutos|FFM2|AUX~dataout\,
 	oe => VCC,
 	padio => ww_MIN(2));
 
@@ -650,7 +650,7 @@ GENERIC MAP (
 	weak_pull_up => "false")
 -- pragma translate_on
 PORT MAP (
-	datain => \contador_minutos|FFM1|TMP~dataout\,
+	datain => \contador_minutos|FFM1|AUX~dataout\,
 	oe => VCC,
 	padio => ww_MIN(1));
 
@@ -664,7 +664,7 @@ GENERIC MAP (
 	weak_pull_up => "false")
 -- pragma translate_on
 PORT MAP (
-	datain => \contador_segundos|FFS2|TMP~dataout\,
+	datain => \contador_segundos|FFS2|AUX~dataout\,
 	oe => VCC,
 	padio => ww_SEG(2));
 
@@ -678,7 +678,7 @@ GENERIC MAP (
 	weak_pull_up => "false")
 -- pragma translate_on
 PORT MAP (
-	datain => \contador_minutos|FFM0|TMP~dataout\,
+	datain => \contador_minutos|FFM0|AUX~dataout\,
 	oe => VCC,
 	padio => ww_MIN(0));
 
@@ -692,7 +692,7 @@ GENERIC MAP (
 	weak_pull_up => "false")
 -- pragma translate_on
 PORT MAP (
-	datain => \contador_segundos|FFS3|TMP~dataout\,
+	datain => \contador_segundos|FFS3|AUX~dataout\,
 	oe => VCC,
 	padio => ww_SEG(3));
 
@@ -706,7 +706,7 @@ GENERIC MAP (
 	weak_pull_up => "false")
 -- pragma translate_on
 PORT MAP (
-	datain => \contador_segundos|FFS0|TMP~dataout\,
+	datain => \contador_segundos|FFS0|AUX~dataout\,
 	oe => VCC,
 	padio => ww_SEG(0));
 END structure;

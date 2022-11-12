@@ -1,5 +1,5 @@
 Simulator report for relogio_digital
-Sat Nov 12 09:31:38 2022
+Sat Nov 12 11:25:53 2022
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -120,14 +120,14 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |relogio_digital|cont_mod6:contador_minutos|comb~4                   ; |relogio_digital|cont_mod6:contador_minutos|comb~4                   ; out0             ;
 ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM2|process_0~3   ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM2|process_0~3   ; out0             ;
 ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM2|process_0~6   ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM2|process_0~6   ; out0             ;
-; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM2|TMP~3         ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM2|TMP~3         ; out              ;
-; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM2|TMP~4         ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM2|TMP~4         ; out              ;
+; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM2|AUX~3         ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM2|AUX~3         ; out              ;
+; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM2|AUX~4         ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM2|AUX~4         ; out              ;
 ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM1|process_0~3   ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM1|process_0~3   ; out0             ;
 ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM1|process_0~6   ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM1|process_0~6   ; out0             ;
-; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM1|TMP~3         ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM1|TMP~3         ; out              ;
-; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM1|TMP~4         ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM1|TMP~4         ; out              ;
-; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM0|TMP~3         ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM0|TMP~3         ; out              ;
-; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM0|TMP           ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM0|TMP           ; regout           ;
+; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM1|AUX~3         ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM1|AUX~3         ; out              ;
+; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM1|AUX~4         ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM1|AUX~4         ; out              ;
+; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM0|AUX~3         ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM0|AUX~3         ; out              ;
+; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM0|AUX           ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM0|AUX           ; regout           ;
 ; |relogio_digital|cont_mod10:contador_segundos|comb~0                 ; |relogio_digital|cont_mod10:contador_segundos|comb~0                 ; out0             ;
 ; |relogio_digital|cont_mod10:contador_segundos|comb~1                 ; |relogio_digital|cont_mod10:contador_segundos|comb~1                 ; out0             ;
 ; |relogio_digital|cont_mod10:contador_segundos|comb~2                 ; |relogio_digital|cont_mod10:contador_segundos|comb~2                 ; out0             ;
@@ -143,23 +143,23 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS3|process_0~3 ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS3|process_0~3 ; out0             ;
 ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS3|process_0~4 ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS3|process_0~4 ; out0             ;
 ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS3|process_0~6 ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS3|process_0~6 ; out0             ;
-; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS3|TMP~3       ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS3|TMP~3       ; out              ;
-; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS3|TMP~4       ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS3|TMP~4       ; out              ;
-; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS3|TMP         ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS3|TMP         ; regout           ;
+; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS3|AUX~3       ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS3|AUX~3       ; out              ;
+; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS3|AUX~4       ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS3|AUX~4       ; out              ;
+; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS3|AUX         ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS3|AUX         ; regout           ;
 ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS2|process_0~3 ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS2|process_0~3 ; out0             ;
 ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS2|process_0~4 ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS2|process_0~4 ; out0             ;
 ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS2|process_0~6 ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS2|process_0~6 ; out0             ;
-; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS2|TMP~3       ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS2|TMP~3       ; out              ;
-; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS2|TMP~4       ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS2|TMP~4       ; out              ;
-; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS2|TMP         ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS2|TMP         ; regout           ;
+; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS2|AUX~3       ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS2|AUX~3       ; out              ;
+; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS2|AUX~4       ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS2|AUX~4       ; out              ;
+; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS2|AUX         ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS2|AUX         ; regout           ;
 ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS1|process_0~3 ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS1|process_0~3 ; out0             ;
 ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS1|process_0~4 ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS1|process_0~4 ; out0             ;
 ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS1|process_0~6 ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS1|process_0~6 ; out0             ;
-; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS1|TMP~3       ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS1|TMP~3       ; out              ;
-; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS1|TMP~4       ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS1|TMP~4       ; out              ;
-; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS1|TMP         ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS1|TMP         ; regout           ;
-; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS0|TMP~3       ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS0|TMP~3       ; out              ;
-; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS0|TMP         ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS0|TMP         ; regout           ;
+; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS1|AUX~3       ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS1|AUX~3       ; out              ;
+; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS1|AUX~4       ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS1|AUX~4       ; out              ;
+; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS1|AUX         ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS1|AUX         ; regout           ;
+; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS0|AUX~3       ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS0|AUX~3       ; out              ;
+; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS0|AUX         ; |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS0|AUX         ; regout           ;
 +----------------------------------------------------------------------+----------------------------------------------------------------------+------------------+
 
 
@@ -175,9 +175,9 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |relogio_digital|cont_mod6:contador_minutos|comb~1                 ; |relogio_digital|cont_mod6:contador_minutos|comb~1                 ; out0             ;
 ; |relogio_digital|cont_mod6:contador_minutos|comb~3                 ; |relogio_digital|cont_mod6:contador_minutos|comb~3                 ; out0             ;
 ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM2|process_0~4 ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM2|process_0~4 ; out0             ;
-; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM2|TMP         ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM2|TMP         ; regout           ;
+; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM2|AUX         ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM2|AUX         ; regout           ;
 ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM1|process_0~4 ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM1|process_0~4 ; out0             ;
-; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM1|TMP         ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM1|TMP         ; regout           ;
+; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM1|AUX         ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM1|AUX         ; regout           ;
 +--------------------------------------------------------------------+--------------------------------------------------------------------+------------------+
 
 
@@ -194,9 +194,9 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |relogio_digital|cont_mod6:contador_minutos|comb~1                 ; |relogio_digital|cont_mod6:contador_minutos|comb~1                 ; out0             ;
 ; |relogio_digital|cont_mod6:contador_minutos|comb~3                 ; |relogio_digital|cont_mod6:contador_minutos|comb~3                 ; out0             ;
 ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM2|process_0~4 ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM2|process_0~4 ; out0             ;
-; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM2|TMP         ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM2|TMP         ; regout           ;
+; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM2|AUX         ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM2|AUX         ; regout           ;
 ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM1|process_0~4 ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM1|process_0~4 ; out0             ;
-; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM1|TMP         ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM1|TMP         ; regout           ;
+; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM1|AUX         ; |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM1|AUX         ; regout           ;
 +--------------------------------------------------------------------+--------------------------------------------------------------------+------------------+
 
 
@@ -213,19 +213,18 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Sat Nov 12 09:31:38 2022
+    Info: Processing started: Sat Nov 12 11:25:52 2022
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off relogio_digital -c relogio_digital
 Info: Using vector source file "C:/Users/willi/OneDrive/Área de Trabalho/work/relogio_digital/relogio_digital.vwf"
-Warning: Ignored node in vector source file. Can't find corresponding node name "MIN[3]" in design.
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info: Simulation partitioned into 1 sub-simulations
 Info: Simulation coverage is      83.33 %
 Info: Number of transitions in simulation is 970
-Info: Quartus II Simulator was successful. 0 errors, 1 warning
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 162 megabytes
-    Info: Processing ended: Sat Nov 12 09:31:38 2022
-    Info: Elapsed time: 00:00:00
+    Info: Processing ended: Sat Nov 12 11:25:53 2022
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 
 

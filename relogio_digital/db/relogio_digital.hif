@@ -20,45 +20,6 @@ mentor.lmf
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
-JK_FF
-# storage
-db|relogio_digital.(2).cnf
-db|relogio_digital.(2).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-jk_ff.vhd
-67836ef94ebad2ddd964a53ee877ec9
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-cont_mod10:contador_segundos|JK_FF:FFS0
-cont_mod10:contador_segundos|JK_FF:FFS1
-cont_mod10:contador_segundos|JK_FF:FFS2
-cont_mod10:contador_segundos|JK_FF:FFS3
-cont_mod6:contador_minutos|JK_FF:FFM0
-cont_mod6:contador_minutos|JK_FF:FFM1
-cont_mod6:contador_minutos|JK_FF:FFM2
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
 cont_mod10
 # storage
 db|relogio_digital.(1).cnf
@@ -70,7 +31,7 @@ ON
 # case_insensitive
 # source_file
 cont_mod10.vhd
-851b3dcaebafc077b77b6c27ac35e362
+9c9f6283fe1a18ed5c6a5fef01dfb62
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -81,12 +42,6 @@ AUTO_RAM_RECOGNITION
 ON
 AUTO_ROM_RECOGNITION
 ON
-}
-# user_parameter {
- constraint(seg)
-3 downto 0
-PARAMETER_STRING
-USR
 }
 # hierarchies {
 cont_mod10:contador_segundos
@@ -109,7 +64,7 @@ ON
 # case_insensitive
 # source_file
 cont_mod6.vhd
-8af19a6be6ed4aa3ec55d3188da81
+b1711fad1b55135c40cc97b28e29cfd
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -121,11 +76,8 @@ ON
 AUTO_ROM_RECOGNITION
 ON
 }
-# user_parameter {
- constraint(min)
-3 downto 0
-PARAMETER_STRING
-USR
+# hierarchies {
+cont_mod6:contador_minutos
 }
 # lmf
 |altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -145,7 +97,7 @@ ON
 # case_insensitive
 # source_file
 relogio_digital.vhd
-abaee71ab57c1543b3a4c7fa797743
+5b3edf5d7ab9f315640333082d7ba55
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -167,18 +119,18 @@ a36c8ec425c8a2589af98b2d4daabc3
 
 # end
 # entity
-cont_mod6
+JK_FF
 # storage
-db|relogio_digital.(4).cnf
-db|relogio_digital.(4).cnf
+db|relogio_digital.(2).cnf
+db|relogio_digital.(2).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
 }
 # case_insensitive
 # source_file
-cont_mod6.vhd
-8af19a6be6ed4aa3ec55d3188da81
+jk_ff.vhd
+887536f1da3a7fb4b24edf3282a5ba12
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -190,14 +142,14 @@ ON
 AUTO_ROM_RECOGNITION
 ON
 }
-# user_parameter {
- constraint(min)
-2 downto 0
-PARAMETER_STRING
-USR
-}
 # hierarchies {
-cont_mod6:contador_minutos
+cont_mod10:contador_segundos|JK_FF:FFS0
+cont_mod10:contador_segundos|JK_FF:FFS1
+cont_mod10:contador_segundos|JK_FF:FFS2
+cont_mod10:contador_segundos|JK_FF:FFS3
+cont_mod6:contador_minutos|JK_FF:FFM0
+cont_mod6:contador_minutos|JK_FF:FFM1
+cont_mod6:contador_minutos|JK_FF:FFM2
 }
 # lmf
 |altera|91sp2|quartus|lmf|maxplus2.lmf

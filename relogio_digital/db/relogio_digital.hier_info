@@ -3,13 +3,13 @@ CLEAR => cont_mod10:contador_segundos.CLEAR
 CLEAR => cont_mod6:contador_minutos.CLEAR
 CLOCK => cont_mod10:contador_segundos.CLOCK
 CLOCK => cont_mod6:contador_minutos.CLOCK
-SEG[0] <= cont_mod10:contador_segundos.SEG[0]
-SEG[1] <= cont_mod10:contador_segundos.SEG[1]
-SEG[2] <= cont_mod10:contador_segundos.SEG[2]
-SEG[3] <= cont_mod10:contador_segundos.SEG[3]
-MIN[0] <= cont_mod6:contador_minutos.MIN[0]
-MIN[1] <= cont_mod6:contador_minutos.MIN[1]
-MIN[2] <= cont_mod6:contador_minutos.MIN[2]
+SEG[0] <= cont_mod10:contador_segundos.OUTPUT[0]
+SEG[1] <= cont_mod10:contador_segundos.OUTPUT[1]
+SEG[2] <= cont_mod10:contador_segundos.OUTPUT[2]
+SEG[3] <= cont_mod10:contador_segundos.OUTPUT[3]
+MIN[0] <= cont_mod6:contador_minutos.OUTPUT[0]
+MIN[1] <= cont_mod6:contador_minutos.OUTPUT[1]
+MIN[2] <= cont_mod6:contador_minutos.OUTPUT[2]
 
 
 |relogio_digital|cont_mod10:contador_segundos
@@ -21,10 +21,10 @@ CLOCK => JK_FF:FFS0.CLOCK
 CLOCK => JK_FF:FFS1.CLOCK
 CLOCK => JK_FF:FFS2.CLOCK
 CLOCK => JK_FF:FFS3.CLOCK
-SEG[0] <= JK_FF:FFS0.Q
-SEG[1] <= JK_FF:FFS1.Q
-SEG[2] <= JK_FF:FFS2.Q
-SEG[3] <= JK_FF:FFS3.Q
+OUTPUT[0] <= JK_FF:FFS0.Q
+OUTPUT[1] <= JK_FF:FFS1.Q
+OUTPUT[2] <= JK_FF:FFS2.Q
+OUTPUT[3] <= JK_FF:FFS3.Q
 
 
 |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS0
@@ -35,8 +35,8 @@ K => process_0~4.IN1
 K => process_0~6.IN1
 CLEAR => process_0~0.IN0
 CLOCK => process_0~1.IN0
-Q <= TMP.DB_MAX_OUTPUT_PORT_TYPE
-QB <= TMP~1.DB_MAX_OUTPUT_PORT_TYPE
+Q <= AUX.DB_MAX_OUTPUT_PORT_TYPE
+QB <= AUX~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS1
@@ -47,8 +47,8 @@ K => process_0~4.IN1
 K => process_0~6.IN1
 CLEAR => process_0~0.IN0
 CLOCK => process_0~1.IN0
-Q <= TMP.DB_MAX_OUTPUT_PORT_TYPE
-QB <= TMP~1.DB_MAX_OUTPUT_PORT_TYPE
+Q <= AUX.DB_MAX_OUTPUT_PORT_TYPE
+QB <= AUX~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS2
@@ -59,8 +59,8 @@ K => process_0~4.IN1
 K => process_0~6.IN1
 CLEAR => process_0~0.IN0
 CLOCK => process_0~1.IN0
-Q <= TMP.DB_MAX_OUTPUT_PORT_TYPE
-QB <= TMP~1.DB_MAX_OUTPUT_PORT_TYPE
+Q <= AUX.DB_MAX_OUTPUT_PORT_TYPE
+QB <= AUX~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |relogio_digital|cont_mod10:contador_segundos|JK_FF:FFS3
@@ -71,8 +71,8 @@ K => process_0~4.IN1
 K => process_0~6.IN1
 CLEAR => process_0~0.IN0
 CLOCK => process_0~1.IN0
-Q <= TMP.DB_MAX_OUTPUT_PORT_TYPE
-QB <= TMP~1.DB_MAX_OUTPUT_PORT_TYPE
+Q <= AUX.DB_MAX_OUTPUT_PORT_TYPE
+QB <= AUX~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |relogio_digital|cont_mod6:contador_minutos
@@ -82,9 +82,9 @@ CLEAR => JK_FF:FFM2.CLEAR
 CLOCK => JK_FF:FFM0.CLOCK
 CLOCK => JK_FF:FFM1.CLOCK
 CLOCK => JK_FF:FFM2.CLOCK
-MIN[0] <= JK_FF:FFM0.Q
-MIN[1] <= JK_FF:FFM1.Q
-MIN[2] <= JK_FF:FFM2.Q
+OUTPUT[0] <= JK_FF:FFM0.Q
+OUTPUT[1] <= JK_FF:FFM1.Q
+OUTPUT[2] <= JK_FF:FFM2.Q
 
 
 |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM0
@@ -95,8 +95,8 @@ K => process_0~4.IN1
 K => process_0~6.IN1
 CLEAR => process_0~0.IN0
 CLOCK => process_0~1.IN0
-Q <= TMP.DB_MAX_OUTPUT_PORT_TYPE
-QB <= TMP~1.DB_MAX_OUTPUT_PORT_TYPE
+Q <= AUX.DB_MAX_OUTPUT_PORT_TYPE
+QB <= AUX~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM1
@@ -107,8 +107,8 @@ K => process_0~4.IN1
 K => process_0~6.IN1
 CLEAR => process_0~0.IN0
 CLOCK => process_0~1.IN0
-Q <= TMP.DB_MAX_OUTPUT_PORT_TYPE
-QB <= TMP~1.DB_MAX_OUTPUT_PORT_TYPE
+Q <= AUX.DB_MAX_OUTPUT_PORT_TYPE
+QB <= AUX~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |relogio_digital|cont_mod6:contador_minutos|JK_FF:FFM2
@@ -119,7 +119,7 @@ K => process_0~4.IN1
 K => process_0~6.IN1
 CLEAR => process_0~0.IN0
 CLOCK => process_0~1.IN0
-Q <= TMP.DB_MAX_OUTPUT_PORT_TYPE
-QB <= TMP~1.DB_MAX_OUTPUT_PORT_TYPE
+Q <= AUX.DB_MAX_OUTPUT_PORT_TYPE
+QB <= AUX~1.DB_MAX_OUTPUT_PORT_TYPE
 
 

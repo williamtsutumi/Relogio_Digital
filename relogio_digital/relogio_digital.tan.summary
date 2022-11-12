@@ -6,7 +6,7 @@ Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
 Actual Time    : 4.500 ns
-From           : cont_mod10:contador_segundos|JK_FF:FFS1|TMP
+From           : cont_mod10:contador_segundos|JK_FF:FFS1|AUX
 To             : SEG[1]
 From Clock     : CLOCK
 To Clock       : --
@@ -16,8 +16,8 @@ Type           : Clock Setup: 'CLOCK'
 Slack          : N/A
 Required Time  : None
 Actual Time    : 125.00 MHz ( period = 8.000 ns )
-From           : cont_mod6:contador_minutos|JK_FF:FFM1|TMP
-To             : cont_mod6:contador_minutos|JK_FF:FFM1|TMP
+From           : cont_mod6:contador_minutos|JK_FF:FFM1|AUX
+To             : cont_mod6:contador_minutos|JK_FF:FFM1|AUX
 From Clock     : CLOCK
 To Clock       : CLOCK
 Failed Paths   : 0

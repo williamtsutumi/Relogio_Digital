@@ -4,7 +4,7 @@ USE ieee. std_logic_1164.all;
 ENTITY cont_mod6 IS
 	PORT(CLEAR: IN BIT;
 		 CLOCK: IN STD_LOGIC;
-	       MIN: OUT BIT_VECTOR(2 DOWNTO 0));
+	    OUTPUT: OUT BIT_VECTOR(2 DOWNTO 0));
 END cont_mod6;
 
  
@@ -24,7 +24,7 @@ BEGIN
 	FFM1: JK_FF PORT MAP(QB(0) AND Q(2), Q(0) OR Q(2), CLEAR, CLOCK, Q(1), QB(1));
 	FFM2: JK_FF PORT MAP(Q(0)  AND Q(1), Q(0) OR Q(1), CLEAR, CLOCK, Q(2), QB(2));
 	
-	MIN(0) <= Q(0);
-	MIN(1) <= Q(1);
-	MIN(2) <= Q(2);
+	OUTPUT(0) <= Q(0);
+	OUTPUT(1) <= Q(1);
+	OUTPUT(2) <= Q(2);
 END arch;

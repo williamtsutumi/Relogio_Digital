@@ -24,7 +24,7 @@
 (DELAYFILE
   (SDFVERSION "2.1")
   (DESIGN "relogio_digital")
-  (DATE "11/12/2022 09:31:14")
+  (DATE "11/12/2022 11:23:33")
   (VENDOR "Altera")
   (PROGRAM "Quartus II")
   (VERSION "Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition")
@@ -51,7 +51,7 @@
   )
   (CELL
     (CELLTYPE "max_asynch_mcell")
-    (INSTANCE contador_segundos\|FFS2\|TMP.pcom)
+    (INSTANCE contador_segundos\|FFS2\|AUX.pcom)
     (DELAY
       (ABSOLUTE
         (PORT pterm1[0] (1000:1000:1000) (1000:1000:1000))
@@ -70,7 +70,7 @@
   )
   (CELL
     (CELLTYPE "max_mcell_register")
-    (INSTANCE contador_segundos\|FFS2\|TMP.preg)
+    (INSTANCE contador_segundos\|FFS2\|AUX.preg)
     (DELAY
       (ABSOLUTE
         (PORT aclr (0:0:0) (0:0:0))
@@ -86,7 +86,7 @@
   )
   (CELL
     (CELLTYPE "max_asynch_mcell")
-    (INSTANCE contador_segundos\|FFS3\|TMP.pcom)
+    (INSTANCE contador_segundos\|FFS3\|AUX.pcom)
     (DELAY
       (ABSOLUTE
         (PORT pterm1[0] (1000:1000:1000) (1000:1000:1000))
@@ -111,7 +111,7 @@
   )
   (CELL
     (CELLTYPE "max_mcell_register")
-    (INSTANCE contador_segundos\|FFS3\|TMP.preg)
+    (INSTANCE contador_segundos\|FFS3\|AUX.preg)
     (DELAY
       (ABSOLUTE
         (PORT aclr (0:0:0) (0:0:0))
@@ -127,7 +127,7 @@
   )
   (CELL
     (CELLTYPE "max_asynch_mcell")
-    (INSTANCE contador_segundos\|FFS0\|TMP.pcom)
+    (INSTANCE contador_segundos\|FFS0\|AUX.pcom)
     (DELAY
       (ABSOLUTE
         (PORT pterm1[0] (1000:1000:1000) (1000:1000:1000))
@@ -148,7 +148,7 @@
   )
   (CELL
     (CELLTYPE "max_mcell_register")
-    (INSTANCE contador_segundos\|FFS0\|TMP.preg)
+    (INSTANCE contador_segundos\|FFS0\|AUX.preg)
     (DELAY
       (ABSOLUTE
         (PORT aclr (0:0:0) (0:0:0))
@@ -164,7 +164,7 @@
   )
   (CELL
     (CELLTYPE "max_asynch_mcell")
-    (INSTANCE contador_segundos\|FFS1\|TMP.pcom)
+    (INSTANCE contador_segundos\|FFS1\|AUX.pcom)
     (DELAY
       (ABSOLUTE
         (PORT pterm1[0] (1000:1000:1000) (1000:1000:1000))
@@ -185,7 +185,7 @@
   )
   (CELL
     (CELLTYPE "max_mcell_register")
-    (INSTANCE contador_segundos\|FFS1\|TMP.preg)
+    (INSTANCE contador_segundos\|FFS1\|AUX.preg)
     (DELAY
       (ABSOLUTE
         (PORT aclr (0:0:0) (0:0:0))
@@ -201,7 +201,7 @@
   )
   (CELL
     (CELLTYPE "max_asynch_mcell")
-    (INSTANCE contador_minutos\|FFM1\|TMP.pcom)
+    (INSTANCE contador_minutos\|FFM1\|AUX.pcom)
     (DELAY
       (ABSOLUTE
         (PORT pterm1[0] (1000:1000:1000) (1000:1000:1000))
@@ -222,7 +222,7 @@
   )
   (CELL
     (CELLTYPE "max_mcell_register")
-    (INSTANCE contador_minutos\|FFM1\|TMP.preg)
+    (INSTANCE contador_minutos\|FFM1\|AUX.preg)
     (DELAY
       (ABSOLUTE
         (PORT aclr (0:0:0) (0:0:0))
@@ -238,7 +238,7 @@
   )
   (CELL
     (CELLTYPE "max_asynch_mcell")
-    (INSTANCE contador_minutos\|FFM0\|TMP.pcom)
+    (INSTANCE contador_minutos\|FFM0\|AUX.pcom)
     (DELAY
       (ABSOLUTE
         (PORT pterm1[0] (1000:1000:1000) (1000:1000:1000))
@@ -253,7 +253,7 @@
   )
   (CELL
     (CELLTYPE "max_mcell_register")
-    (INSTANCE contador_minutos\|FFM0\|TMP.preg)
+    (INSTANCE contador_minutos\|FFM0\|AUX.preg)
     (DELAY
       (ABSOLUTE
         (PORT aclr (0:0:0) (0:0:0))
@@ -269,7 +269,7 @@
   )
   (CELL
     (CELLTYPE "max_asynch_mcell")
-    (INSTANCE contador_minutos\|FFM2\|TMP.pcom)
+    (INSTANCE contador_minutos\|FFM2\|AUX.pcom)
     (DELAY
       (ABSOLUTE
         (PORT pterm1[0] (1000:1000:1000) (1000:1000:1000))
@@ -290,7 +290,7 @@
   )
   (CELL
     (CELLTYPE "max_mcell_register")
-    (INSTANCE contador_minutos\|FFM2\|TMP.preg)
+    (INSTANCE contador_minutos\|FFM2\|AUX.preg)
     (DELAY
       (ABSOLUTE
         (PORT aclr (0:0:0) (0:0:0))

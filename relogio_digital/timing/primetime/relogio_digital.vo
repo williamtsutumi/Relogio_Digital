@@ -16,7 +16,7 @@
 // PROGRAM "Quartus II"
 // VERSION "Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition"
 
-// DATE "11/12/2022 09:31:14"
+// DATE "11/12/2022 11:23:33"
 
 // 
 // Device: Altera EPM7128SLC84-7 Package PLCC84
@@ -64,51 +64,51 @@ initial $sdf_annotate("relogio_digital_v.sdo");
 
 wire \CLOCK~dataout ;
 wire \CLEAR~dataout ;
-wire \contador_segundos|FFS2|TMP~dataout ;
-wire \contador_segundos|FFS3|TMP~dataout ;
-wire \contador_segundos|FFS0|TMP~dataout ;
-wire \contador_segundos|FFS1|TMP~dataout ;
-wire \contador_minutos|FFM1|TMP~dataout ;
-wire \contador_minutos|FFM0|TMP~dataout ;
-wire \contador_minutos|FFM2|TMP~dataout ;
+wire \contador_segundos|FFS2|AUX~dataout ;
+wire \contador_segundos|FFS3|AUX~dataout ;
+wire \contador_segundos|FFS0|AUX~dataout ;
+wire \contador_segundos|FFS1|AUX~dataout ;
+wire \contador_minutos|FFM1|AUX~dataout ;
+wire \contador_minutos|FFM0|AUX~dataout ;
+wire \contador_minutos|FFM2|AUX~dataout ;
 
-wire \contador_segundos|FFS1|ALT_INV_TMP~dataout ;
-wire \contador_minutos|FFM2|ALT_INV_TMP~dataout ;
-wire \contador_minutos|FFM1|ALT_INV_TMP~dataout ;
-wire \contador_segundos|FFS2|ALT_INV_TMP~dataout ;
-wire \contador_minutos|FFM0|ALT_INV_TMP~dataout ;
-wire \contador_segundos|FFS3|ALT_INV_TMP~dataout ;
-wire \contador_segundos|FFS0|ALT_INV_TMP~dataout ;
+wire \contador_segundos|FFS1|ALT_INV_AUX~dataout ;
+wire \contador_minutos|FFM2|ALT_INV_AUX~dataout ;
+wire \contador_minutos|FFM1|ALT_INV_AUX~dataout ;
+wire \contador_segundos|FFS2|ALT_INV_AUX~dataout ;
+wire \contador_minutos|FFM0|ALT_INV_AUX~dataout ;
+wire \contador_segundos|FFS3|ALT_INV_AUX~dataout ;
+wire \contador_segundos|FFS0|ALT_INV_AUX~dataout ;
 wire \ALT_INV_CLEAR~dataout ;
 wire \ALT_INV_CLOCK~dataout ;
 
-INV \contador_segundos|FFS1|INV_INST_TMP~dataout  (
-	.IN1(\contador_segundos|FFS1|TMP~dataout ),
-	.Y(\contador_segundos|FFS1|ALT_INV_TMP~dataout ));
+INV \contador_segundos|FFS1|INV_INST_AUX~dataout  (
+	.IN1(\contador_segundos|FFS1|AUX~dataout ),
+	.Y(\contador_segundos|FFS1|ALT_INV_AUX~dataout ));
 
-INV \contador_minutos|FFM2|INV_INST_TMP~dataout  (
-	.IN1(\contador_minutos|FFM2|TMP~dataout ),
-	.Y(\contador_minutos|FFM2|ALT_INV_TMP~dataout ));
+INV \contador_minutos|FFM2|INV_INST_AUX~dataout  (
+	.IN1(\contador_minutos|FFM2|AUX~dataout ),
+	.Y(\contador_minutos|FFM2|ALT_INV_AUX~dataout ));
 
-INV \contador_minutos|FFM1|INV_INST_TMP~dataout  (
-	.IN1(\contador_minutos|FFM1|TMP~dataout ),
-	.Y(\contador_minutos|FFM1|ALT_INV_TMP~dataout ));
+INV \contador_minutos|FFM1|INV_INST_AUX~dataout  (
+	.IN1(\contador_minutos|FFM1|AUX~dataout ),
+	.Y(\contador_minutos|FFM1|ALT_INV_AUX~dataout ));
 
-INV \contador_segundos|FFS2|INV_INST_TMP~dataout  (
-	.IN1(\contador_segundos|FFS2|TMP~dataout ),
-	.Y(\contador_segundos|FFS2|ALT_INV_TMP~dataout ));
+INV \contador_segundos|FFS2|INV_INST_AUX~dataout  (
+	.IN1(\contador_segundos|FFS2|AUX~dataout ),
+	.Y(\contador_segundos|FFS2|ALT_INV_AUX~dataout ));
 
-INV \contador_minutos|FFM0|INV_INST_TMP~dataout  (
-	.IN1(\contador_minutos|FFM0|TMP~dataout ),
-	.Y(\contador_minutos|FFM0|ALT_INV_TMP~dataout ));
+INV \contador_minutos|FFM0|INV_INST_AUX~dataout  (
+	.IN1(\contador_minutos|FFM0|AUX~dataout ),
+	.Y(\contador_minutos|FFM0|ALT_INV_AUX~dataout ));
 
-INV \contador_segundos|FFS3|INV_INST_TMP~dataout  (
-	.IN1(\contador_segundos|FFS3|TMP~dataout ),
-	.Y(\contador_segundos|FFS3|ALT_INV_TMP~dataout ));
+INV \contador_segundos|FFS3|INV_INST_AUX~dataout  (
+	.IN1(\contador_segundos|FFS3|AUX~dataout ),
+	.Y(\contador_segundos|FFS3|ALT_INV_AUX~dataout ));
 
-INV \contador_segundos|FFS0|INV_INST_TMP~dataout  (
-	.IN1(\contador_segundos|FFS0|TMP~dataout ),
-	.Y(\contador_segundos|FFS0|ALT_INV_TMP~dataout ));
+INV \contador_segundos|FFS0|INV_INST_AUX~dataout  (
+	.IN1(\contador_segundos|FFS0|AUX~dataout ),
+	.Y(\contador_segundos|FFS0|ALT_INV_AUX~dataout ));
 
 INV \INV_INST_CLEAR~dataout  (
 	.IN1(\CLEAR~dataout ),
@@ -147,15 +147,15 @@ max_io \CLEAR~I (
 // synopsys translate_on
 
 // Location: LC8
-max_mcell \contador_segundos|FFS2|TMP (
+max_mcell \contador_segundos|FFS2|AUX (
 	.clk(\ALT_INV_CLOCK~dataout ),
 	.aclr(\ALT_INV_CLEAR~dataout ),
 	.pexpin(gnd),
 	.fpin(vcc),
 	.pterm0({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
-	.pterm1({vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,\contador_segundos|FFS0|TMP~dataout ,\contador_segundos|FFS1|TMP~dataout ,
-\contador_segundos|FFS3|ALT_INV_TMP~dataout }),
-	.pterm2({vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,\contador_segundos|FFS2|TMP~dataout ,\contador_segundos|FFS3|TMP~dataout }),
+	.pterm1({vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,\contador_segundos|FFS0|AUX~dataout ,\contador_segundos|FFS1|AUX~dataout ,
+\contador_segundos|FFS3|ALT_INV_AUX~dataout }),
+	.pterm2({vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,\contador_segundos|FFS2|AUX~dataout ,\contador_segundos|FFS3|AUX~dataout }),
 	.pterm3({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
 	.pterm4({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
 	.pterm5({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
@@ -165,27 +165,27 @@ max_mcell \contador_segundos|FFS2|TMP (
 	.paclr({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
 	.papre({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
 	.modesel(13'b0101100100001),
-	.dataout(\contador_segundos|FFS2|TMP~dataout ),
+	.dataout(\contador_segundos|FFS2|AUX~dataout ),
 	.pexpout());
 // synopsys translate_off
-// defparam \contador_segundos|FFS2|TMP .operation_mode = "normal";
-// defparam \contador_segundos|FFS2|TMP .output_mode = "reg";
-// defparam \contador_segundos|FFS2|TMP .pexp_mode = "off";
-// defparam \contador_segundos|FFS2|TMP .power_up = "low";
-// defparam \contador_segundos|FFS2|TMP .register_mode = "tff";
+// defparam \contador_segundos|FFS2|AUX .operation_mode = "normal";
+// defparam \contador_segundos|FFS2|AUX .output_mode = "reg";
+// defparam \contador_segundos|FFS2|AUX .pexp_mode = "off";
+// defparam \contador_segundos|FFS2|AUX .power_up = "low";
+// defparam \contador_segundos|FFS2|AUX .register_mode = "tff";
 // synopsys translate_on
 
 // Location: LC13
-max_mcell \contador_segundos|FFS3|TMP (
+max_mcell \contador_segundos|FFS3|AUX (
 	.clk(\ALT_INV_CLOCK~dataout ),
 	.aclr(\ALT_INV_CLEAR~dataout ),
 	.pexpin(gnd),
 	.fpin(vcc),
 	.pterm0({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
-	.pterm1({vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,\contador_segundos|FFS3|ALT_INV_TMP~dataout ,\contador_segundos|FFS1|TMP~dataout ,
-\contador_segundos|FFS0|TMP~dataout ,\contador_segundos|FFS2|TMP~dataout }),
-	.pterm2({vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,\contador_segundos|FFS3|TMP~dataout ,\contador_segundos|FFS1|ALT_INV_TMP~dataout ,
-\contador_segundos|FFS0|ALT_INV_TMP~dataout ,\contador_segundos|FFS2|ALT_INV_TMP~dataout }),
+	.pterm1({vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,\contador_segundos|FFS3|ALT_INV_AUX~dataout ,\contador_segundos|FFS1|AUX~dataout ,
+\contador_segundos|FFS0|AUX~dataout ,\contador_segundos|FFS2|AUX~dataout }),
+	.pterm2({vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,\contador_segundos|FFS3|AUX~dataout ,\contador_segundos|FFS1|ALT_INV_AUX~dataout ,
+\contador_segundos|FFS0|ALT_INV_AUX~dataout ,\contador_segundos|FFS2|ALT_INV_AUX~dataout }),
 	.pterm3({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
 	.pterm4({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
 	.pterm5({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
@@ -195,27 +195,27 @@ max_mcell \contador_segundos|FFS3|TMP (
 	.paclr({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
 	.papre({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
 	.modesel(13'b0101010100001),
-	.dataout(\contador_segundos|FFS3|TMP~dataout ),
+	.dataout(\contador_segundos|FFS3|AUX~dataout ),
 	.pexpout());
 // synopsys translate_off
-// defparam \contador_segundos|FFS3|TMP .operation_mode = "normal";
-// defparam \contador_segundos|FFS3|TMP .output_mode = "reg";
-// defparam \contador_segundos|FFS3|TMP .pexp_mode = "off";
-// defparam \contador_segundos|FFS3|TMP .power_up = "low";
-// defparam \contador_segundos|FFS3|TMP .register_mode = "dff";
+// defparam \contador_segundos|FFS3|AUX .operation_mode = "normal";
+// defparam \contador_segundos|FFS3|AUX .output_mode = "reg";
+// defparam \contador_segundos|FFS3|AUX .pexp_mode = "off";
+// defparam \contador_segundos|FFS3|AUX .power_up = "low";
+// defparam \contador_segundos|FFS3|AUX .register_mode = "dff";
 // synopsys translate_on
 
 // Location: LC14
-max_mcell \contador_segundos|FFS0|TMP (
+max_mcell \contador_segundos|FFS0|AUX (
 	.clk(\ALT_INV_CLOCK~dataout ),
 	.aclr(\ALT_INV_CLEAR~dataout ),
 	.pexpin(gnd),
 	.fpin(vcc),
 	.pterm0({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
-	.pterm1({vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,\contador_segundos|FFS0|ALT_INV_TMP~dataout ,\contador_segundos|FFS3|TMP~dataout ,
-\contador_segundos|FFS1|TMP~dataout }),
-	.pterm2({vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,\contador_segundos|FFS2|TMP~dataout ,\contador_segundos|FFS0|ALT_INV_TMP~dataout ,
-\contador_segundos|FFS3|TMP~dataout }),
+	.pterm1({vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,\contador_segundos|FFS0|ALT_INV_AUX~dataout ,\contador_segundos|FFS3|AUX~dataout ,
+\contador_segundos|FFS1|AUX~dataout }),
+	.pterm2({vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,\contador_segundos|FFS2|AUX~dataout ,\contador_segundos|FFS0|ALT_INV_AUX~dataout ,
+\contador_segundos|FFS3|AUX~dataout }),
 	.pterm3({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
 	.pterm4({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
 	.pterm5({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
@@ -225,27 +225,27 @@ max_mcell \contador_segundos|FFS0|TMP (
 	.paclr({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
 	.papre({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
 	.modesel(13'b0101100100010),
-	.dataout(\contador_segundos|FFS0|TMP~dataout ),
+	.dataout(\contador_segundos|FFS0|AUX~dataout ),
 	.pexpout());
 // synopsys translate_off
-// defparam \contador_segundos|FFS0|TMP .operation_mode = "invert";
-// defparam \contador_segundos|FFS0|TMP .output_mode = "reg";
-// defparam \contador_segundos|FFS0|TMP .pexp_mode = "off";
-// defparam \contador_segundos|FFS0|TMP .power_up = "low";
-// defparam \contador_segundos|FFS0|TMP .register_mode = "tff";
+// defparam \contador_segundos|FFS0|AUX .operation_mode = "invert";
+// defparam \contador_segundos|FFS0|AUX .output_mode = "reg";
+// defparam \contador_segundos|FFS0|AUX .pexp_mode = "off";
+// defparam \contador_segundos|FFS0|AUX .power_up = "low";
+// defparam \contador_segundos|FFS0|AUX .register_mode = "tff";
 // synopsys translate_on
 
 // Location: LC3
-max_mcell \contador_segundos|FFS1|TMP (
+max_mcell \contador_segundos|FFS1|AUX (
 	.clk(\ALT_INV_CLOCK~dataout ),
 	.aclr(\ALT_INV_CLEAR~dataout ),
 	.pexpin(gnd),
 	.fpin(vcc),
 	.pterm0({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
-	.pterm1({vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,\contador_segundos|FFS1|ALT_INV_TMP~dataout ,\contador_segundos|FFS3|ALT_INV_TMP~dataout ,
-\contador_segundos|FFS0|TMP~dataout }),
-	.pterm2({vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,\contador_segundos|FFS1|TMP~dataout ,\contador_segundos|FFS3|ALT_INV_TMP~dataout ,
-\contador_segundos|FFS0|ALT_INV_TMP~dataout }),
+	.pterm1({vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,\contador_segundos|FFS1|ALT_INV_AUX~dataout ,\contador_segundos|FFS3|ALT_INV_AUX~dataout ,
+\contador_segundos|FFS0|AUX~dataout }),
+	.pterm2({vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,\contador_segundos|FFS1|AUX~dataout ,\contador_segundos|FFS3|ALT_INV_AUX~dataout ,
+\contador_segundos|FFS0|ALT_INV_AUX~dataout }),
 	.pterm3({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
 	.pterm4({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
 	.pterm5({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
@@ -255,27 +255,27 @@ max_mcell \contador_segundos|FFS1|TMP (
 	.paclr({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
 	.papre({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
 	.modesel(13'b0101010100001),
-	.dataout(\contador_segundos|FFS1|TMP~dataout ),
+	.dataout(\contador_segundos|FFS1|AUX~dataout ),
 	.pexpout());
 // synopsys translate_off
-// defparam \contador_segundos|FFS1|TMP .operation_mode = "normal";
-// defparam \contador_segundos|FFS1|TMP .output_mode = "reg";
-// defparam \contador_segundos|FFS1|TMP .pexp_mode = "off";
-// defparam \contador_segundos|FFS1|TMP .power_up = "low";
-// defparam \contador_segundos|FFS1|TMP .register_mode = "dff";
+// defparam \contador_segundos|FFS1|AUX .operation_mode = "normal";
+// defparam \contador_segundos|FFS1|AUX .output_mode = "reg";
+// defparam \contador_segundos|FFS1|AUX .pexp_mode = "off";
+// defparam \contador_segundos|FFS1|AUX .power_up = "low";
+// defparam \contador_segundos|FFS1|AUX .register_mode = "dff";
 // synopsys translate_on
 
 // Location: LC6
-max_mcell \contador_minutos|FFM1|TMP (
+max_mcell \contador_minutos|FFM1|AUX (
 	.clk(\ALT_INV_CLOCK~dataout ),
 	.aclr(\ALT_INV_CLEAR~dataout ),
 	.pexpin(gnd),
 	.fpin(vcc),
 	.pterm0({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
-	.pterm1({vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,\contador_minutos|FFM1|ALT_INV_TMP~dataout ,\contador_minutos|FFM0|ALT_INV_TMP~dataout ,
-\contador_minutos|FFM2|TMP~dataout }),
-	.pterm2({vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,\contador_minutos|FFM1|TMP~dataout ,\contador_minutos|FFM0|ALT_INV_TMP~dataout ,
-\contador_minutos|FFM2|ALT_INV_TMP~dataout }),
+	.pterm1({vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,\contador_minutos|FFM1|ALT_INV_AUX~dataout ,\contador_minutos|FFM0|ALT_INV_AUX~dataout ,
+\contador_minutos|FFM2|AUX~dataout }),
+	.pterm2({vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,\contador_minutos|FFM1|AUX~dataout ,\contador_minutos|FFM0|ALT_INV_AUX~dataout ,
+\contador_minutos|FFM2|ALT_INV_AUX~dataout }),
 	.pterm3({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
 	.pterm4({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
 	.pterm5({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
@@ -285,25 +285,25 @@ max_mcell \contador_minutos|FFM1|TMP (
 	.paclr({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
 	.papre({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
 	.modesel(13'b0101010100001),
-	.dataout(\contador_minutos|FFM1|TMP~dataout ),
+	.dataout(\contador_minutos|FFM1|AUX~dataout ),
 	.pexpout());
 // synopsys translate_off
-// defparam \contador_minutos|FFM1|TMP .operation_mode = "normal";
-// defparam \contador_minutos|FFM1|TMP .output_mode = "reg";
-// defparam \contador_minutos|FFM1|TMP .pexp_mode = "off";
-// defparam \contador_minutos|FFM1|TMP .power_up = "low";
-// defparam \contador_minutos|FFM1|TMP .register_mode = "dff";
+// defparam \contador_minutos|FFM1|AUX .operation_mode = "normal";
+// defparam \contador_minutos|FFM1|AUX .output_mode = "reg";
+// defparam \contador_minutos|FFM1|AUX .pexp_mode = "off";
+// defparam \contador_minutos|FFM1|AUX .power_up = "low";
+// defparam \contador_minutos|FFM1|AUX .register_mode = "dff";
 // synopsys translate_on
 
 // Location: LC11
-max_mcell \contador_minutos|FFM0|TMP (
+max_mcell \contador_minutos|FFM0|AUX (
 	.clk(\ALT_INV_CLOCK~dataout ),
 	.aclr(\ALT_INV_CLEAR~dataout ),
 	.pexpin(gnd),
 	.fpin(vcc),
 	.pterm0({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
-	.pterm1({vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,\contador_minutos|FFM0|ALT_INV_TMP~dataout ,\contador_minutos|FFM2|TMP~dataout ,
-\contador_minutos|FFM1|TMP~dataout }),
+	.pterm1({vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,\contador_minutos|FFM0|ALT_INV_AUX~dataout ,\contador_minutos|FFM2|AUX~dataout ,
+\contador_minutos|FFM1|AUX~dataout }),
 	.pterm2({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
 	.pterm3({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
 	.pterm4({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
@@ -314,27 +314,27 @@ max_mcell \contador_minutos|FFM0|TMP (
 	.paclr({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
 	.papre({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
 	.modesel(13'b0101100100010),
-	.dataout(\contador_minutos|FFM0|TMP~dataout ),
+	.dataout(\contador_minutos|FFM0|AUX~dataout ),
 	.pexpout());
 // synopsys translate_off
-// defparam \contador_minutos|FFM0|TMP .operation_mode = "invert";
-// defparam \contador_minutos|FFM0|TMP .output_mode = "reg";
-// defparam \contador_minutos|FFM0|TMP .pexp_mode = "off";
-// defparam \contador_minutos|FFM0|TMP .power_up = "low";
-// defparam \contador_minutos|FFM0|TMP .register_mode = "tff";
+// defparam \contador_minutos|FFM0|AUX .operation_mode = "invert";
+// defparam \contador_minutos|FFM0|AUX .output_mode = "reg";
+// defparam \contador_minutos|FFM0|AUX .pexp_mode = "off";
+// defparam \contador_minutos|FFM0|AUX .power_up = "low";
+// defparam \contador_minutos|FFM0|AUX .register_mode = "tff";
 // synopsys translate_on
 
 // Location: LC5
-max_mcell \contador_minutos|FFM2|TMP (
+max_mcell \contador_minutos|FFM2|AUX (
 	.clk(\ALT_INV_CLOCK~dataout ),
 	.aclr(\ALT_INV_CLEAR~dataout ),
 	.pexpin(gnd),
 	.fpin(vcc),
 	.pterm0({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
-	.pterm1({vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,\contador_minutos|FFM2|ALT_INV_TMP~dataout ,\contador_minutos|FFM1|TMP~dataout ,
-\contador_minutos|FFM0|TMP~dataout }),
-	.pterm2({vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,\contador_minutos|FFM2|TMP~dataout ,\contador_minutos|FFM1|ALT_INV_TMP~dataout ,
-\contador_minutos|FFM0|ALT_INV_TMP~dataout }),
+	.pterm1({vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,\contador_minutos|FFM2|ALT_INV_AUX~dataout ,\contador_minutos|FFM1|AUX~dataout ,
+\contador_minutos|FFM0|AUX~dataout }),
+	.pterm2({vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,vcc,\contador_minutos|FFM2|AUX~dataout ,\contador_minutos|FFM1|ALT_INV_AUX~dataout ,
+\contador_minutos|FFM0|ALT_INV_AUX~dataout }),
 	.pterm3({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
 	.pterm4({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
 	.pterm5({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
@@ -344,19 +344,19 @@ max_mcell \contador_minutos|FFM2|TMP (
 	.paclr({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
 	.papre({gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd,gnd}),
 	.modesel(13'b0101010100001),
-	.dataout(\contador_minutos|FFM2|TMP~dataout ),
+	.dataout(\contador_minutos|FFM2|AUX~dataout ),
 	.pexpout());
 // synopsys translate_off
-// defparam \contador_minutos|FFM2|TMP .operation_mode = "normal";
-// defparam \contador_minutos|FFM2|TMP .output_mode = "reg";
-// defparam \contador_minutos|FFM2|TMP .pexp_mode = "off";
-// defparam \contador_minutos|FFM2|TMP .power_up = "low";
-// defparam \contador_minutos|FFM2|TMP .register_mode = "dff";
+// defparam \contador_minutos|FFM2|AUX .operation_mode = "normal";
+// defparam \contador_minutos|FFM2|AUX .output_mode = "reg";
+// defparam \contador_minutos|FFM2|AUX .pexp_mode = "off";
+// defparam \contador_minutos|FFM2|AUX .power_up = "low";
+// defparam \contador_minutos|FFM2|AUX .register_mode = "dff";
 // synopsys translate_on
 
 // Location: PIN_12
 max_io \SEG[1]~I (
-	.datain(\contador_segundos|FFS1|TMP~dataout ),
+	.datain(\contador_segundos|FFS1|AUX~dataout ),
 	.oe(vcc),
 	.modesel(9'b101010010),
 	.dataout(),
@@ -370,7 +370,7 @@ max_io \SEG[1]~I (
 
 // Location: PIN_11
 max_io \MIN[2]~I (
-	.datain(\contador_minutos|FFM2|TMP~dataout ),
+	.datain(\contador_minutos|FFM2|AUX~dataout ),
 	.oe(vcc),
 	.modesel(9'b101010010),
 	.dataout(),
@@ -384,7 +384,7 @@ max_io \MIN[2]~I (
 
 // Location: PIN_10
 max_io \MIN[1]~I (
-	.datain(\contador_minutos|FFM1|TMP~dataout ),
+	.datain(\contador_minutos|FFM1|AUX~dataout ),
 	.oe(vcc),
 	.modesel(9'b101010010),
 	.dataout(),
@@ -398,7 +398,7 @@ max_io \MIN[1]~I (
 
 // Location: PIN_9
 max_io \SEG[2]~I (
-	.datain(\contador_segundos|FFS2|TMP~dataout ),
+	.datain(\contador_segundos|FFS2|AUX~dataout ),
 	.oe(vcc),
 	.modesel(9'b101010010),
 	.dataout(),
@@ -412,7 +412,7 @@ max_io \SEG[2]~I (
 
 // Location: PIN_8
 max_io \MIN[0]~I (
-	.datain(\contador_minutos|FFM0|TMP~dataout ),
+	.datain(\contador_minutos|FFM0|AUX~dataout ),
 	.oe(vcc),
 	.modesel(9'b101010010),
 	.dataout(),
@@ -426,7 +426,7 @@ max_io \MIN[0]~I (
 
 // Location: PIN_6
 max_io \SEG[3]~I (
-	.datain(\contador_segundos|FFS3|TMP~dataout ),
+	.datain(\contador_segundos|FFS3|AUX~dataout ),
 	.oe(vcc),
 	.modesel(9'b101010010),
 	.dataout(),
@@ -440,7 +440,7 @@ max_io \SEG[3]~I (
 
 // Location: PIN_5
 max_io \SEG[0]~I (
-	.datain(\contador_segundos|FFS0|TMP~dataout ),
+	.datain(\contador_segundos|FFS0|AUX~dataout ),
 	.oe(vcc),
 	.modesel(9'b101010010),
 	.dataout(),

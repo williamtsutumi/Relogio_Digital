@@ -16,7 +16,7 @@
 ## PROGRAM "Quartus II"
 ## VERSION "Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition"
 
-## DATE "11/12/2022 09:31:14"
+## DATE "11/12/2022 11:23:33"
 
 ## 
 ## Device: Altera EPM7128SLC84-7 Package PLCC84
